@@ -1,2 +1,2 @@
 # phias.github.io
-Welcome to Sophia's portfolio! Discover my journey and work. ✨
+Welcome to my portfolio! Discover my journey and work. ✨
