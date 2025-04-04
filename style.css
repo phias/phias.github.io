@@ -1,9 +1,18 @@
 body {
-    max-width: 1280px;
-    line-height: 1.4;
-    padding: 0 1rem;
-    margin: 2rem auto;
-    background-color: aliceblue;
+  font-family: 
+      'Noto Sans TC', /* Google 字型：適合繁體中文 */
+      'Roboto',       /* Google 字型：適合英文 */
+      'Microsoft JhengHei', /* 備援：Windows 常見中文字型 */
+      'PingFang TC',         /* 備援：macOS 常見中文字型 */
+      'Helvetica Neue', Helvetica, Arial, /* 備援：常見英文無襯線字體 */
+      sans-serif; /* 最後保險用 */
+  font-size: large; /* 基準字級：適中，易讀 */
+  line-height: 1.6; /* 中文適合較寬行距，閱讀舒適 */
+  color: #222;
+  background-color: aliceblue;
+  max-width: 1280px;
+  padding: 0 1rem;
+  margin: 2rem auto;
 }
 
 a {
