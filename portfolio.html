@@ -7,24 +7,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <nav>
-            <a href="./index.html" class="btn-icon">🏠</a>
-        </nav>
-        <header>
-            <h1>📔Portfolio</h1>
+        <header class="header">
+            <h1 class="title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h1>
         </header>
+        <!-- Navbar：點擊連結滑到對應分類區塊；窄螢幕只顯示 emoji -->
+        <nav class="navbar">
+            <a href="./index.html" class="nav-link" title="Home">🏠<span class="nav-text"> Home</span></a>
+            <a href="./portfolio.html" class="nav-link" title="Portfolio">📔<span class="nav-text"> Portfolio</span></a>
+            <a href="./casestudy.html" class="nav-link" title="Case Study">📚<span class="nav-text"> Case Study</span></a>
+            <a href="./blog.html" class="nav-link" title="Blog">📝<span class="nav-text"> Blog</span></a>
+        </nav>
         
         <article>
-            <section class="portfolio">
+            <h2 class="section-title">📔Portfolio</h2>
+            
+            <section class="card">
                 <a href="./financial-car.html">
                     <h2>財管購物車｜作為規劃、設計包辦的數轉專員💪</h2>
-                    <img src="./img/banner-fintech.png" alt="財管購物車封面">
-                </a>
+                    <img src="./img/banner-fintech.png" alt="財管購物車封面">                    </a>
             </section>
-            <section class="portfolio">
+            <section class="card">
                 <a href="./timesaw.html">
-                    <h2>時間管理工具｜在專案中作為研究員角色🧑‍🔬</h2>
-                    <img src="./img/banner-timesaw.png" alt="時間管理工具封面">
+                    <div class="card-content">
+                        <h2>時間管理工具｜在專案中作為研究員角色🧑‍🔬</h2>
+                        <img src="./img/banner-timesaw.png" alt="時間管理工具封面">
+                    </div>
+                    <div class="under-construction">
+                        <h2>🚧 施工中...</h2>
+                    </div>
                 </a>
             </section>
         </article>
