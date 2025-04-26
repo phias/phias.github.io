@@ -97,6 +97,149 @@ a:hover {
   }
 }
 
+/* === App Bar 基礎樣式 === */
+.top-app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  margin: 1rem; /* 給它一點呼吸空間 */
+}
+
+.app-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 網站標題 */
+.app-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+}
+
+/* 桌面版導覽列 */
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 漢堡選單按鈕 */
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile menu dropdown */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  transform-origin: top right;
+}
+
+/* === 響應式：小螢幕 === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* === hero section === */
+.hero-intro {
+  background: #ffff; 
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin: 1rem;
+}
+
+.hero-content {
+  margin: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.hero-content-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%; /* 圓形頭像 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero-content-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+}
+
+
 /* article */
 
 article {

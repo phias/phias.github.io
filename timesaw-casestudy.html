@@ -4,19 +4,33 @@
     <meta content="text/html" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h1>
+    <!-- Header 與 Navbar -->
+    <header class="top-app-bar">
+        <div class="app-bar-container">
+            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <nav class="nav-links">
+                <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
+                <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
+                <a href="./blog.html" class="nav-link">📝 Blog</a>
+            </nav>
+            <button class="menu-icon" id="menu-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <!-- 手機版 dropdown menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="./portfolio.html">📔 Portfolio</a>
+            <a href="./casestudy.html">📚 Case Study</a>
+            <a href="./blog.html">📝 Blog</a>
+        </div>
     </header>
-    <!-- Navbar：點擊連結滑到對應分類區塊；窄螢幕只顯示 emoji -->
-    <nav class="navbar">
-        <a href="./index.html" class="nav-link" title="Home">🏠<span class="nav-text"> Home</span></a>
-        <a href="./portfolio.html" class="nav-link" title="Portfolio">📔<span class="nav-text"> Portfolio</span></a>
-        <a href="./casestudy.html" class="nav-link" title="Case Study">📚<span class="nav-text"> Case Study</span></a>
-        <a href="./blog.html" class="nav-link" title="Blog">📝<span class="nav-text"> Blog</span></a>
-    </nav>
     <article>
         <h1>
             Timesaw Puzzle 時間管理工具專案
@@ -25,5 +39,13 @@
             <p style="font-size: x-small;">發佈日期：coming soom...</p>
         </div>
     </article>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
+        });
+    </script>
 </body>
 </html>

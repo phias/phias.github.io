@@ -19,6 +19,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     
@@ -32,21 +35,32 @@
     </script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h1>
-    </header>
+    <!-- Header 與 Navbar -->
+    <header class="top-app-bar">
+        <div class="app-bar-container">
+            <a href="./index.html" class="app-title nav-link">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <nav class="nav-links">
+                <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
+                <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
+                <a href="./blog.html" class="nav-link">📝 Blog</a>
+            </nav>
+            <button class="menu-icon" id="menu-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
 
-    <!-- Navbar：點擊連結滑到對應分類區塊；窄螢幕只顯示 emoji -->
-    <nav class="navbar">
-        <a href="#portfolio" class="nav-link" title="Portfolio">📔<span class="nav-text"> Portfolio</span></a>
-        <a href="#casestudy" class="nav-link" title="Case Study">📚<span class="nav-text"> Case Study</span></a>
-        <a href="#blog" class="nav-link" title="Blog">📝<span class="nav-text"> Blog</span></a>
-    </nav>
+        <!-- 手機版 dropdown menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="./portfolio.html">📔 Portfolio</a>
+            <a href="./casestudy.html">📚 Case Study</a>
+            <a href="./blog.html">📝 Blog</a>
+        </div>
+    </header>
     <!-- 主內容：各分類文章區塊 -->
     <article>
         <!-- Portfolio 分類 -->
         <section id="portfolio" class="section">
-            <h2><a href="./portfolio.html">📔Portfolio</a></h2>
+            <h2>📔Portfolio</h2>
             <div class="content-grid" id="portfolio-posts">
                 <a href="./financial-car.html" class="card coming-soon">
                     <h3>財管購物車 | 作為規劃、設計包辦的數轉專員💪</h3>
@@ -69,7 +83,7 @@
         </section>
         <!-- Case Study 分類 -->
         <section id="casestudy" class="section">
-            <h2><a href="./casestudy.html">📚Case Study</a></h2>
+            <h2>📚Case Study</h2>
             <div class="content-grid" id="portfolio-posts">
                 <a href="./financial-car-casestudy.html" class="card coming-soon">
                     <h3>財管購物車專案</h3>
@@ -254,6 +268,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
+        });
+    </script>
+    
 </body>
 </html>
 
