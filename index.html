@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
-    <meta name="author" content="Sophia Lue">
-    <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
-    <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
-    <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
+        <meta name="author" content="Sophia Lue">
+        <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
+        <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
+        <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
+        <meta property="og:url" content="https://yourdomain.com">
+        <meta name="twitter:card" content="summary_large_image">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Google Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Analytics (請替換追蹤碼) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-</head>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H5KNZ3T763');
+        </script>
+    </head>
 <body>
     <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-            <a href="./index.html" class="app-title nav-link">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
             <nav class="nav-links">
-                <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
-                <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
-                <a href="./blog.html" class="nav-link">📝 Blog</a>
+                <a href="./portfolio.html" class="nav-link btn-icon-text">
+                    <span class="icon">📔</span>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+                <a href="./casestudy.html" class="nav-link btn-icon-text">
+                    <span class="icon">📚</span>
+                    <span class="nav-text">Case Study</span>
+                </a>
+                <a href="./blog.html" class="nav-link btn-icon-text">
+                    <span class="icon">📝</span>
+                    <span class="nav-text">Blog</span>
+                </a>
             </nav>
-            <button class="menu-icon" id="menu-toggle">
+            <button class="menu-icon btn-icon-only" id="menu-toggle">
                 <span class="material-icons">menu</span>
             </button>
         </div>
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html">📔 Portfolio</a>
-            <a href="./casestudy.html">📚 Case Study</a>
-            <a href="./blog.html">📝 Blog</a>
+            <a href="./portfolio.html" class="nav-link btn-icon-text">
+                <span class="icon">📔</span>
+                <span>Portfolio</span>
+            </a>
+            <a href="./casestudy.html" class="nav-link btn-icon-text">
+                <span class="icon">📚</span>
+                <span>Case Study</span>
+            </a>
+            <a href="./blog.html" class="nav-link btn-icon-text">
+                <span class="icon">📝</span>
+                <span>Blog</span>
+            </a>
         </div>
     </header>
+    
     <!-- 主內容：各分類文章區塊 -->
     <article>
         <!-- Portfolio 分類 -->
@@ -81,6 +101,7 @@
                 </a>
             </div>
         </section>
+        
         <!-- Case Study 分類 -->
         <section id="casestudy" class="section">
             <h2>📚Case Study</h2>
@@ -113,128 +134,128 @@
                 </a>
             </div>
         </section>
-        <!-- blog 分類 -->
-            <section id="blog" class="section">
-                <h2>📝Blog</h2>
-                <ul class="no-bullets">
-                    <li class="card">
-                        <a href="./exchangestudent-0.html" title="查看我的交換準備、交換申請、面試分享">
-                            <h3>
-                                📼交換紀錄 | 交換準備、交換申請、面試分享
-                            </h3>
-                            <p style="color: #222;">
-                                整理我申請研究所交換的完整流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧。
-                                不是最頂尖也能申請成功，只要掌握關鍵細節，你也可以踏出第一步！
-                            </p>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>
-                                📼交換紀錄 | 簽證、開戶、ESN card、PESEL
-                            </h3>
-                        </a>
-                    </li>
-                    <li class="card">
-                        <a href="./exchangestudent-2.html" title="查看如何在波蘭寄包裹、寄明信片、匯款">
-                            <h3>
-                                📼交換紀錄 | 波蘭郵寄包裹、寄明信片、匯款
-                            </h3>
-                            <p style="color: #222;">
-                                在波蘭交換期間，遇到寄包裹回台、寄明信片給朋友、甚至處理國際匯款的情況嗎？
-                                這篇文章分享我親身經驗，包括郵資、流程、注意事項，幫助你順利搞定留學生活裡的小事！
-                            </p>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>
-                                📼交換紀錄 | Ike我來了！ 【瑞典斯德歌爾摩攻略】
-                            </h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>
-                                📼交換紀錄 | 請來🫱【波蘭格但斯克、格丁尼亞、索波特、馬爾堡攻略】
-                            </h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3></h3>📼交換紀錄 | 【波蘭克拉克夫攻略】
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3></h3>📼交換紀錄 | 有點無聊的首都🙁【波蘭華沙攻略】
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3></h3>📼交換紀錄 | 欸？！今天是柏林圍牆倒塌紀念日！【德國柏林攻略】
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3></h3>📼交換紀錄 | 胸器不有利🥲【匈牙利布達佩斯攻略】
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3></h3>📼交換紀錄 | 博物館逛到吐🤢聖誕節欸🥺【法國巴黎攻略】
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 收集小矮人🥰【波蘭樂斯拉夫攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 歐洲知名滑雪勝地✨【波蘭札克帕內攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 地。【波蘭托倫攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 【丹麥哥本哈根攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 冬天不要來（認真）【瑞士蘇黎世攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 【法國科爾馬攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 【法國斯特拉斯堡攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 【盧森堡攻略】</h3>
-                        </a>
-                    </li>
-                    <li class="coming-soon card">
-                        <a href="#">
-                            <h3>📼交換紀錄 | 連空氣都是尿的【比利時布魯塞爾攻略】</h3>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
         
+        <!-- blog 分類 -->
+        <section id="blog" class="section">
+            <h2>📝Blog</h2>
+            <ul class="no-bullets">
+                <li class="card">
+                    <a href="./exchangestudent-0.html" title="查看我的交換準備、交換申請、面試分享">
+                        <h3>
+                            📼交換紀錄 | 交換準備、交換申請、面試分享
+                        </h3>
+                        <p style="color: #222;">
+                            整理我申請研究所交換的完整流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧。
+                            不是最頂尖也能申請成功，只要掌握關鍵細節，你也可以踏出第一步！
+                        </p>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>
+                            📼交換紀錄 | 簽證、開戶、ESN card、PESEL
+                        </h3>
+                    </a>
+                </li>
+                <li class="card">
+                    <a href="./exchangestudent-2.html" title="查看如何在波蘭寄包裹、寄明信片、匯款">
+                        <h3>
+                            📼交換紀錄 | 波蘭郵寄包裹、寄明信片、匯款
+                        </h3>
+                        <p style="color: #222;">
+                            在波蘭交換期間，遇到寄包裹回台、寄明信片給朋友、甚至處理國際匯款的情況嗎？
+                            這篇文章分享我親身經驗，包括郵資、流程、注意事項，幫助你順利搞定留學生活裡的小事！
+                        </p>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>
+                            📼交換紀錄 | Ike我來了！ 【瑞典斯德歌爾摩攻略】
+                        </h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>
+                            📼交換紀錄 | 請來🫱【波蘭格但斯克、格丁尼亞、索波特、馬爾堡攻略】
+                        </h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 【波蘭克拉克夫攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 有點無聊的首都🙁【波蘭華沙攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 欸？！今天是柏林圍牆倒塌紀念日！【德國柏林攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 胸器不有利🥲【匈牙利布達佩斯攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 博物館逛到吐🤢聖誕節欸🥺【法國巴黎攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 收集小矮人🥰【波蘭樂斯拉夫攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 歐洲知名滑雪勝地✨【波蘭札克帕內攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 地。【波蘭托倫攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 【丹麥哥本哈根攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 冬天不要來（認真）【瑞士蘇黎世攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 【法國科爾馬攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 【法國斯特拉斯堡攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 【盧森堡攻略】</h3>
+                    </a>
+                </li>
+                <li class="coming-soon card">
+                    <a href="#">
+                        <h3>📼交換紀錄 | 連空氣都是尿的【比利時布魯塞爾攻略】</h3>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </article>
+    
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-about">
@@ -248,18 +269,28 @@
                 </p>
                 <p>
                     如果你有什麼想分享或討論的，別猶豫，直接用
-                    <a href="mailto:sophia.lue1010@gmail.com">email</a>
+                    <a href="mailto:sophia.lue1010@gmail.com" class="btn btn-icon-text">
+                        <span class="icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    
                     聯絡我吧！謝謝泥🦀
                 </p>
             </div>
         
             <div class="footer-support">
                 如果喜歡我的文章內容，歡迎給予實際支持👉
-                <a href="https://p.ecpay.com.tw/6942264" target="_blank" rel="noopener">贊助連結</a>
+                <a href="https://p.ecpay.com.tw/6942264" class="btn btn-icon-text" target="_blank" rel="noopener">
+                    <span class="icon">💰</span>
+                    <span>贊助連結</span>
+                </a>
             </div>
         
             <div class="footer-social">
-                <a href="https://www.instagram.com/ni_de_life">Instagram</a>
+                <a href="https://www.instagram.com/ni_de_life" class="btn btn-icon-text">
+                    <span class="icon"></span>
+                    <span>Instagram</span>
+                </a>
                 <a href="https://www.linkedin.com/in/yu-ning-liu-834596210">LinkedIn</a>
             </div>
         
@@ -268,15 +299,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
     
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
-        });
-    </script>
-    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
-
