@@ -84,7 +84,7 @@
                 <h2>📝Blog</h2>
                 <div>
                     <div class="card">
-                        <a href="./exchangestudent-0.html" title="查看我的交換準備、交換申請、面試分享">
+                        <a href="./article.html?post=exchangestudent-0" title="查看我的交換準備、交換申請、面試分享">
                             <h3>
                                 📼交換紀錄 | 交換準備、交換申請、面試分享
                             </h3>
@@ -102,7 +102,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="./exchangestudent-2.html" title="查看如何在波蘭寄包裹、寄明信片、匯款">
+                        <a href="./article.html?post=exchangestudent-1" title="查看如何在波蘭寄包裹、寄明信片、匯款">
                             <h3>
                                 📼交換紀錄 | 波蘭郵寄包裹、寄明信片、匯款
                             </h3>
@@ -196,6 +196,11 @@
                         <a href="#">
                             <h3>📼交換紀錄 | 連空氣都是尿的【比利時布魯塞爾攻略】</h3>
                         </a>
+                    </div>
+
+                    <!-- 動態載入的文章區域 -->
+                    <div id="dynamic-blog-posts">
+                        <!-- 透過 JavaScript 載入最新文章 -->
                     </div>
                 </div>
                 <!-- 手機版查看更多連結 -->
@@ -307,5 +312,127 @@
     
     <!-- External JavaScript -->
     <script src="script.js"></script>
+    <script src="blog-engine.js"></script>
+
+    <!-- 首頁專用 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 載入最新文章到首頁
+            loadLatestPostsForHomepage();
+        });
+
+        async function loadLatestPostsForHomepage() {
+            try {
+                const blogEngine = new BlogEngine();
+                const posts = await blogEngine.loadAllPosts();
+                
+                // 取得已發布的文章
+                const publishedPosts = posts.filter(post => post.status === 'published');
+                
+                // 更新動態文章區域（顯示最新的2篇，除了靜態顯示的）
+                const dynamicContainer = document.getElementById('dynamic-blog-posts');
+                if (dynamicContainer && publishedPosts.length > 2) {
+                    const latestPosts = publishedPosts.slice(2, 4); // 取得第3和第4篇
+                    
+                    let html = '';
+                    latestPosts.forEach(post => {
+                        html += `
+                            <div class="card" style="animation: fadeInUp 0.6s ease-out;">
+                                <a href="./article.html?post=${post.slug}" title="${post.description}">
+                                    <h3>${post.title}</h3>
+                                    <p style="color: #222;">${post.description}</p>
+                                    <div class="article-meta" style="font-size: 0.8rem; color: var(--color-text-500); margin-top: 0.5rem;">
+                                        <span>${post.date}</span>
+                                        <span> • </span>
+                                        <span>${post.readTime || '5 分鐘閱讀'}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        `;
+                    });
+                    
+                    dynamicContainer.innerHTML = html;
+                }
+                
+                // 更新「查看更多文章」連結的數量
+                const viewMoreLink = document.querySelector('.view-more-link');
+                if (viewMoreLink) {
+                    const totalPublished = publishedPosts.length;
+                    const totalPlanned = posts.length;
+                    viewMoreLink.textContent = `📚 查看更多文章 (已發布 ${totalPublished} 篇，規劃中 ${totalPlanned - totalPublished} 篇) →`;
+                }
+                
+            } catch (error) {
+                console.error('載入首頁文章失敗:', error);
+            }
+        }
+
+        // 添加漸入動畫
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .article-meta {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 增強 coming-soon 卡片的互動
+        document.addEventListener('DOMContentLoaded', () => {
+            const comingSoonCards = document.querySelectorAll('.coming-soon');
+            
+            comingSoonCards.forEach(card => {
+                // 創建一個更好的 hover 效果
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-4px) scale(1.02)';
+                    card.style.filter = 'brightness(0.95)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(-2px)';
+                    card.style.filter = 'brightness(1)';
+                });
+            });
+        });
+
+        // SEO 和 Analytics 增強
+        window.addEventListener('load', () => {
+            // 發送頁面瀏覽事件到 Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: document.title,
+                    page_location: window.location.href,
+                    page_path: window.location.pathname
+                });
+            }
+            
+            // 追蹤用戶互動
+            document.querySelectorAll('a[href*="article.html"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (typeof gtag !== 'undefined') {
+                        const articleSlug = new URL(link.href).searchParams.get('post');
+                        gtag('event', 'click', {
+                            event_category: 'Blog',
+                            event_label: articleSlug,
+                            value: 1
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
