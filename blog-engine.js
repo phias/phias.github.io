@@ -10,7 +10,6 @@ class BlogEngine {
         this.postsConfig = [
             'exchangestudent-0.md',
             'exchangestudent-1.md',
-            'exchangestudent-2.md',
             // 可以繼續添加更多文章
         ];
     }
