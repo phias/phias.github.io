@@ -2282,7 +2282,6 @@ section h2 {
 /* Article meta styles */
 .article-meta {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;

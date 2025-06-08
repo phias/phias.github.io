@@ -8,6 +8,7 @@ readTime: "5 分鐘閱讀"
 status: "published"
 country: "波蘭"
 city: "波茲南"
+layout: article
 ---
 
 ## 寄明信片

@@ -1,187 +1,574 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-    <meta content="text/html" charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>📼交換紀錄 | 交換準備、交換申請、面試分享 - 阿泥在哪裡？</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧。不是最頂尖也能申請成功，掌握關鍵細節踏出第一步！">
+    <meta name="author" content="Sophia Lue">
+    <meta name="keywords" content="交換學生, 交換申請, 面試技巧, 交換計畫書, 波蘭交換, 留學準備">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="📼交換紀錄 | 交換準備、交換申請、面試分享">
+    <meta property="og:description" content="詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧">
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="Sophia Lue">
+    <meta property="article:published_time" content="2025-04-05">
+    <meta property="article:section" content="交換準備">
+    <meta property="article:tag" content="交換學生">
+    <meta property="article:tag" content="申請攻略">
+    <meta property="article:tag" content="面試技巧">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>📼交換紀錄 | 交換準備、交換申請、面試分享</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H5KNZ3T763');
+    </script>
 </head>
 <body>
-    <!-- Header 與 Navbar -->
-    <header class="top-app-bar">
-        <div class="app-bar-container">
-            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
-            <nav class="nav-links">
-                <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
-                <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
-                <a href="./blog.html" class="nav-link">📝 Blog</a>
+    <!-- 載入畫面 -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>載入文章中...</p>
+        </div>
+    </div>
+
+    <div class="article-page">
+        <!-- Header 與 Navbar -->
+        <header class="top-app-bar">
+            <div class="app-bar-container">
+                <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+                <nav class="nav-links">
+                    <a href="./portfolio.html" class="nav-link btn-icon-text">
+                        <span class="icon">📔</span>
+                        <span class="nav-text">Portfolio</span>
+                    </a>
+                    <a href="./casestudy.html" class="nav-link btn-icon-text">
+                        <span class="icon">📚</span>
+                        <span class="nav-text">Case Study</span>
+                    </a>
+                    <a href="./blog.html" class="nav-link btn-icon-text">
+                        <span class="icon">📝</span>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </nav>
+                <button class="menu-icon btn-icon-only" id="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+
+            <!-- 手機版 dropdown menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="./portfolio.html" class="nav-link btn-icon-text">
+                    <span class="icon">📔</span>
+                    <span>Portfolio</span>
+                </a>
+                <a href="./casestudy.html" class="nav-link btn-icon-text">
+                    <span class="icon">📚</span>
+                    <span>Case Study</span>
+                </a>
+                <a href="./blog.html" class="nav-link btn-icon-text">
+                    <span class="icon">📝</span>
+                    <span>Blog</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- 文章標頭區域 -->
+        <div class="article-header">
+            <!-- 麵包屑導航 -->
+            <nav class="breadcrumb">
+                <a href="./index.html">首頁</a>
+                <span class="separator">›</span>
+                <a href="./blog.html">Blog</a>
+                <span class="separator">›</span>
+                <span>交換準備</span>
+                <span class="separator">›</span>
+                <span>交換申請分享</span>
             </nav>
-            <button class="menu-icon" id="menu-toggle">
-                <span class="material-icons">menu</span>
-            </button>
+
+            <!-- 文章標題區 -->
+            <div class="article-title-section">
+                <h1>📼 交換紀錄 | 交換準備、交換申請、面試分享</h1>
+                
+                <div class="article-info">
+                    <span class="publish-date">📅 2025年4月5日</span>
+                    <span class="read-time">⏱️ 約 8 分鐘閱讀</span>
+                </div>
+                
+                <div class="article-tags">
+                    <span class="article-tag">#交換學生</span>
+                    <span class="article-tag">#申請攻略</span>
+                    <span class="article-tag">#面試技巧</span>
+                    <span class="article-tag">#波蘭交換</span>
+                    <span class="article-tag">#留學準備</span>
+                </div>
+            </div>
         </div>
 
-        <!-- 手機版 dropdown menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html">📔 Portfolio</a>
-            <a href="./casestudy.html">📚 Case Study</a>
-            <a href="./blog.html">📝 Blog</a>
+        <!-- Article Bento Grid 佈局 -->
+        <div class="article-bento-grid">
+            <!-- 主要文章內容 -->
+            <article class="article-content">
+                <h2>交換申請大解析</h2>
+                <p>
+                    我申請那年配分是校內成績30%，書審30%，面試40%。盡量參加交換說明會，現場了解相關資訊和流程，還能及時提問。
+                    雖然國際處有提供提問的office hour的時間，但是要預先約時間，個人認為稍嫌麻煩。
+                    如果無法前往或錯過說明會，補看說明會的錄影，或是參考說明會簡報也足夠。
+                    我們學校的交換申請是線上填寫表格之後，再送紙本文件。交換申請準備文件如下：
+                </p>
+                <ul>
+                    <li>交換計畫書</li>
+                    <li>交換申請表</li>
+                    <li>歷年成績單</li>
+                    <li>語言證明（多益、托福、雅思等）</li>
+                    <li>健康聲明書</li>
+                    <li>其他有利資料</li>
+                </ul>
+
+                <h3>交換計畫書撰寫技巧</h3>
+                <p>
+                    首先如果還沒開通校內Grammarly帳號先去開通，可以幫忙修正英文文法和建議正式用詞。
+                    再來內容部分，交換申請計畫書依照朋友與我自己的經驗，英文組使用英文撰寫一頁到兩頁之間就很足夠，主要是有沒有表達清楚交換的規劃。
+                </p>
+                <p>
+                    計畫書的撰寫技巧，是書寫的角度多以學校要透過交換來培育優秀人才來設想，學校要看到學生已經有哪些優秀能力、培育的潛力如何。
+                    要說明交換對你的好處，以及沒有去交換對你的壞處，強調這段經歷能夠培養你哪些能力、對未來人生發展（包含職涯、自律、獨立等）產生什麼影響。
+                </p>
+                <p>
+                    撰寫架構則跟讀書計畫很像，可以分為短、中、長期來寫，短期為校內徵選上了之後到出去交換前，你打算為交換做什麼準備；
+                    中期就是在交換期間你打算做什麼事情，可以提及在交換的學校想要選修什麼課、想去哪些國家；
+                    長期則是交換回來之後的規劃，像是留學申請、打工度假、工作求職等，如果去交換繪對你有什麼幫助。
+                </p>
+
+                <strong>內容比例建議：</strong>
+                <ol>
+                    <li>
+                        <strong>動機與目標</strong> (30%)
+                        <ul>
+                            <li>為什麼選擇這個國家/學校？</li>
+                            <li>期望達成什麼目標？</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>學術規劃</strong> (20%)
+                        <ul>
+                            <li>想修習的課程</li>
+                            <li>如何與台灣的學業結合</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>個人準備</strong> (25%)
+                        <ul>
+                            <li>語言能力</li>
+                            <li>適應能力</li>
+                            <li>相關經驗</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>未來展望</strong> (25%)
+                        <ul>
+                            <li>交換經驗如何影響未來規劃</li>
+                            <li>如何分享收穫</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    另外，可以提及目前學習語言的方法，生活中什麼時候會使用、訓練到英文能力，目前面臨什麼語言學習困境。
+                    還有，如果有特殊優秀經歷（如競賽、實習、創業），可以結合起來去說服為什麼一定要讓你去交換。
+                    如果還是不知道如何著手撰寫，也可以參考後面羅列的面試問題集，反正面試也會被問到。
+                </p>
+                <h3>交換申請表</h3>
+                <p>
+                    越早填寫越好，就算其他資料還沒準備好，例如還沒拿到語言證明、還沒寫完交換計畫書，也可以先填上去，填完之後需要一些行政建檔時間才會取得申請表。
+                </p>
+
+                <h3>歷年成績單</h3>
+                <p>
+                    歷年成績單要列印包含名次的正本，並自行列印影本。
+                    成績部分，我是研究所出去，無法供大學部參考，不過還是可以說一下，我不是書卷，成績也沒有特別好，甚至比我大學部時期的成績更爛，還是申請成功。
+                    不過這也不是說有申請就會上，我有認識的人因為成績太差，學期平均快要不及格，被當很多課，他申請了沒有進到面試。
+                    個人判斷總成績平均80分以上，都有機會進到面試，不像其他學校可能需要平均90分以上。
+                    有進到面試關卡，幾乎可以確定有交換資格，只是最終被分發的學校你自己有沒有喜歡而已。
+                    如果只是想交換出去，不特別挑國家，我們學校相對其他學校，已經是競爭比較不激烈的了。
+                </p>
+                <blockquote><strong> 偷偷說：</strong>如果目標是旅遊，波蘭CP值很高，而且校內競爭比較小，大推 ✨</blockquote>
+
+                <h3>語言證明</h3>
+                <p>
+                    需要在兩年內考取的語言證明，提供給我們學校的語言證明只需要有就好，我當初用Duolingo English Test。
+                    不過我申請交換的學校不承認，後來繳交TOEIC的語言證明，雖然那張語言證明沒有達到交換學校要求的標準，還是取得交換學校的Offer。
+                </p>
+
+                <h3>其他有利資料</h3>
+                <p>
+                    我附上了實習證書、GA證照，但是回想起來也可以附上自己組隊做的Side Project專案介紹。
+                </p>
+
+                <h2>面試準備與過程分享</h2>
+
+                <h3>面試形式</h3>
+                
+                <p>
+                    我們學校的交換面試歷年都是採團體面試，6人一組，尤其是英文組人數比較多，申請的時間又是上學期出去。
+                    地點在行政大樓6樓，面試當天我自己有穿正裝，觀察其他人大多也是穿著正裝，可是系上學長姐也人說沒有穿著正裝也申請上。
+                    建議穿著整齊整潔即可，至於要不要穿正裝，依個人偏好選擇。
+                </p>
+                <h3>面試過程</h3>
+                <p>
+                    當天抵達面試會場後，需要先報到簽名，等待時間可以坐在外面的椅子上等待，輪到你們那組行政人員會到外面提醒。
+                    面試經常會超出表定時間，一場結束教授們也會討論上一組的情況，再加上每隔幾組會有休息時間，其實不用太早抵達，快到你那組的表定時間再報到即可。
+                    而面試場地大多數會選在行政大樓6樓會議室，不過疫情期間也曾經採取線上面試，而我這屆已經疫情趨緩，聽説後面都會盡量採實體面試，我下一梯次也是實體面試。
+                    面試過程會錄影拍照，面試開始前會詢問許可再開始。
+                </p>
+
+                <p>面試問答主要有兩部分：</p>
+                <ol>
+                    <li><strong>自我介紹</strong>（2分鐘）</li>
+                    <li><strong>英文問答</strong>（1～3分鐘）</li>
+                </ol>
+
+                <p>
+                    一開始會先教授們會提問，同一個問題每個人輪流回答，我那場只有提問兩題。
+                    第一題會從教授的左手邊開始回答，第二題則反過來從右手邊開始。
+                    答題盡量抓在1~3分鐘，回答內容太少教授們想提問也沒辦法，也沒辦法展現英文能力，講太久則會被教授們喊停，沒有回答完整。
+                </p>
+                
+
+                <h3>問題集大搜羅</h3>
+                <p>下面是我自己查學長姐的面試經驗分享文章，整理出來的交換面試問題集：</p>
+
+                <ol>
+                    <li>請你自我介紹一下。</li>
+                    <li>你去交換的動機是什麼？</li>
+                    <li>交換期間規劃/到當地想做什麼/這趟出去希望得到什麼？</li>
+                    <li>去國外之後，怎麼交朋友/怎麼融入當地？</li>
+                    <li>上課如果聽不懂的話，要怎麼解決？</li>
+                    <li>交換的好處除了文化交流，你認為還有什麼？</li>
+                    <li>到了當地跟朋友聊天會怎麼形容台灣/學校？</li>
+                    <li>你會怎麼宣傳台灣/學校，吸引國外學生來台灣唸書？</li>
+                    <li>為什麼覺得自己有資格代表北大去交換？</li>
+                    <li>有沒有讀博士班的意願？</li>
+                    <li>為什麼挑選這所學校進行交換？</li>
+                    <li>課業上有什麼安排？預計選什麼課程？</li>
+                    <li>除了上課，交換期間有什麼休閒娛樂的規劃？</li>
+                    <li>你知道有關交換國家最近發生的事情嗎？</li>
+                    <li>你比其他面試的人好的地方是什麼？</li>
+                    <li>要如何跟其他國家的人介紹台灣？</li>
+                    <li>你覺得台灣跟要去交換的國家，文化上有什麼不同？</li>
+                    <li>交換學生的經歷對你有什麼幫助？</li>
+                    <li>五個志願中，你怎麼選擇去交換的學校？</li>
+                </ol>
+
+
+                <blockquote>
+                    <p>如果每個問題都能用英文流暢的說明3分鐘以上，面試對你來說只是走流程，一定可以去交換！</p>
+                </blockquote>
+
+                <h2>結語</h2>
+                <p>
+                    感謝讀到這裡，原本想著沒有什麼好分享，卻也寫成了長篇大論。
+                    回顧整個申請過程，雖然充滿挑戰，但每一步都是我人生中很重要的里程。
+                    不只是語言能力的提升，更重要的是學會了規劃、堅持和面對焦慮。
+                    希望這些內容有幫助到也想申請交換的學弟妹們，如果還有什麼想了解詢問的事情，歡迎
+                    <a href="mailto:sophia.lue1010@gmail.com">email</a>
+                    問我。我很樂意分享更多經驗 ✨
+                </p>
+            </article>
+
+            <!-- 側邊欄 -->
+            <div class="article-sidebar">
+                <!-- 目錄 -->
+                <div class="toc-container">
+                    <h3>📋 文章目錄</h3>
+                    <nav class="toc">
+                        <ul class="toc-list">
+                            <li><a href="#交換申請大解析" class="toc-link toc-level-1">交換申請大解析</a></li>
+                            <li><a href="#交換計畫書撰寫技巧" class="toc-link toc-level-2">交換計畫書撰寫技巧</a></li>
+                            <li><a href="#交換申請表" class="toc-link toc-level-2">交換申請表</a></li>
+                            <li><a href="#歷年成績單" class="toc-link toc-level-2">歷年成績單</a></li>
+                            <li><a href="#語言證明" class="toc-link toc-level-2">語言證明</a></li>
+                            <li><a href="#其他有利資料" class="toc-link toc-level-2">其他有利資料</a></li>
+                            <li><a href="#面試準備與過程分享" class="toc-link toc-level-1">面試準備與過程分享</a></li>
+                            <li><a href="#面試形式" class="toc-link toc-level-2">面試形式</a></li>
+                            <li><a href="#面試過程" class="toc-link toc-level-2">面試過程</a></li>
+                            <li><a href="#問題集大搜羅" class="toc-link toc-level-2">問題集大搜羅</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- 相關文章 -->
+                <div class="related-posts">
+                    <h3>📖 相關文章</h3>
+                    <div class="related-list">
+                        <article class="related-article">
+                            <a href="./exchangestudent-2.html" class="related-link">
+                                <div class="related-meta">
+                                    <span class="related-category">交換紀錄</span>
+                                    <span class="related-date">2025年6月</span>
+                                </div>
+                                <h4>波蘭郵寄包裹、寄明信片、匯款</h4>
+                                <p class="related-description">在波蘭交換期間處理國際郵寄和匯款的完整經驗分享</p>
+                            </a>
+                        </article>
+                        
+                        <article class="related-article">
+                            <a href="#" class="related-link">
+                                <div class="related-meta">
+                                    <span class="related-category">交換紀錄</span>
+                                    <span class="related-date">即將發布</span>
+                                </div>
+                                <h4>簽證、開戶、ESN card、PESEL</h4>
+                                <p class="related-description">交換前必須處理的重要手續，從申請簽證到波蘭當地開戶</p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 分享區塊 -->
+                <div class="share-section">
+                    <h3>📤 分享文章</h3>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn" onclick="copyToClipboard()">
+                            <span class="icon">🔗</span>
+                            <span>複製連結</span>
+                        </a>
+                        <a href="mailto:?subject=推薦文章：交換申請分享&body=推薦你看這篇文章：📼 交換紀錄 | 交換準備、交換申請、面試分享" class="share-btn">
+                            <span class="icon">✉️</span>
+                            <span>Email 分享</span>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-btn">
+                            <span class="icon">📘</span>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <article>
-        <h1>
-            📼 交換紀錄 | 交換準備、交換申請、面試分享
-        </h1>
-        <div>
-            <p style="font-size: x-small;">發佈日期：2025/04/05</p>
-            <h2>交換準備與申請</h2>
-            <p>
-                我申請那年配分是校內成績30%，書審30%，面試40%。盡量參加交換說明會，現場了解相關資訊和流程，還能及時提問。
-                雖然國際處有提供提問的office hour的時間，但是要預先約時間，個人認為稍嫌麻煩。
-                如果無法前往或錯過說明會，補看說明會的錄影，或是參考說明會簡報也足夠。
-                我們學校的交換申請是線上填寫表格之後，再送紙本文件。交換申請準備文件如下：
-            </p>
-            <ul>
-                <li>交換申請表</li>
-                <li>歷年成績單</li>
-                <li>交換計畫書</li>
-                <li>語言證明（多益、托福、雅思等）</li>
-                <li>健康聲明書</li>
-                <li>其他有利資料</li>
-            </ul>
-            <h3>
-                交換申請表
-            </h3>
-            <p>
-                越早填寫越好，就算其他資料還沒準備好，例如還沒拿到語言證明、還沒寫完交換計畫書，也可以先填上去，填完之後需要一些行政建檔時間才會取得申請表。
-            </p>
-            <h3>
-                歷年成績單
-            </h3>
-            <p>
-                歷年成績單要列印包含名次的正本，並自行列印影本。
-                成績部分，我是研究所出去，無法供大學部參考，不過還是可以說一下，我不是書卷，成績也沒有特別好，甚至比我大學部時期的成績更爛，還是申請成功。
-                不過這也不是說有申請就會上，我有認識的人因為成績太差，學期平均快要不及格，被當很多課，他申請了沒有進到面試。
-                個人判斷總成績平均80分以上，都有機會進到面試，不像其他學校可能需要平均90分以上。
-                有進到面試關卡，幾乎可以確定有交換資格，只是最終被分發的學校你自己有沒有喜歡而已。
-                如果只是想交換出去，不特別挑國家，我們學校相對其他學校，已經是競爭比較不激烈的了。
-            </p>
-            <h3>
-                交換計畫書
-            </h3>
-            <p>
-                首先如果還沒開通校內Grammarly帳號先去開通，可以幫忙修正英文文法和建議正式用詞。
-                再來內容部分，交換申請計畫書依照朋友與我自己的經驗，英文組使用英文撰寫一頁到兩頁之間就很足夠，主要是有沒有表達清楚交換的規劃。
-                計畫書的撰寫技巧，是書寫的角度多以學校要透過交換來培育優秀人才來設想，學校要看到學生已經有哪些優秀能力、培育的潛力如何。
-                要說明交換對你的好處，以及沒有去交換對你的壞處，強調這段經歷能夠培養你哪些能力、對未來人生發展（包含職涯、自律、獨立等）產生什麼影響。
-                撰寫架構則跟讀書計畫很像，可以分為短、中、長期來寫，短期為校內徵選上了之後到出去交換前，你打算為交換做什麼準備；中期就是在交換期間你打算做什麼事情，可以提及在交換的學校想要選修什麼課、想去哪些國家；長期則是交換回來之後的規劃，像是留學申請、打工度假、工作求職等，如果去交換繪對你有什麼幫助。
-                另外，可以提及目前學習語言的方法，生活中什麼時候會使用、訓練到英文能力，目前面臨什麼語言學習困境。
-                還有，如果有特殊優秀經歷（如競賽、實習、創業），可以結合起來去說服為什麼一定要讓你去交換。
-                如果還是不知道如何著手撰寫，也可以參考後面羅列的面試問題集，在計畫書中回答這些問題，反正面試也會被問到。
-            </p>
-            <h3>
-                語言證明
-            </h3>
-            <p>
-                需要在兩年內考取的語言證明，提供給我們學校的語言證明只需要有就好，我當初用Duolingo English Test。
-                不過我申請交換的學校不承認，後來繳交TOEIC的語言證明，雖然那張語言證明沒有達到交換學校要求的標準，還是取得交換學校的Offer。
-            </p>
-            <h3>
-                其他有利資料
-            </h3>
-            <p>
-                我附上了實習證書、GA證照，但是回想起來也可以附上自己組隊做的Side Project專案介紹。
-            </p>
-            <h2>
-                面試準備與過程分享
-            </h2>
-            <p>
-                方式：6人一組，實體團體面試
-                <br>
-                地點：行政大樓6樓
-                <br>
-                服裝：穿著整齊整潔即可
-            </p>
-            <p>
-                我們學校的交換面試歷年都是採團體面試，尤其是英文組人數比較多，申請的時間又是上學期出去。
-                面試當天我自己有穿正裝，觀察其他人大多也是穿著正裝，可是系上學長姐也人說沒有穿著正裝也申請上，建議穿著整齊整潔即可，至於要不要穿正裝，依個人偏好選擇。
-                當天抵達面試會場後，需要先報到簽名，等待時間可以坐在外面的椅子上等待，輪到你們那組行政人員會到外面提醒。
-                面試經常會超出表定時間，一場結束教授們也會討論上一組的情況，再加上每隔幾組會有休息時間，其實不用太早抵達，快到你那組的表定時間再報到即可。
-                而面試場地大多數會選在行政大樓6樓會議室，不過疫情期間也曾經採取線上面試，而我這屆已經疫情趨緩，聽説後面都會盡量採實體面試，我下一梯次也是實體面試。
-                面試過程會錄影拍照，面試開始前會詢問許可再開始。
-                我申請那屆是6人一組，教授們會提問，同一個問題每個人輪流回答，我那場只有提問兩題，第一題會從教授的左手邊開始回答，第二題則反過來從右手邊開始。
-                答題盡量抓在1~3分鐘，回答內容太少教授們想提問也沒辦法，也沒辦法展現英文能力，講太久則會被教授們喊停，沒有回答完整。
-            </p>
-            <p>
-                下面是我自己查學長姐的面試經驗分享文章，整理出來的交換面試問題集，如果每個問題都能用英文流暢的說明3分鐘以上，面試對你來說只是走流程，一定可以去交換：
-            </p>
-            <ol>
-                <li>請你自我介紹一下。</li>
-                <li>你去交換的動機是什麼？</li>
-                <li>交換期間規劃/到當地想做什麼/這趟出去希望得到什麼？</li>
-                <li>去國外之後，怎麼交朋友/怎麼融入當地？</li>
-                <li>上課如果聽不懂的話，要怎麼解決？</li>
-                <li>交換的好處除了文化交流，你認為還有什麼？</li>
-                <li>到了當地跟朋友聊天會怎麼形容台灣/學校？</li>
-                <li>你會怎麼宣傳台灣/學校，吸音國外學生來台灣唸書？</li>
-                <li>為什麼覺得自己有資格代表北大去交換？</li>
-                <li>有沒有讀博士班的意願？</li>
-                <li>為什麼挑選這所學校進行交換？</li>
-                <li>課業上有什麼安排？預計選什麼課程？</li>
-                <li>除了上課，交換期間有什麼休閒娛樂的規劃？</li>
-                <li>你知道有關交換國家最近發生的事情嗎？</li>
-                <li>你比其他面試的人好的地方是什麼？</li>
-                <li>要如何跟其他國家的人介紹台灣？</li>
-                <li>你覺得台灣跟要去交換的國家，文化上有什麼不同？</li>
-                <li>交換學生的經歷對你有什麼幫助？</li>
-                <li>五個志願中，你怎麼選擇去交換的學校ㄋ？</li>
-            </ol>
-            <p>
-                感謝讀到這裡，原本想著沒有什麼好分享，卻也寫成了長篇大論。
-            </p>
-            <p>
-                希望這些內容有幫助到也想申請交換的學弟妹們，如果還有什麼想了解詢問的事情，歡迎
-                <a href="mailto:sophia.lue1010@gmail.com">email</a>
-                問我。
-            </p>
-        </div>
-    </article>
+
+        <!-- 文章底部導航 -->
+        <nav class="article-navigation">
+            <a href="./blog.html" class="nav-back">
+                <span class="icon">←</span>
+                <span>返回文章列表</span>
+            </a>
+            
+            <div class="nav-adjacent">
+                <!-- <a href="#" class="nav-prev">
+                    <span class="nav-label">上一篇</span>
+                    <span class="nav-title">即將發布更多內容</span>
+                </a> -->
+                
+                <a href="./exchangestudent-2.html" class="nav-next">
+                    <span class="nav-label">下一篇</span>
+                    <span class="nav-title">波蘭郵寄包裹、寄明信片、匯款</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-about">
-            <h3>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h3>
-            <p>
-                一個關於交換經驗、個人作品與專案研究的記錄空間。
-                <br>
-                希望透過分享，讓每一段旅程都能留下腳印。
-            </p>
+                <h3>關於本站</h3>
+                <p>
+                    哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。
+                    <br>
+                    平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。
+                    <br>
+                    曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平台的使用體驗。
+                </p>
+                <p>
+                    如果你有什麼想分享或討論的，別猶豫，直接用
+                    <a href="mailto:sophia.lue1010@gmail.com" class="btn btn-icon-text">
+                        <span class="icon">✉️</span>
+                        <span>Email</span>
+                    </a>
+                    聯絡我吧！謝謝泥🦀
+                </p>
             </div>
         
             <div class="footer-support">
-            如果喜歡我的文章內容，歡迎給予實際支持👉
-            <a href="https://p.ecpay.com.tw/6942264" target="_blank" rel="noopener">贊助連結</a>
+                如果喜歡我的文章內容，歡迎給予實際支持👉
+                <a href="https://p.ecpay.com.tw/6942264" class="btn btn-icon-text" target="_blank" rel="noopener">
+                    <span class="icon">💰</span>
+                    <span>贊助連結</span>
+                </a>
             </div>
         
             <div class="footer-social">
-            <a href="https://www.instagram.com/ni_de_life">Instagram</a>
-            <a href="https://www.linkedin.com/in/yu-ning-liu-834596210">LinkedIn</a>
+                <a href="https://www.instagram.com/ni_de_life" class="btn btn-icon-text">
+                    <span class="icon">📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.linkedin.com/in/yu-ning-liu-834596210" class="btn btn-icon-text">
+                    <span class="icon">🔗</span>
+                    <span>LinkedIn</span>
+                </a>
             </div>
         
             <div class="footer-copyright">
-            &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
+                &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
             </div>
         </div>
-        </footer>
-        <script>
-            const menuToggle = document.getElementById("menu-toggle");
-            const mobileMenu = document.getElementById("mobile-menu");
-        
-            menuToggle.addEventListener("click", () => {
-                mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- 文章頁面專用 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 隱藏載入畫面
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 300);
+            }, 800);
+
+            // 目錄滾動高亮
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const headings = document.querySelectorAll('.article-content h2, .article-content h3');
+            
+            // 為標題添加 ID
+            headings.forEach(heading => {
+                const id = heading.textContent.trim();
+                heading.id = id;
             });
-        </script>
+
+            // 滾動監聽
+            function highlightTOC() {
+                let current = '';
+                headings.forEach(heading => {
+                    const rect = heading.getBoundingClientRect();
+                    if (rect.top <= 100) {
+                        current = heading.id;
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightTOC);
+            highlightTOC(); // 初始執行
+
+            // 平滑滾動到目錄項目
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // 複製連結功能
+        function copyToClipboard() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // 創建提示
+                const notification = document.createElement('div');
+                notification.textContent = '✅ 連結已複製到剪貼簿！';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--color-success-500);
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    border-radius: 10px;
+                    font-weight: 500;
+                    z-index: 1000;
+                    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+                    animation: slideIn 0.3s ease-out;
+                `;
+
+                document.body.appendChild(notification);
+
+                // 3秒後移除
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }).catch(() => {
+                alert('複製失敗，請手動複製網址');
+            });
+        }
+
+        // 添加 CSS 動畫
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 結構化資料
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "📼交換紀錄 | 交換準備、交換申請、面試分享",
+            "description": "詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧",
+            "author": {
+                "@type": "Person",
+                "name": "Sophia Lue",
+                "url": "https://www.instagram.com/ni_de_life"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "阿泥在哪裡？",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": ""
+                }
+            },
+            "datePublished": "2025-04-05",
+            "dateModified": "2025-04-05",
+            "articleSection": "交換準備",
+            "keywords": ["交換學生", "申請攻略", "面試技巧", "波蘭交換", "留學準備"],
+            "wordCount": "2000"
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    </script>
 </body>
 </html>
