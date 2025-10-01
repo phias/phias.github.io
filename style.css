@@ -326,6 +326,7 @@ ul.no-bullets {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   align-self: stretch;
   gap: 1.5rem;
@@ -2269,6 +2270,14 @@ section h2 {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+}
+
+.tag-list {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  display: inline-flex;
 }
 
 .learning-path-item .tag {
