@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - 阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="阿泥的部落格 - 分享交換學生經驗、歐洲旅遊攻略、設計心得與生活觀察">
     <meta name="author" content="Sophia Lue">
@@ -12,60 +13,61 @@
     <meta property="og:title" content="Blog - 阿泥在哪裡？｜Sophia's Magic Corner">
     <meta property="og:description" content="交換學生經驗分享與歐洲旅遊攻略">
     <meta property="og:type" content="website">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-H5KNZ3T763');
     </script>
 </head>
+
 <body>
     <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <a href="./index.html" class="btn btn--md btn--text btn--primary">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
             <nav class="nav-links">
-                <a href="./portfolio.html" class="nav-link btn-icon-text">
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📔</span>
                     <span class="nav-text">Portfolio</span>
                 </a>
-                <a href="./casestudy.html" class="nav-link btn-icon-text">
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📚</span>
                     <span class="nav-text">Case Study</span>
                 </a>
-                <a href="./blog.html" class="nav-link btn-icon-text">
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📝</span>
                     <span class="nav-text">Blog</span>
                 </a>
             </nav>
-            <button class="menu-icon btn-icon-only" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle">
                 <span class="material-icons">menu</span>
             </button>
         </div>
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html" class="nav-link btn-icon-text">
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📔</span>
                 <span>Portfolio</span>
             </a>
-            <a href="./casestudy.html" class="nav-link btn-icon-text">
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📚</span>
                 <span>Case Study</span>
             </a>
-            <a href="./blog.html" class="nav-link btn-icon-text">
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📝</span>
                 <span>Blog</span>
             </a>
@@ -74,7 +76,7 @@
 
     <!-- 主內容：Blog bento grid 佈局 -->
     <div class="blog-page">
-        <div class="blog-bento-grid">
+        <div class="blog-layout">
             <!-- Blog文章列表 - 主要內容區域 -->
             <section id="blog-posts" class="section">
                 <div class="section-header">
@@ -85,20 +87,21 @@
                     <!-- 已發布文章 -->
                     <div class="published-posts">
                         <h3 class="category-title">✨ 最新文章</h3>
-                        <div class="card">
+                        <div class="card card-blog">
                             <a href="./exchangestudent-1.html" title="波蘭簽證、國際學生證、PESEL與開戶全攻略">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
                                 </div>
                                 <h3>波蘭簽證、國際學生證、PESEL與開戶全攻略</h3>
-                                <p>準備去波蘭交換或留學？這篇指南幫你一次搞定！內容涵蓋D類學生簽證申請、ISIC/ESNcard選擇、PESEL辦理，以及交換半年銀行帳戶的實用建議。透過作者親身經驗，讓你行前準備不慌亂，輕鬆啟程。</p>
+                                <p>準備去波蘭交換或留學？這篇指南幫你一次搞定！內容涵蓋D類學生簽證申請、ISIC/ESNcard選擇、PESEL辦理，以及交換半年銀行帳戶的實用建議。透過作者親身經驗，讓你行前準備不慌亂，輕鬆啟程。
+                                </p>
                                 <div class="article-meta">
                                     <span class="publish-date">2025年8月</span>
                                     <span class="read-time">12 分鐘閱讀</span>
                                 </div>
                             </a>
                         </div>
-                        
+
 
                     </div>
 
@@ -107,7 +110,7 @@
                         <h3 class="category-title">🚀 即將發布</h3>
                         <div class="upcoming-grid">
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
                                 </div>
@@ -115,7 +118,7 @@
                                 <p>瑞典首都完整攻略，從景點推薦到美食地圖，帶你體驗北歐魅力！</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
                                 </div>
@@ -128,20 +131,21 @@
                     <!-- 交換紀錄系列 -->
                     <div class="city-guides">
                         <h3 class="category-title">📼 交換紀錄</h3>
-                        <div class="card">
+                        <div class="card card-blog">
                             <a href="./exchangestudent-1.html" title="波蘭簽證、國際學生證、PESEL與開戶全攻略">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
                                 </div>
                                 <h3>波蘭簽證、國際學生證、PESEL與開戶全攻略</h3>
-                                <p>準備去波蘭交換或留學？這篇指南幫你一次搞定！內容涵蓋D類學生簽證申請、ISIC/ESNcard選擇、PESEL辦理，以及交換半年銀行帳戶的實用建議。透過作者親身經驗，讓你行前準備不慌亂，輕鬆啟程。</p>
+                                <p>準備去波蘭交換或留學？這篇指南幫你一次搞定！內容涵蓋D類學生簽證申請、ISIC/ESNcard選擇、PESEL辦理，以及交換半年銀行帳戶的實用建議。透過作者親身經驗，讓你行前準備不慌亂，輕鬆啟程。
+                                </p>
                                 <div class="article-meta">
                                     <span class="publish-date">2025年8月</span>
                                     <span class="read-time">12 分鐘閱讀</span>
                                 </div>
                             </a>
                         </div>
-                        <div class="card">
+                        <div class="card card-blog">
                             <a href="./exchangestudent-2.html" title="查看如何在波蘭寄包裹、寄明信片、匯款">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
@@ -154,7 +158,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card">
+                        <div class="card card-blog">
                             <a href="./exchangestudent-0.html" title="查看我的交換準備、交換申請、面試分享">
                                 <div class="card-header">
                                     <span class="category-tag">📼 交換紀錄</span>
@@ -167,98 +171,98 @@
                                 </div>
                             </a>
                         </div>
-                        
+
                     </div>
 
                     <!-- 歐洲城市攻略系列 -->
                     <div class="city-guides">
                         <h3 class="category-title">🏰 歐洲城市攻略</h3>
                         <div class="city-grid">
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">波蘭</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>「如果我能再見到你」在波羅的海三城與馬爾堡尋找「辛梅爾」的足跡【波蘭格但斯克、格丁尼亞、索波特、馬爾堡攻略】</h3>
                                 <p>波蘭北部濱海城市群完整攻略，探索琥珀之都的魅力！</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">波蘭</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>【波蘭克拉克夫攻略】</h3>
                                 <p>波蘭古都完整攻略，從舊城區到奧斯威辛集中營，歷史與美景並存。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">波蘭</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>有點無聊的首都🙁【波蘭華沙攻略】</h3>
                                 <p>華沙旅遊攻略，雖然不是最有趣的城市，但也有它的獨特魅力。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">德國</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>欸？！今天是柏林圍牆倒塌紀念日！【德國柏林攻略】</h3>
                                 <p>德國首都完整攻略，從歷史景點到現代文化，感受這座城市的多元面貌。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">匈牙利</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>胸器不有利🥲【匈牙利布達佩斯攻略】</h3>
                                 <p>多瑙河畔的珍珠，東歐最美首都布達佩斯完整旅遊攻略。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">法國</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>博物館逛到吐🤢聖誕節欸🥺【法國巴黎攻略】</h3>
                                 <p>光之城巴黎完整攻略，從羅浮宮到香榭麗舍大道，經典與浪漫的完美結合。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">波蘭</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>收集小矮人🥰【波蘭樂斯拉夫攻略】</h3>
                                 <p>波蘭威尼斯樂斯拉夫攻略，尋找散落城市各角落的可愛小矮人雕像！</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">波蘭</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>歐洲知名滑雪勝地✨【波蘭札克帕內攻略】</h3>
                                 <p>波蘭南部高塔特拉山區，冬季滑雪夏季健行的絕佳去處。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">丹麥</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>【丹麥哥本哈根攻略】</h3>
                                 <p>童話王國首都哥本哈根攻略，從小美人魚到新港運河，體驗北歐幸福感。</p>
                             </div>
 
-                            <div class="card coming-soon">
+                            <div class="card card-coming-soon">
                                 <div class="card-header">
                                     <span class="category-tag">瑞士</span>
-                                    <span class="coming-soon-badge">即將發布</span>
+                                    <span class="status-chip">即將發布</span>
                                 </div>
                                 <h3>冬天不要來（認真）【瑞士蘇黎世攻略】</h3>
                                 <p>瑞士最大城市蘇黎世攻略，美麗但昂貴的阿爾卑斯山麓體驗。</p>
@@ -268,7 +272,7 @@
 
                 </div>
             </section>
-            
+
             <!-- 右側側邊欄容器 -->
             <div class="blog-sidebar">
                 <!-- 關於區塊 -->
@@ -300,13 +304,13 @@
                                 <span class="category-name">交換紀錄</span>
                                 <span class="category-count">2</span>
                             </div>
-                            
+
                             <!-- <div class="category-item">
                                 <span class="category-icon">🏰</span>
                                 <span class="category-name">城市攻略</span>
                                 <span class="category-count">15</span>
                             </div> -->
-                            
+
                         </div>
                     </div>
                 </section>
@@ -328,62 +332,89 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-about">
-                <h3>關於本站</h3>
-                <p>
-                    哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。
-                    <br>
-                    平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。
-                    <br>
-                    曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平台的使用體驗。
-                </p>
-                <p>
-                    如果你有什麼想分享或討論的，別猶豫，直接用
-                    <a href="mailto:sophia.lue1010@gmail.com" class="btn btn-icon-text">
-                        <span class="icon">✉️</span>
-                        <span>Email</span>
-                    </a>
-                    聯絡我吧！謝謝泥🦀
-                </p>
-            </div>
-        
-            <div class="footer-support">
-                如果喜歡我的文章內容，歡迎給予實際支持👉
-                <a href="https://p.ecpay.com.tw/6942264" class="btn btn-icon-text" target="_blank" rel="noopener">
-                    <span class="icon">💰</span>
-                    <span>贊助連結</span>
+            <div data-layer="card-about" class="card-about">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Text" class="AboutText">關於阿泥</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="About Description" class="AboutDescription">
+                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。</div>
+                    <div data-layer="About Description" class="AboutDescription">
+                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。</div>
+                    <div data-layer="About Description" class="AboutDescription">曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW
+                        實戰營，協助優化線上學習平台的使用體驗。</div>
+                </div>
+                <a href="mailto:sophia.lue1010@gmail.com" data-layer="cardlink" class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <span class="material-symbols-rounded cardlink-icon">
+                        mail
+                    </span>
+                    <div data-layer="Contact Text" class="cardlink-text">聯絡我</div>
                 </a>
             </div>
-        
-            <div class="footer-social">
-                <a href="https://www.instagram.com/ni_de_life" class="btn btn-icon-text">
-                    <span class="icon">📷</span>
-                    <span>Instagram</span>
+
+            <div data-layer="card-toc" class="card-toc">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
+                </div>
+
+                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                    <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
+                </a>
+                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                    <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
+                </a>
+                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                    <div data-layer="Blog Text" class="cardlink-text">Blog</div>
                 </a>
             </div>
-        
-            <div class="footer-copyright">
-                &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
+
+            <div data-layer="card-support" class="card-support">
+                <div data-layer="card-header" class="cardheader">
+                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Text" class="cardheader-text">支持創作</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://buymeacoffee.com/sophialue14" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--tertiary">
+                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
+                </a>
+            </div>
+
+            <div data-layer="card-social" class="card-social">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://www.instagram.com/ni_de_life" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--secondary">
+                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
+                </a>
+
             </div>
         </div>
+        <div data-layer="footer-signature" class="FooterSignature"
+            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText"
+                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+                © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
+        </div>
     </footer>
-    
-    <!-- 基本 JavaScript 用於手機選單 -->
-    <script>
-        // 手機選單切換功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                });
-            }
-        });
-    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>

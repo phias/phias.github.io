@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📼交換紀錄 | 交換準備、交換申請、面試分享 - 阿泥在哪裡？</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧。不是最頂尖也能申請成功，掌握關鍵細節踏出第一步！">
     <meta name="author" content="Sophia Liu">
     <meta name="keywords" content="交換學生, 交換申請, 面試技巧, 交換計畫書, 波蘭交換, 留學準備, 臺北大學, 研究所交換">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="📼交換紀錄 | 交換準備、交換申請、面試分享">
     <meta property="og:description" content="詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧">
@@ -20,75 +21,70 @@
     <meta property="article:tag" content="交換學生">
     <meta property="article:tag" content="申請攻略">
     <meta property="article:tag" content="面試技巧">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-H5KNZ3T763');
     </script>
 </head>
+
 <body>
-    <!-- 載入畫面 -->
-    <div class="loading-screen" id="loading-screen">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <p>載入文章中...</p>
-        </div>
-    </div>
-
-    <div class="article-page">
-        <!-- Header 與 Navbar -->
-        <header class="top-app-bar">
-            <div class="app-bar-container">
-                <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
-                <nav class="nav-links">
-                    <a href="./portfolio.html" class="nav-link btn-icon-text">
-                        <span class="icon">📔</span>
-                        <span class="nav-text">Portfolio</span>
-                    </a>
-                    <a href="./casestudy.html" class="nav-link btn-icon-text">
-                        <span class="icon">📚</span>
-                        <span class="nav-text">Case Study</span>
-                    </a>
-                    <a href="./blog.html" class="nav-link btn-icon-text">
-                        <span class="icon">📝</span>
-                        <span class="nav-text">Blog</span>
-                    </a>
-                </nav>
-                <button class="menu-icon btn-icon-only" id="menu-toggle">
-                    <span class="material-icons">menu</span>
-                </button>
-            </div>
-
-            <!-- 手機版 dropdown menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <a href="./portfolio.html" class="nav-link btn-icon-text">
+    <!-- Header 與 Navbar -->
+    <header class="top-app-bar">
+        <div class="app-bar-container">
+            <a href="./index.html" class="btn btn--md btn--text btn--primary site-title">
+                <span class="title-full">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</span>
+                <span class="title-short">✨阿泥在哪裡？🧙‍♀️</span>
+            </a>
+            <nav class="nav-links">
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📔</span>
-                    <span>Portfolio</span>
+                    <span class="nav-text">Portfolio</span>
                 </a>
-                <a href="./casestudy.html" class="nav-link btn-icon-text">
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📚</span>
-                    <span>Case Study</span>
+                    <span class="nav-text">Case Study</span>
                 </a>
-                <a href="./blog.html" class="nav-link btn-icon-text">
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📝</span>
-                    <span>Blog</span>
+                    <span class="nav-text">Blog</span>
                 </a>
-            </div>
-        </header>
+            </nav>
+            <button class="menu-icon" id="menu-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
 
+        <!-- 手機版 dropdown menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📔</span>
+                <span>Portfolio</span>
+            </a>
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📚</span>
+                <span>Case Study</span>
+            </a>
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📝</span>
+                <span>Blog</span>
+            </a>
+        </div>
+    </header>
+    <div class="article-page">
         <!-- 文章標頭區域 -->
         <div class="article-header">
             <!-- 麵包屑導航 -->
@@ -105,12 +101,12 @@
             <!-- 文章標題區 -->
             <div class="article-title-section">
                 <h1>📼 交換紀錄 | 交換準備、交換申請、面試分享</h1>
-                
+
                 <div class="article-info">
                     <span class="publish-date">📅 2025年4月5日</span>
                     <span class="read-time">⏱️ 約 8 分鐘閱讀</span>
                 </div>
-                
+
                 <div class="article-tags">
                     <span class="article-tag">#交換學生</span>
                     <span class="article-tag">#申請攻略</span>
@@ -223,7 +219,7 @@
                 <h2>面試準備與過程分享</h2>
 
                 <h3>面試形式</h3>
-                
+
                 <p>
                     我們學校的交換面試歷年都是採團體面試，6人一組，尤其是英文組人數比較多，申請的時間又是上學期出去。
                     地點在行政大樓6樓，面試當天我自己有穿正裝，觀察其他人大多也是穿著正裝，可是系上學長姐也人說沒有穿著正裝也申請上。
@@ -248,7 +244,7 @@
                     第一題會從教授的左手邊開始回答，第二題則反過來從右手邊開始。
                     答題盡量抓在1~3分鐘，回答內容太少教授們想提問也沒辦法，也沒辦法展現英文能力，講太久則會被教授們喊停，沒有回答完整。
                 </p>
-                
+
 
                 <h3>問題集大搜羅</h3>
                 <p>下面是我自己查學長姐的面試經驗分享文章，整理出來的交換面試問題集：</p>
@@ -292,71 +288,70 @@
             </article>
 
             <!-- 側邊欄 -->
-            <div class="article-sidebar">
-                <!-- 目錄 -->
-                <div class="toc-container">
-                    <h3>📋 文章目錄</h3>
-                    <nav class="toc">
-                        <ul class="toc-list">
-                            <li><a href="#交換申請大解析" class="toc-link toc-level-1">交換申請大解析</a></li>
-                            <li><a href="#交換計畫書撰寫技巧" class="toc-link toc-level-2">交換計畫書撰寫技巧</a></li>
-                            <li><a href="#交換申請表" class="toc-link toc-level-2">交換申請表</a></li>
-                            <li><a href="#歷年成績單" class="toc-link toc-level-2">歷年成績單</a></li>
-                            <li><a href="#語言證明" class="toc-link toc-level-2">語言證明</a></li>
-                            <li><a href="#其他有利資料" class="toc-link toc-level-2">其他有利資料</a></li>
-                            <li><a href="#面試準備與過程分享" class="toc-link toc-level-1">面試準備與過程分享</a></li>
-                            <li><a href="#面試形式" class="toc-link toc-level-2">面試形式</a></li>
-                            <li><a href="#面試過程" class="toc-link toc-level-2">面試過程</a></li>
-                            <li><a href="#問題集大搜羅" class="toc-link toc-level-2">問題集大搜羅</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <!-- 目錄 -->
+            <div class="toc-container">
+                <h3>📋 文章目錄</h3>
+                <nav class="toc">
+                    <ul class="toc-list">
+                        <li><a href="#交換申請大解析" class="toc-link toc-level-1">交換申請大解析</a></li>
+                        <li><a href="#交換計畫書撰寫技巧" class="toc-link toc-level-2">交換計畫書撰寫技巧</a></li>
+                        <li><a href="#交換申請表" class="toc-link toc-level-2">交換申請表</a></li>
+                        <li><a href="#歷年成績單" class="toc-link toc-level-2">歷年成績單</a></li>
+                        <li><a href="#語言證明" class="toc-link toc-level-2">語言證明</a></li>
+                        <li><a href="#其他有利資料" class="toc-link toc-level-2">其他有利資料</a></li>
+                        <li><a href="#面試準備與過程分享" class="toc-link toc-level-1">面試準備與過程分享</a></li>
+                        <li><a href="#面試形式" class="toc-link toc-level-2">面試形式</a></li>
+                        <li><a href="#面試過程" class="toc-link toc-level-2">面試過程</a></li>
+                        <li><a href="#問題集大搜羅" class="toc-link toc-level-2">問題集大搜羅</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-                <!-- 相關文章 -->
-                <div class="related-posts">
-                    <h3>📖 相關文章</h3>
-                    <div class="related-list">
-                        <article class="related-article">
-                            <a href="./exchangestudent-2.html" class="related-link">
-                                <div class="related-meta">
-                                    <span class="related-category">📼 交換紀錄</span>
-                                    <span class="related-date">2025年6月</span>
-                                </div>
-                                <h4>波蘭郵寄包裹、寄明信片、匯款</h4>
-                                <p class="related-description">在波蘭交換期間，遇到寄包裹回台、寄明信片給朋友、甚至處理國際匯款的情況嗎？這篇文章分享我親身經驗，包括郵資、流程、注意事項，幫助你順利搞定留學生活裡的小事！</p>
-                            </a>
-                        </article>
-                        
-                        <article class="related-article">
-                            <a href="./exchangestudent-1.html" class="related-link">
-                                <div class="related-meta">
-                                    <span class="related-category">📼 交換紀錄</span>
-                                    <span class="related-date">2025年8月</span>
-                                </div>
-                                <h4>波蘭簽證、國際學生證、PESEL與開戶全攻略</h4>
-                                <p class="related-description">交換前期必須處理的重要手續，從申請簽證到網銀開戶，眉眉角角詳細說給你聽！</p>
-                            </a>
-                        </article>
-                    </div>
-                </div>
+            <!-- 相關文章 -->
+            <div class="related-posts">
+                <h3>📖 相關文章</h3>
+                <div class="related-list">
+                    <article class="related-article">
+                        <a href="./exchangestudent-2.html" class="related-link">
+                            <div class="related-meta">
+                                <span class="related-category">📼 交換紀錄</span>
+                                <span class="related-date">2025年6月</span>
+                            </div>
+                            <h4>波蘭郵寄包裹、寄明信片、匯款</h4>
+                            <p class="related-description">
+                                在波蘭交換期間，遇到寄包裹回台、寄明信片給朋友、甚至處理國際匯款的情況嗎？這篇文章分享我親身經驗，包括郵資、流程、注意事項，幫助你順利搞定留學生活裡的小事！</p>
+                        </a>
+                    </article>
 
-                <!-- 分享區塊 -->
-                <div class="share-section">
-                    <h3>📤 分享文章</h3>
-                    <div class="share-buttons">
-                        <a href="#" class="share-btn" onclick="copyToClipboard()">
-                            <span class="icon">🔗</span>
-                            <span>複製連結</span>
+                    <article class="related-article">
+                        <a href="./exchangestudent-1.html" class="related-link">
+                            <div class="related-meta">
+                                <span class="related-category">📼 交換紀錄</span>
+                                <span class="related-date">2025年8月</span>
+                            </div>
+                            <h4>波蘭簽證、國際學生證、PESEL與開戶全攻略</h4>
+                            <p class="related-description">交換前期必須處理的重要手續，從申請簽證到網銀開戶，眉眉角角詳細說給你聽！</p>
                         </a>
-                        <a href="mailto:?subject=推薦文章：交換申請分享&body=推薦你看這篇文章：📼 交換紀錄 | 交換準備、交換申請、面試分享" class="share-btn">
-                            <span class="icon">✉️</span>
-                            <span>Email 分享</span>
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-btn">
-                            <span class="icon">📘</span>
-                            <span>Facebook</span>
-                        </a>
-                    </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 分享區塊 -->
+            <div class="share-section">
+                <h3>📤 分享文章</h3>
+                <div class="share-buttons">
+                    <a href="#" class="btn btn--md btn--outline-filled btn--linear-secondary" onclick="copyToClipboard()">
+                        <span class="icon">🔗</span>
+                        <span>複製連結</span>
+                    </a>
+                    <a href="mailto:?subject=推薦文章：交換申請分享&body=推薦你看這篇文章：📼 交換紀錄 | 交換準備、交換申請、面試分享" class="btn btn--md btn--outline-filled btn--linear-secondary">
+                        <span class="icon">✉️</span>
+                        <span>Email 分享</span>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="btn btn--md btn--outline-filled btn--linear-secondary">
+                        <span class="icon">📘</span>
+                        <span>Facebook</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -367,13 +362,13 @@
                 <span class="icon">←</span>
                 <span>返回文章列表</span>
             </a>
-            
+
             <div class="nav-adjacent">
                 <!-- <a href="#" class="nav-prev">
                     <span class="nav-label">上一篇</span>
                     <span class="nav-title">即將發布更多內容</span>
                 </a> -->
-                
+
                 <a href="./exchangestudent-2.html" class="nav-next">
                     <span class="nav-label">下一篇</span>
                     <span class="nav-title">波蘭郵寄包裹、寄明信片、匯款</span>
@@ -385,190 +380,89 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-about">
-                <h3>關於本站</h3>
-                <p>
-                    哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。
-                    <br>
-                    平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。
-                    <br>
-                    曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平台的使用體驗。
-                </p>
-                <p>
-                    如果你有什麼想分享或討論的，別猶豫，直接用
-                    <a href="mailto:sophia.lue1010@gmail.com" class="btn btn-icon-text">
-                        <span class="icon">✉️</span>
-                        <span>Email</span>
-                    </a>
-                    聯絡我吧！謝謝泥🦀
-                </p>
-            </div>
-        
-            <div class="footer-support">
-                如果喜歡我的文章內容，歡迎給予實際支持👉
-                <a href="https://p.ecpay.com.tw/6942264" class="btn btn-icon-text" target="_blank" rel="noopener">
-                    <span class="icon">💰</span>
-                    <span>贊助連結</span>
+            <div data-layer="card-about" class="card-about">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Text" class="AboutText">關於阿泥</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="About Description" class="AboutDescription">
+                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。</div>
+                    <div data-layer="About Description" class="AboutDescription">
+                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。</div>
+                    <div data-layer="About Description" class="AboutDescription">曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW
+                        實戰營，協助優化線上學習平台的使用體驗。</div>
+                </div>
+                <a href="mailto:sophia.lue1010@gmail.com" data-layer="cardlink"
+                    class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <span class="material-symbols-rounded cardlink-icon">
+                        mail
+                    </span>
+                    <div data-layer="Contact Text" class="cardlink-text">聯絡我</div>
                 </a>
             </div>
-        
-            <div class="footer-social">
-                <a href="https://www.instagram.com/ni_de_life" class="btn btn-icon-text">
-                    <span class="icon">📷</span>
-                    <span>Instagram</span>
+
+            <div data-layer="card-toc" class="card-toc">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
+                </div>
+
+                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                    <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
                 </a>
-                <a href="https://www.linkedin.com/in/yu-ning-liu-834596210" class="btn btn-icon-text">
-                    <span class="icon">🔗</span>
-                    <span>LinkedIn</span>
+                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                    <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
+                </a>
+                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                    <div data-layer="Blog Text" class="cardlink-text">Blog</div>
                 </a>
             </div>
-        
-            <div class="footer-copyright">
-                &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
+
+            <div data-layer="card-support" class="card-support">
+                <div data-layer="card-header" class="cardheader">
+                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Text" class="cardheader-text">支持創作</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://buymeacoffee.com/sophialue14" data-layer="cardlink"
+                    class="btn btn--lg btn--outline-filled btn--tertiary">
+                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
+                </a>
             </div>
+
+            <div data-layer="card-social" class="card-social">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://www.instagram.com/ni_de_life" data-layer="cardlink"
+                    class="btn btn--lg btn--outline-filled btn--secondary">
+                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
+                </a>
+
+            </div>
+        </div>
+        <div data-layer="footer-signature" class="FooterSignature"
+            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText"
+                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+                © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-    
-    <!-- 文章頁面專用 JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 隱藏載入畫面
-            const loadingScreen = document.getElementById('loading-screen');
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 300);
-            }, 800);
-
-            // 目錄滾動高亮
-            const tocLinks = document.querySelectorAll('.toc-link');
-            const headings = document.querySelectorAll('.article-content h2, .article-content h3');
-            
-            // 為標題添加 ID
-            headings.forEach(heading => {
-                const id = heading.textContent.trim();
-                heading.id = id;
-            });
-
-            // 滾動監聽
-            function highlightTOC() {
-                let current = '';
-                headings.forEach(heading => {
-                    const rect = heading.getBoundingClientRect();
-                    if (rect.top <= 100) {
-                        current = heading.id;
-                    }
-                });
-
-                tocLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', highlightTOC);
-            highlightTOC(); // 初始執行
-
-            // 平滑滾動到目錄項目
-            tocLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // 複製連結功能
-        function copyToClipboard() {
-            navigator.clipboard.writeText(window.location.href).then(() => {
-                // 創建提示
-                const notification = document.createElement('div');
-                notification.textContent = '✅ 連結已複製到剪貼簿！';
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: var(--color-success-500);
-                    color: white;
-                    padding: 1rem 1.5rem;
-                    border-radius: 10px;
-                    font-weight: 500;
-                    z-index: 1000;
-                    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-                    animation: slideIn 0.3s ease-out;
-                `;
-
-                document.body.appendChild(notification);
-
-                // 3秒後移除
-                setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.3s ease-in';
-                    setTimeout(() => {
-                        document.body.removeChild(notification);
-                    }, 300);
-                }, 3000);
-            }).catch(() => {
-                alert('複製失敗，請手動複製網址');
-            });
-        }
-
-        // 添加 CSS 動畫
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // 結構化資料
-        const structuredData = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "📼交換紀錄 | 交換準備、交換申請、面試分享",
-            "description": "詳細分享研究所交換申請流程，包含書審準備、交換計畫書撰寫、語言證明選擇與團體面試技巧",
-            "author": {
-                "@type": "Person",
-                "name": "Sophia Liu",
-                "url": "https://www.instagram.com/ni_de_life"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "阿泥在哪裡？",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": ""
-                }
-            },
-            "datePublished": "2025-04-05",
-            "dateModified": "2025-04-05",
-            "articleSection": "交換紀錄",
-            "keywords": ["交換學生", "申請攻略", "面試技巧", "波蘭交換", "留學準備"],
-            "wordCount": "2000"
-        };
-
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
-        document.head.appendChild(script);
-    </script>
 </body>
+
 </html>

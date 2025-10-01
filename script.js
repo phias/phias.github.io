@@ -1,286 +1,293 @@
-// === 導覽選單功能 ===
 document.addEventListener("DOMContentLoaded", () => {
+    // === 導覽選單功能 ===
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const appBar = document.querySelector(".top-app-bar");
-    
-    // 檢查元素是否存在（可能在某些頁面不存在）
-    if (!menuToggle || !mobileMenu || !appBar) {
-        console.warn("Navigation elements not found on this page");
-        return;
-    }
-    
-    let isMenuOpen = false;
-
-    // 開關選單
-    function toggleMenu() {
-        isMenuOpen = !isMenuOpen;
-        
-        if (isMenuOpen) {
-            // 打開選單
-            mobileMenu.style.display = "flex";
-            setTimeout(() => {
-                mobileMenu.classList.add('show');
-            }, 10); // 短暫延遲確保動畫效果
-            menuToggle.classList.add('active');
-        } else {
-            // 關閉選單
-            mobileMenu.classList.remove('show');
-            setTimeout(() => {
-                mobileMenu.style.display = "none";
-            }, 300); // 等待動畫完成
-            menuToggle.classList.remove('active');
+    if (menuToggle && mobileMenu && appBar) {
+        let isMenuOpen = false;
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.style.display = "flex";
+                setTimeout(() => { mobileMenu.classList.add('show'); }, 10);
+                menuToggle.classList.add('active');
+                menuToggle.setAttribute('aria-expanded', "true");
+            } else {
+                mobileMenu.classList.remove('show');
+                setTimeout(() => { mobileMenu.style.display = "none"; }, 300);
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', "false");
+            }
+            const icon = menuToggle.querySelector('.material-symbols-rounded');
+            if (icon) icon.textContent = isMenuOpen ? 'close' : 'menu';
         }
-        
-        // 更新按鈕圖標
-        const icon = menuToggle.querySelector('.material-icons');
-        if (icon) {
-            icon.textContent = isMenuOpen ? 'close' : 'menu';
-        }
-    }
-
-    // 關閉選單
-    function closeMenu() {
-        if (isMenuOpen) {
-            isMenuOpen = false;
-            mobileMenu.classList.remove('show');
-            menuToggle.classList.remove('active');
-            setTimeout(() => {
-                mobileMenu.style.display = "none";
-            }, 300);
-            
-            const icon = menuToggle.querySelector('.material-icons');
-            if (icon) {
-                icon.textContent = 'menu';
+        function closeMenu() {
+            if (isMenuOpen) {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('show');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', "false");
+                setTimeout(() => { mobileMenu.style.display = "none"; }, 300);
+                const icon = menuToggle.querySelector('.material-symbols-rounded');
+                if (icon) icon.textContent = 'menu';
             }
         }
-    }
-
-    // 點擊漢堡選單按鈕
-    menuToggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        toggleMenu();
-    });
-
-    // 點擊選單項目後關閉
-    const menuLinks = mobileMenu.querySelectorAll('.nav-link');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // 點擊選單外的區域關閉選單
-    document.addEventListener('click', (e) => {
-        if (isMenuOpen && !appBar.contains(e.target)) {
-            closeMenu();
-        }
-    });
-
-    // 按 ESC 鍵關閉選單
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isMenuOpen) {
-            closeMenu();
-        }
-    });
-
-    // 視窗大小改變時關閉選單（切換到電腦版時）
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && isMenuOpen) {
-            closeMenu();
-        }
-    });
-});
-
-// === 聊天介紹動畫 ===
-document.addEventListener("DOMContentLoaded", () => {
-    const section = document.getElementById("chat-section");
-    
-    // 檢查元素是否存在（因為不是所有頁面都有聊天區塊）
-    if (!section) {
-        return; // 如果沒有聊天區塊就跳過
-    }
-    
-    const messages = section.querySelectorAll(".chat-message");
-
-    // 如果沒有消息就跳過
-    if (messages.length === 0) {
-        return;
-    }
-
-    const options = {
-        threshold: 0.2
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                messages.forEach((msg, i) => {
-                    setTimeout(() => {
-                        msg.style.opacity = "1";
-                        msg.style.transform = "translateY(0)";
-                    }, i * 600); // 每句話間隔 600ms 出現
-                });
-                observer.unobserve(entry.target);
-            }
+        menuToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
-    }, options);
+        mobileMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !appBar.contains(e.target)) closeMenu();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) closeMenu();
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && isMenuOpen) closeMenu();
+        });
+    }
 
-    observer.observe(section);
-});
+    // === 聊天介紹動畫 ===
+    const section = document.getElementById("chat-section");
+    if (section) {
+        const messages = section.querySelectorAll(".chat-message");
+        if (messages.length > 0) {
+            const options = { threshold: 0.2 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        messages.forEach((msg, i) => {
+                            setTimeout(() => {
+                                msg.style.opacity = "1";
+                                msg.style.transform = "translateY(0)";
+                            }, i * 600);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            observer.observe(section);
+        }
+    }
 
-// === 平滑滾動功能 ===
-document.addEventListener("DOMContentLoaded", () => {
-    // 為所有內部錨點連結添加平滑滾動
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    internalLinks.forEach(link => {
+    // === 平滑滾動功能 ===
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
             const targetId = link.getAttribute('href');
-            
-            // 跳過空錨點
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
                 e.preventDefault();
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
-});
 
-// === 返回頂部功能 ===
-document.addEventListener("DOMContentLoaded", () => {
-    // 創建返回頂部按鈕（可選功能）
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '↑';
-    backToTopButton.className = 'back-to-top';
-    backToTopButton.style.cssText = `
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: var(--color-primary-500);
-        color: white;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-        box-shadow: 0 4px 12px rgba(174, 233, 238, 0.3);
-    `;
-
-    document.body.appendChild(backToTopButton);
-
-    // 顯示/隱藏返回頂部按鈕
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.opacity = '1';
-            backToTopButton.style.visibility = 'visible';
-        } else {
-            backToTopButton.style.opacity = '0';
-            backToTopButton.style.visibility = 'hidden';
-        }
-    });
-
-    // 點擊返回頂部
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // hover 效果
-    backToTopButton.addEventListener('mouseenter', () => {
-        backToTopButton.style.background = 'var(--color-primary-700)';
-        backToTopButton.style.transform = 'translateY(-2px)';
-    });
-
-    backToTopButton.addEventListener('mouseleave', () => {
-        backToTopButton.style.background = 'var(--color-primary-500)';
-        backToTopButton.style.transform = 'translateY(0)';
-    });
-});
-
-// === 工具函數 ===
-// 防抖函數（用於優化性能）
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// 節流函數（用於優化性能）
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// === 錯誤處理 ===
-window.addEventListener('error', (e) => {
-    console.error('JavaScript Error:', e.error);
-    // 可以在這裡添加錯誤回報邏輯
-});
-
-// === 效能監控（開發時使用） ===
-if (window.performance && window.performance.measure) {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const navigation = window.performance.getEntriesByType('navigation')[0];
-            console.log(`頁面載入時間: ${navigation.loadEventEnd - navigation.loadEventStart}ms`);
-        }, 0);
-    });
-}
-
-// === SEO 和分析增強 ===
-document.addEventListener("DOMContentLoaded", () => {
-    // 結構化資料（JSON-LD）
+    // === SEO 和分析增強 ===
     function addStructuredData() {
-        if (window.location.pathname.includes('article.html')) {
-            // 為文章頁面添加結構化資料
+        const pathname = window.location.pathname;
+        if (pathname.includes('article.html') || pathname.includes('exchangestudent-')) {
             const script = document.createElement('script');
             script.type = 'application/ld+json';
             script.textContent = JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
-                "author": {
-                    "@type": "Person",
-                    "name": "Sophia Lue"
-                },
+                "author": { "@type": "Person", "name": "Sophia Lue" },
                 "publisher": {
                     "@type": "Organization",
                     "name": "阿泥在哪裡？",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://yourdomain.com/logo.png"
-                    }
+                    "logo": { "@type": "ImageObject", "url": "https://yourdomain.com/logo.png" }
                 }
             });
             document.head.appendChild(script);
         }
     }
-
     addStructuredData();
 });
+
+// 將新的 JS 程式碼包在一個立即執行的函式中，避免與原 script.js 衝突
+(function () {
+    // 確保 DOM 已載入
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupCardStacker);
+    } else {
+        setupCardStacker();
+    }
+
+    function setupCardStacker() {
+        const projects = [
+            { id: 1, title: 'Timesow Puzzle 時間管理工具', description: '結合番茄鐘與拼圖遊戲的 App，讓時間管理變得更有趣。', imageUrl: 'https://placehold.co/600x450/82CFD8/FFFFFF?text=Timesow', tags: ['product-design', 'ux-research', 'ui-ux'] },
+            { id: 2, title: '線上學習平台優化', description: '從使用者回饋出發，優化課程觀看與互動介面。', imageUrl: 'https://placehold.co/600x450/52ACB7/FFFFFF?text=E-Learning', tags: ['side-project', 'ux-research', 'ui-ux'] },
+            { id: 3, title: '財富管理體驗優化', description: '重新釐清使用者需求，打造滿意的財富管理體驗。', imageUrl: 'https://placehold.co/600x450/FF9443/FFFFFF?text=Fintech', tags: ['product-design', 'fintech', 'data-tech'] },
+            { id: 4, title: '數據儀表板設計', description: '將複雜數據轉化為清晰易懂的視覺化圖表。', imageUrl: 'https://placehold.co/600x450/FFBB6E/FFFFFF?text=Dashboard', tags: ['side-project', 'data-tech', 'ui-ux'] },
+            { id: 5, title: '使用者訪談與分析', description: '透過深度訪談，挖掘使用者真實痛點與需求。', imageUrl: 'https://placehold.co/600x450/CC5680/FFFFFF?text=Interview', tags: ['ux-research'] },
+            { id: 6, title: '永續時尚 App 概念', description: '一個旨在推廣二手衣物交換與租賃的平台概念。', imageUrl: 'https://placehold.co/600x450/994160/FFFFFF?text=Fashion+App', tags: ['product-design', 'side-project', 'ui-ux'] }
+        ];
+
+        const stacker = document.getElementById('card-stacker');
+        if (!stacker) {
+            console.error('Card stacker container not found!');
+            return;
+        }
+
+        // *** 新增：獲取 DOM 元素 ***
+        const featuredProjectSection = document.querySelector('.featured-project');
+        const allProjectsTitle = document.querySelector('.all-projects .section-title');
+
+        let cardElements = [];
+        let currentIndex = 0;
+        let visibleCards = [];
+        let isScrolling = false;
+        let activeFilter = 'all';
+
+        const tagDisplayMap = {
+            'product-design': '產品設計',
+            'ux-research': 'UX 研究',
+            'side-project': 'Side Project',
+            'ui-ux': 'UI/UX設計',
+            'fintech': '金融科技',
+            'data-tech': '數據科技'
+        };
+
+        function createCards() {
+            stacker.innerHTML = ''; // 清空容器
+            cardElements = []; // 清空陣列
+            projects.forEach(project => {
+                const card = document.createElement('a');
+                card.href = `#project-${project.id}`;
+                card.className = 'project-card';
+                card.dataset.tags = project.tags.join(' ');
+
+                const chipText = tagDisplayMap[project.tags[0]] || project.tags[0];
+
+                const tagsHtml = project.tags.map(tagKey => {
+                    const displayTag = tagDisplayMap[tagKey] || tagKey;
+                    return `<span class="tag"># ${displayTag}</span>`;
+                }).join('');
+
+                card.innerHTML = `
+                            <div class="card-content">
+                                <div class="card-chip">${chipText}</div>
+                                <div class="card-image-container">
+                                    <img src="${project.imageUrl}" alt="${project.title}">
+                                </div>
+                                <div class="card-text-content">
+                                    <h4>${project.title}</h4>
+                                    <p>${project.description}</p>
+                                    <div class="tag-group">
+                                        ${tagsHtml}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                stacker.appendChild(card);
+                cardElements.push(card);
+            });
+        }
+
+        function updateCardPositions() {
+            if (visibleCards.length === 0) return;
+
+            visibleCards.forEach((card, index) => {
+                card.classList.remove('is-active');
+
+                if (index < currentIndex) {
+                    const stackOffset = currentIndex - index;
+                    card.style.transform = `translateY(${stackOffset * -30}px) translateZ(-${stackOffset * 80}px) scale(${1 - stackOffset * 0.05})`;
+                    card.style.opacity = '1';
+                }
+                else if (index === currentIndex) {
+                    card.style.transform = `translateY(0) translateZ(0) scale(1)`;
+                    card.style.opacity = '1';
+                    card.classList.add('is-active');
+                }
+                else {
+                    card.style.transform = `translateY(120%) scale(0.8)`;
+                    card.style.opacity = '0';
+                }
+
+                card.style.zIndex = index;
+                card.style.pointerEvents = (index === currentIndex) ? 'auto' : 'none';
+            });
+        }
+
+        function filterAndArrangeCards() {
+            visibleCards = cardElements.filter(card =>
+                activeFilter === 'all' || card.dataset.tags.includes(activeFilter)
+            );
+
+            cardElements.forEach(card => {
+                const isVisible = visibleCards.includes(card);
+                card.style.display = isVisible ? 'block' : 'none';
+            });
+
+            currentIndex = Math.max(0, visibleCards.length - 1);
+            updateCardPositions();
+        }
+
+        function handleScroll(e) {
+            if (isScrolling || visibleCards.length <= 1) return;
+            isScrolling = true;
+
+            if (e.deltaY < 0) {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                }
+            } else {
+                if (currentIndex < visibleCards.length - 1) {
+                    currentIndex++;
+                }
+            }
+            updateCardPositions();
+
+            setTimeout(() => { isScrolling = false; }, 400);
+        }
+
+        function handleFilterClick(e) {
+            e.preventDefault();
+            const target = e.target.closest('.tag');
+            if (target && !target.classList.contains('active')) {
+                document.querySelectorAll('.tag-cloud .tag').forEach(t => t.classList.remove('active'));
+
+                const filterValue = target.dataset.filter;
+                const filterText = target.textContent.trim();
+
+                document.querySelectorAll(`.tag[data-filter="${filterValue}"]`).forEach(t => t.classList.add('active'));
+
+                activeFilter = filterValue;
+
+                // *** 新增：更新標題和精選專案可見度 ***
+                if (allProjectsTitle && featuredProjectSection) {
+                    if (filterValue === 'all') {
+                        // 提取文本節點進行更改，以保留 ::before 偽元素
+                        const titleTextNode = Array.from(allProjectsTitle.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
+                        if (titleTextNode) titleTextNode.textContent = ' 所有專案';
+                        featuredProjectSection.style.display = 'block';
+                    } else {
+                        const titleTextNode = Array.from(allProjectsTitle.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
+                        if (titleTextNode) titleTextNode.textContent = ` ${filterText}`;
+                        featuredProjectSection.style.display = 'none';
+                    }
+                }
+
+                filterAndArrangeCards();
+            }
+        }
+
+        stacker.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            handleScroll(e);
+        });
+
+        document.getElementById('category-filter')?.addEventListener('click', handleFilterClick);
+        document.getElementById('skill-filter')?.addEventListener('click', handleFilterClick);
+
+        // 初始設定
+        createCards();
+        filterAndArrangeCards();
+        window.addEventListener('resize', filterAndArrangeCards);
+    }
+})();

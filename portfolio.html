@@ -1,242 +1,300 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
-        
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
-        <meta name="author" content="Sophia Lue">
-        <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
-        <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
-        <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
-        <meta property="og:url" content="https://yourdomain.com">
-        <meta name="twitter:card" content="summary_large_image">
-        
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-        
-        <!-- Google Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="style.css">
-        
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
 
-            gtag('config', 'G-H5KNZ3T763');
-        </script>
-    </head>
-    <body>
-        <!-- Header 與 Navbar -->
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
+    <meta name="author" content="Sophia Lue">
+    <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
+    <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
+    <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/web-img.svg">
+    <meta property="og:url" content="https://phias.github.io">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H5KNZ3T763');
+    </script>
+</head>
+
+<body>
+    <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <a href="./index.html" class="btn btn--md btn--text btn--primary">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
             <nav class="nav-links">
-                <a href="./portfolio.html" class="nav-link btn-icon-text">
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📔</span>
                     <span class="nav-text">Portfolio</span>
                 </a>
-                <a href="./casestudy.html" class="nav-link btn-icon-text">
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📚</span>
                     <span class="nav-text">Case Study</span>
                 </a>
-                <a href="./blog.html" class="nav-link btn-icon-text">
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
                     <span class="icon">📝</span>
                     <span class="nav-text">Blog</span>
                 </a>
             </nav>
-            <button class="menu-icon btn-icon-only" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle">
                 <span class="material-icons">menu</span>
             </button>
         </div>
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html" class="nav-link btn-icon-text">
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📔</span>
                 <span>Portfolio</span>
             </a>
-            <a href="./casestudy.html" class="nav-link btn-icon-text">
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📚</span>
                 <span>Case Study</span>
             </a>
-            <a href="./blog.html" class="nav-link btn-icon-text">
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
                 <span class="icon">📝</span>
                 <span>Blog</span>
             </a>
         </div>
     </header>
 
-        <article class="portfolio-page">
-            <!-- Hero Section -->
-            <section class="hero-intro">
-                <div class="hero-content-flex">
-                    <img src="./img/me-gipuli-2.webp" alt="阿泥個人照" class="profile-pic">
-                    <div class="intro-text">
-                        <h2 class="hero-title">哈囉👋我是阿泥（Sophia）</h2>
-                        <p class="hero-description">
-                            目前就讀社會研究所，專注於社會網絡與金融社會學領域。<br>
-                            平常熱愛鑽研設計與科技，靠著網路資源自學 UI/UX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。<br>
-                            曾在金融業實習，參與財富管理平臺的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平臺的使用體驗。
-                        </p>
-                        <!-- hero stats -->
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">年設計經驗</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">歐洲城市探索</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">∞</span>
-                                <span class="stat-label">學習熱忱</span>
-                            </div>
-                        </div>
-                        <!-- hero actions -->
-                        <div class="hero-actions">
-                            <a class="nav-link primary" href="#portfolio">
-                                <span class="icon">📔</span>
-                                <span>查看作品</span>
-                            </a>
-                            <a class="nav-link secondary" href="#contact">
-                                <span class="icon">📧</span>
-                                <span>聯絡我</span>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-            <div class="bento-grid">
-                <!-- Portfolio Section -->
-                <section class="content-section" id="portfolio">
-                    <div class="section-header">
-                        <h2 class="section-title">
-                            📔作品集 Portfolio
-                        </h2>
-                        <p class="section-subtitle">探索我的設計旅程與創作靈感</p>
-                    </div>
-
-                    <div class="cards">
-                        <div class="card">
-                            <a href="./financial-car.html" class="portfolio-card-link">
-                                <div class="portfolio-card">
-                                    <div class="card-content">
-                                        <img src="./img/banner-fintech.webp" alt="財管購物車封面">
-                                        <h2>財富管理購物車</h2>
-                                        <p>金融業數位轉型專案，從需求挖掘到高保真原型設計的完整流程</p>
-                                        <div class="tags">
-                                            <span class="tag">數位轉型</span>
-                                            <span class="tag">金融業</span>
-                                            <span class="tag">產品設計</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="card">
-                            <a href="./timesaw.html" class="portfolio-card-link">
-                                <div class="portfolio-card">
-                                    <div class="card-content">
-                                        <img src="./img/banner-timesaw.webp" alt="Timesaw Puzzle封面">
-                                        <h2>Timesaw Puzzle</h2>
-                                        <p>跨域團隊合作的時間管理工具，專為學生打造的智能規劃系統</p>
-                                        <div class="tags">
-                                            <span class="tag">UX研究</span>
-                                            <span class="tag">Side Project</span>
-                                            <span class="tag">時間管理</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    
-                    </div>
-                    
-
-                    
-                </section>
-                <!-- QA Section -->
-                <section class="content-section" id="QA">
-                    <div class="section-header">
-                        <h2 class="section-title">
-                            Q & A
-                        </h2>
-                        <p class="section-subtitle">關於我的快速問答</p>
-                    </div>
-                    
-                    <div id="chat-section" class="chat-container">
-                        <div class="chat-message user">你是誰？</div>
-                        <div class="chat-message ai">我是阿泥（Sophia），正在念社會所，研究主題是社會資本和金融行為。</div>
-                        <div class="chat-message user">聽起來很學術，那跟UI/UX有關嗎？</div>
-                        <div class="chat-message ai">有的！我其實對「人怎麼做決策、怎麼跟科技互動」這些問題很著迷，這也讓我自學了 UI/UX，開始把社會學的觀察用在產品設計上。</div>
-                        <div class="chat-message user">有做過什麼專案嗎？</div>
-                        <div class="chat-message ai">我目前和夥伴一起開發了一款叫做 Timesaw Puzzle 的時間管理工具，我在裡面擔任 UX researcher，從研究到設計都參與，希望幫助使用者更自在地安排時間、減少焦慮。</div>
-                        <div class="chat-message user">還有其他經驗嗎？</div>
-                        <div class="chat-message ai">有！我曾在金融業實習，參與財富管理平台的購物車設計，也參加了 UXTW 實戰營，協助優化線上課程平台的內容策略，觀察學習者的使用行為，真的收穫很多。</div>
-                        <div class="chat-message user">你怎麼形容你自己？</div>
-                        <div class="chat-message ai">我是一個擅長觀察、喜歡拆解問題的人，對事物總是擁有獨特的見解。社會學背景讓我更習慣從不同角度看事情，也訓練我在不確定中冷靜分析。我相信設計是讓生活變得更好，使用者與公司互利的關係，而不只是漂亮的擺飾。
-                        </div>
-                        <div class="chat-message user">你未來想做什麼？</div>
-                        <div class="chat-message ai">我希望能成為一位能理解人、整合資訊、解決問題的產品經理或產品設計師，讓更多人離不開我所設計的產品。</div>
-                    </div>
-                </section>
-                <!-- Contact Section -->
-        <section class="content-section" id="contact">
-            <div class="section-header">
-                <h2 class="section-title">
-                    聯絡我
-                </h2>
-                <p class="section-subtitle">還有更多問題想問我？</p>
-            </div>
-            
-            <div class="contact-info">
-                <a href="mailto:sophia.lue1010@gmail.com">📧 sophia.lue1010@gmail.com</a>
-                
-                <a href="https://www.linkedin.com/in/yu-ning-liu-834596210">🔗 LinkedIn</a>
-                <a href="#">💬 歡迎隨時聯絡討論</a>
-            </div>
-        </section>
-            </div>
-            
-            
-        </article>
-        
-        <footer class="site-footer">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <h3>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h3>
-                    <p>
-                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。<br>
-                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。<br>
+    <article class="portfolio-page">
+        <!-- Hero Section -->
+        <section class="hero-intro">
+            <div class="hero-content-flex">
+                <img src="./img/me-gipuli-2.webp" alt="阿泥個人照" class="profile-pic">
+                <div class="intro-text">
+                    <h2 class="hero-title">哈囉👋我是阿泥（Sophia）</h2>
+                    <p class="hero-description">
+                        目前就讀社會研究所，專注於社會網絡與金融社會學領域。<br>
+                        平常熱愛鑽研設計與科技，靠著網路資源自學 UI/UX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。<br>
                         曾在金融業實習，參與財富管理平臺的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平臺的使用體驗。
                     </p>
-                    <p>
-                        如果你有什麼想分享或討論的，別猶豫，直接用
-                        <a href="mailto:sophia.lue1010@gmail.com">email</a>
-                        聯絡我吧！謝謝泥🦀
-                    </p>
-                </div>
-        
-                
-        
-                <div class="footer-copyright">
-                    &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
+                    <!-- hero stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">年設計經驗</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">歐洲城市探索</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">學習熱忱</span>
+                        </div>
+                    </div>
+                    <!-- hero actions -->
+                    <div class="hero-actions">
+                        <a class="btn btn--md btn--outline-filled btn--primary" href="#portfolio">
+                            <span class="icon">📔</span>
+                            <span>查看作品</span>
+                        </a>
+                        <a class="btn btn--md btn--text btn--primary" href="#contact">
+                            <span class="icon">📧</span>
+                            <span>聯絡我</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+        </section>
+        <div class="portfolio-layout">
+            <!-- Portfolio Section -->
+            <section class="content-section" id="portfolio">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        📔作品集 Portfolio
+                    </h2>
+                    <p class="section-subtitle">探索我的設計旅程與創作靈感</p>
+                </div>
+
+                <div class="card-list">
+                    <div class="card card-portfolio card-coming-soon">
+                        <a href="./financial-car.html" class="portfolio-card-link">
+                            <img src="./img/banner-fintech.webp" alt="財管購物車封面">
+                            <h2>財富管理購物車</h2>
+                            <p>金融業數位轉型專案，從需求挖掘到高保真原型設計的完整流程</p>
+                            <div class="tags">
+                                <span class="tag">數位轉型</span>
+                                <span class="tag">金融業</span>
+                                <span class="tag">產品設計</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card card-portfolio card-coming-soon">
+                        <a href="./timesaw.html" class="portfolio-card-link">
+                            <img src="./img/banner-timesaw.webp" alt="Timesaw Puzzle封面">
+                            <h2>Timesaw Puzzle</h2>
+                            <p>跨域團隊合作的時間管理工具，專為學生打造的智能規劃系統</p>
+                            <div class="tags">
+                                <span class="tag">UX研究</span>
+                                <span class="tag">Side Project</span>
+                                <span class="tag">時間管理</span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </section>
+            <!-- QA Section -->
+            <section class="content-section" id="QA">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Q & A
+                    </h2>
+                    <p class="section-subtitle">關於我的快速問答</p>
+                </div>
+
+                <div id="chat-section" class="chat-container">
+                    <div class="chat-message user">你是誰？</div>
+                    <div class="chat-message ai">我是阿泥（Sophia），正在念社會所，研究主題是社會資本和金融行為。</div>
+                    <div class="chat-message user">聽起來很學術，那跟UI/UX有關嗎？</div>
+                    <div class="chat-message ai">有的！我其實對「人怎麼做決策、怎麼跟科技互動」這些問題很著迷，這也讓我自學了 UI/UX，開始把社會學的觀察用在產品設計上。</div>
+                    <div class="chat-message user">有做過什麼專案嗎？</div>
+                    <div class="chat-message ai">我目前和夥伴一起開發了一款叫做 Timesaw Puzzle 的時間管理工具，我在裡面擔任 UX
+                        researcher，從研究到設計都參與，希望幫助使用者更自在地安排時間、減少焦慮。</div>
+                    <div class="chat-message user">還有其他經驗嗎？</div>
+                    <div class="chat-message ai">有！我曾在金融業實習，參與財富管理平台的購物車設計，也參加了 UXTW
+                        實戰營，協助優化線上課程平台的內容策略，觀察學習者的使用行為，真的收穫很多。</div>
+                    <div class="chat-message user">你怎麼形容你自己？</div>
+                    <div class="chat-message ai">
+                        我是一個擅長觀察、喜歡拆解問題的人，對事物總是擁有獨特的見解。社會學背景讓我更習慣從不同角度看事情，也訓練我在不確定中冷靜分析。我相信設計是讓生活變得更好，使用者與公司互利的關係，而不只是漂亮的擺飾。
+                    </div>
+                    <div class="chat-message user">你未來想做什麼？</div>
+                    <div class="chat-message ai">我希望能成為一位能理解人、整合資訊、解決問題的產品經理或產品設計師，讓更多人離不開我所設計的產品。</div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section class="content-section" id="contact">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        聯絡我
+                    </h2>
+                    <p class="section-subtitle">還有更多問題想問我？</p>
+                </div>
+
+                <div class="contact-info">
+                    <a href="mailto:sophia.lue1010@gmail.com">📧 sophia.lue1010@gmail.com</a>
+
+                    <a href="https://www.linkedin.com/in/yu-ning-liu-834596210">🔗 LinkedIn</a>
+                    <a href="#">💬 歡迎隨時聯絡討論</a>
+                </div>
+            </section>
+        </div>
+
+
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div data-layer="card-about" class="card-about">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Text" class="AboutText">關於阿泥</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="About Description" class="AboutDescription">
+                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。</div>
+                    <div data-layer="About Description" class="AboutDescription">
+                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。</div>
+                    <div data-layer="About Description" class="AboutDescription">曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW
+                        實戰營，協助優化線上學習平台的使用體驗。</div>
+                </div>
+                <a href="mailto:sophia.lue1010@gmail.com" data-layer="cardlink" class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <span class="material-symbols-rounded cardlink-icon">
+                        mail
+                    </span>
+                    <div data-layer="Contact Text" class="cardlink-text">聯絡我</div>
+                </a>
+            </div>
+
+            <div data-layer="card-toc" class="card-toc">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
+                </div>
+
+                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                    <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
+                </a>
+                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                    <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
+                </a>
+                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                    <div data-layer="Blog Text" class="cardlink-text">Blog</div>
+                </a>
+            </div>
+
+            <div data-layer="card-support" class="card-support">
+                <div data-layer="card-header" class="cardheader">
+                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Text" class="cardheader-text">支持創作</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://buymeacoffee.com/sophialue14" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--tertiary">
+                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
+                </a>
+            </div>
+
+            <div data-layer="card-social" class="card-social">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://www.instagram.com/ni_de_life" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--secondary">
+                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
+                </a>
+
+            </div>
+        </div>
+        <div data-layer="footer-signature" class="FooterSignature"
+            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText"
+                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+                © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
 </html>

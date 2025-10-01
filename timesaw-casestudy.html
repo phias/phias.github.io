@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta content="text/html" charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</title>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H5KNZ3T763');
+    </script>
 </head>
+
 <body>
     <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-            <a href="./index.html" class="app-title">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
+            <a href="./index.html" class="btn btn--md btn--text btn--primary">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
             <nav class="nav-links">
-                <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
-                <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
-                <a href="./blog.html" class="nav-link">📝 Blog</a>
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📔</span>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📚</span>
+                    <span class="nav-text">Case Study</span>
+                </a>
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📝</span>
+                    <span class="nav-text">Blog</span>
+                </a>
             </nav>
             <button class="menu-icon" id="menu-toggle">
                 <span class="material-icons">menu</span>
@@ -26,9 +52,18 @@
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html">📔 Portfolio</a>
-            <a href="./casestudy.html">📚 Case Study</a>
-            <a href="./blog.html">📝 Blog</a>
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📔</span>
+                <span>Portfolio</span>
+            </a>
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📚</span>
+                <span>Case Study</span>
+            </a>
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📝</span>
+                <span>Blog</span>
+            </a>
         </div>
     </header>
     <article>
@@ -39,13 +74,90 @@
             <p style="font-size: x-small;">發佈日期：coming soom...</p>
         </div>
     </article>
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
     
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
-        });
-    </script>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div data-layer="card-about" class="card-about">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Text" class="AboutText">關於阿泥</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="About Description" class="AboutDescription">
+                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。</div>
+                    <div data-layer="About Description" class="AboutDescription">
+                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。</div>
+                    <div data-layer="About Description" class="AboutDescription">曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW
+                        實戰營，協助優化線上學習平台的使用體驗。</div>
+                </div>
+                <div data-layer="cardlink" class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <span class="material-symbols-rounded cardlink-icon">
+                        mail
+                    </span>
+                    <div data-layer="Contact Text" class="cardlink-text">聯絡我</div>
+                </div>
+            </div>
+
+            <div data-layer="card-toc" class="card-toc">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
+                </div>
+
+                <div data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                    <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
+                </div>
+                <div data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                    <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
+                </div>
+                <div data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                    <div data-layer="Blog Text" class="cardlink-text">Blog</div>
+                </div>
+            </div>
+
+            <div data-layer="card-support" class="card-support">
+                <div data-layer="card-header" class="cardheader">
+                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Text" class="cardheader-text">支持創作</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <div data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--tertiary">
+                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
+                </div>
+            </div>
+
+            <div data-layer="card-social" class="card-social">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <div data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--secondary">
+                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
+                </div>
+
+            </div>
+        </div>
+        <div data-layer="footer-signature" class="FooterSignature"
+            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText"
+                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+                © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
