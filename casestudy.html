@@ -1,73 +1,224 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    </head>
-    <body>
-        <!-- Header 與 Navbar -->
-        <header class="top-app-bar">
-            <div class="app-bar-container">
-                <a href="./index.html" class="app-title nav-link">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</a>
-                <nav class="nav-links">
-                    <a href="./portfolio.html" class="nav-link">📔 Portfolio</a>
-                    <a href="./casestudy.html" class="nav-link">📚 Case Study</a>
-                    <a href="./blog.html" class="nav-link">📝 Blog</a>
-                </nav>
-                <button class="menu-icon" id="menu-toggle">
-                    <span class="material-icons">menu</span>
-                </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
+    <meta name="author" content="Sophia Lue">
+    <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
+    <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
+    <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KNZ3T763"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H5KNZ3T763');
+    </script>
+</head>
+
+<body>
+    <!-- Header 與 Navbar -->
+    <header class="top-app-bar">
+        <div class="app-bar-container">
+
+            <a href="./index.html" class="btn btn--md btn--text btn--primary site-title">
+                <span class="title-full">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</span>
+                <span class="title-short">✨阿泥在哪裡？🧙‍♀️</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📔</span>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📚</span>
+                    <span class="nav-text">Case Study</span>
+                </a>
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
+                    <span class="icon">📝</span>
+                    <span class="nav-text">Blog</span>
+                </a>
+            </nav>
+            <button class="menu-icon" id="menu-toggle">
+                <span class="material-symbols-rounded">
+                    menu
+                </span>
+            </button>
+        </div>
+
+        <!-- 手機版 dropdown menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📔</span>
+                <span>Portfolio</span>
+            </a>
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📚</span>
+                <span>Case Study</span>
+            </a>
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
+                <span class="icon">📝</span>
+                <span>Blog</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- === 主內容 HTML === -->
+    <div class="main-content container">
+        <aside class="sidebar">
+            <section class="widget">
+                <h3 class="widget-title">專案類型</h3>
+                <div class="tag-cloud" id="category-filter">
+                    <a class="tag active" data-filter="all">全部專案</a>
+                    <a class="tag" data-filter="product-design">產品設計</a>
+                    <a class="tag" data-filter="ux-research">UX 研究</a>
+                    <a class="tag" data-filter="side-project">Side Project</a>
+                </div>
+            </section>
+            <section class="widget">
+                <h3 class="widget-title">技能標籤</h3>
+                <div class="tag-cloud" id="skill-filter">
+                    <a class="tag" data-filter="ui-ux">UI/UX設計</a>
+                    <a class="tag" data-filter="fintech">金融科技</a>
+                    <a class="tag" data-filter="data-tech">數據科技</a>
+                </div>
+            </section>
+        </aside>
+
+        <main class="projects-area">
+            <section class="featured-project">
+                <h2 class="section-title">精選專案</h2>
+                <div class="featured-card">
+                    <div class="internship-chip">實習專案</div>
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x300/FFDAE5/CC5680?text=STUDY" alt="財富管理購物車設計專案示意圖">
+                    </div>
+                    <div class="card-content">
+                        <h4>財富管理購物車設計</h4>
+                        <p>設計金融平台的購物車體驗，提升用戶轉換率並簡化投資流程。透過用戶研究和迭代設計，打造直觀的數位理財體驗。</p>
+                        <div class="tag-group">
+                            <span class="tag"># UI/UX設計</span>
+                            <span class="tag"># 金融科技</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="all-projects">
+                <h2 class="section-title">所有專案</h2>
+                <div class="card-stack-container" id="card-stacker">
+                    <!-- 卡片將由下方的 JavaScript 動態生成 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div data-layer="card-about" class="card-about">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Text" class="AboutText">關於阿泥</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="About Description" class="AboutDescription">
+                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。</div>
+                    <div data-layer="About Description" class="AboutDescription">
+                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。</div>
+                    <div data-layer="About Description" class="AboutDescription">曾在金融業實習，參與財富管理平台的購物車設計與規劃，也曾參與 UXTW
+                        實戰營，協助優化線上學習平台的使用體驗。</div>
+                </div>
+                <a href="mailto:sophia.lue1010@gmail.com" data-layer="cardlink" class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <span class="material-symbols-rounded cardlink-icon">
+                        mail
+                    </span>
+                    <div data-layer="Contact Text" class="cardlink-text">聯絡我</div>
+                </a>
             </div>
 
-            <!-- 手機版 dropdown menu -->
-            <div class="mobile-menu" id="mobile-menu">
-                <a href="./portfolio.html">📔 Portfolio</a>
-                <a href="./casestudy.html">📚 Case Study</a>
-                <a href="./blog.html">📝 Blog</a>
-            </div>
-        </header>
+            <div data-layer="card-toc" class="card-toc">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
+                </div>
 
-        <article>
-            <h2 class="section-title">📚 Case Study</h2>
-        </article>
-        <footer class="site-footer">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <h3>✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</h3>
-                    <p>
-                        哈囉👋我是阿泥（Sophia），目前就讀社會研究所，專注於社會網絡與金融社會學領域。<br>
-                        平常熱愛鑽研設計與科技，靠著網路資源自學UIUX，並和夥伴一起開發了時間管理工具 Timesaw Puzzle。<br>
-                        曾在金融業實習，參與財富管理平臺的購物車設計與規劃，也曾參與 UXTW 實戰營，協助優化線上學習平臺的使用體驗。
-                    </p>
-                    <p>
-                        如果你有什麼想分享或討論的，別猶豫，直接用
-                        <a href="mailto:sophia.lue1010@gmail.com">email</a>
-                        聯絡我吧！謝謝泥🦀
-                    </p>
-                </div>
-        
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/yu-ning-liu-834596210">LinkedIn</a>
-                </div>
-        
-                <div class="footer-copyright">
-                    &copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved.
-                </div>
+                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                    <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
+                </a>
+                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                    <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
+                </a>
+                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
+                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                    <div data-layer="Blog Text" class="cardlink-text">Blog</div>
+                </a>
             </div>
-        </footer>
-        <script>
-            const menuToggle = document.getElementById("menu-toggle");
-            const mobileMenu = document.getElementById("mobile-menu");
-        
-            menuToggle.addEventListener("click", () => {
-                mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
-            });
-        </script>
-        
-    </body>
+
+            <div data-layer="card-support" class="card-support">
+                <div data-layer="card-header" class="cardheader">
+                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Text" class="cardheader-text">支持創作</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://buymeacoffee.com/sophialue14" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--tertiary">
+                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
+                </a>
+            </div>
+
+            <div data-layer="card-social" class="card-social">
+                <div data-layer="card-header" class="card-header">
+                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
+                </div>
+                <div data-layer="card-content" class="card-content">
+                    <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
+                </div>
+                <a href="https://www.instagram.com/ni_de_life" data-layer="cardlink" class="btn btn--lg btn--outline-filled btn--secondary">
+                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
+                </a>
+
+            </div>
+        </div>
+        <div data-layer="footer-signature" class="FooterSignature"
+            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText"
+                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+                © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
 </html>
