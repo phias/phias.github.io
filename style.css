@@ -1024,7 +1024,6 @@ article section {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   overflow: hidden;
   padding: 1.5rem;
   border-radius: var(--border-radius-md);
@@ -1041,7 +1040,6 @@ article section {
 
 .card p {
   color: var(--color-text-500);
-  margin: 0;
 }
 
 .card img {
@@ -1075,7 +1073,7 @@ article section {
 .card-blog {
   background: var(--color-surface-50);
   border-left: 4px solid var(--color-primary-500);
-  box-shadow: 0 4px 16px var(--color-primary-50);
+  box-shadow: 0 4px 16px var(--color-primary-100);
 }
 
 .card-blog:hover {
@@ -3684,6 +3682,58 @@ section h2 {
   }
 }
 
+
+/* 7.7 Project Page
+   ------------------------------------------------------------------------ */
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+.project-info h5 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-700);
+  font: var(--font-label-large-emphasized);
+  text-align: left;
+}
+.project-info p {
+  margin: 0;
+  color: var(--color-text-700);
+  font: var(--font-label-large-baseline);
+  text-align: left;
+}
+
+.project-info-list{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.execution-time {
+  font: var(--font-body-small-baseline);
+  color: var(--color-text-500);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.project-tag-time {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+
 /* ========================================================================
   8. UTILITY & STATE CLASSES
    ======================================================================== */
@@ -3869,3 +3919,5 @@ section h2 {
     font: var(--font-body-large-baseline);
   }
 }
+
+
