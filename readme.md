@@ -14,6 +14,8 @@ This is a personal portfolio and case study display website for Sophia (阿泥).
 - `style.css`: Main styling file containing global tokens, layouts, component stylings, and page-specific blocks. Contains all UI/UX redesigns.
 - `spec.md`: Detailed specifications for layout, UI tweaks, and refactoring guidelines.
 
-## Maintenance Guidelines
+1. **Maintenance Guidelines**
+   Currently, the styling is being consolidated into a single `style.css` file to prevent duplicate classes and maintain namespace scopes correctly (e.g. scoping `.project-title` and `.project-desc` to `.page-casestudy`). See `spec.md` for refactoring specifications.
 
-Currently, the styling is being consolidated into a single `style.css` file to prevent duplicate classes and maintain namespace scopes correctly (e.g. scoping `.project-title` and `.project-desc` to `.page-casestudy`). See `spec.md` for refactoring specifications.
+2. **Git Configuration**
+   The `.gitignore` has been updated to exclude any personal AI skill (`.agent/`) and MCP config (`mcp_config.json`) files. See `spec.md` for more details.

@@ -184,3 +184,14 @@ Merge `casestudy-design.css` into `style.css` to consolidate styles, improve mai
 
 3. **轉場效果 (Transitions)**:
    - 所有的互動效果皆會加入流暢的貝茲曲線轉場 (`transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)`) 確保視覺感受舒適。
+
+## Git Configuration
+
+### .gitignore 更新
+
+確保專案不會外洩敏感資訊或非必要的快取檔案，`.gitignore` 已進行以下更新與補強：
+
+1. **AI Agent / Skills**：排除獨立客製化的 `.agent/` 與 `.agents/` 目錄，確保本機工具不會共用於遠端。
+2. **MCP 相關設定**：排除 `mcp_config.json` 及 `mcp-config.json`，防止對接服務的 API Token（如 Figma PAT）外洩。
+3. **編譯檔案快取**：排除 Python 執行產生的 `__pycache__/` 與 `*.pyc` 檔案。
+4. **系統隱藏檔**：全局排除 macOS 產生的 `**/.DS_Store`、`.AppleDouble` 與 `.LSOverride`。

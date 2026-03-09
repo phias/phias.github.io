@@ -1,13 +1,24 @@
 # 排除 AI 工具專用檔案
 .agent/
+.agents/
 mcp-config.json
+mcp_config.json
 *.rules
 .cursorrules
+
+# 排除開發工具與系統檔
+node_modules/
 .env
 
-# 排除開發工具
-node_modules/
+# 排除 macOS 系統檔案
 .DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# 排除 Python 編譯檔案
+__pycache__/
+*.pyc
 
 # 排除隱密資料
 posts/
