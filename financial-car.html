@@ -49,26 +49,32 @@
     <header class="top-app-bar">
         <div class="app-bar-container">
 
-            <a href="./index.html" class="btn btn--md btn--text btn--primary site-title">
-                <span class="title-full">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</span>
-                <span class="title-short">✨阿泥在哪裡？🧙‍♀️</span>
+            <a href="./index.html" class="btn btn--md btn--text site-title"
+                style="--btn-text-color: var(--color-text-900); --btn-color-hover-light: var(--color-surface-100);">
+                <span class="title-full"><span class="material-symbols-outlined"
+                        style="vertical-align: middle;">auto_awesome</span> 阿泥在哪裡？ <span
+                        style="color: var(--color-divider); margin: 0 4px;">|</span> Sophia's Magic Corner <span
+                        class="material-symbols-outlined" style="vertical-align: middle;">face_3</span></span>
+                <span class="title-short"><span class="material-symbols-outlined"
+                        style="vertical-align: middle;">auto_awesome</span> 阿泥在哪裡？ <span
+                        class="material-symbols-outlined" style="vertical-align: middle;">face_3</span></span>
             </a>
 
             <nav class="nav-links">
-                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📔</span>
-                    <span class="nav-text">Portfolio</span>
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--secondary" data-action="nav_portfolio">
+                    <span class="material-symbols-outlined icon">category</span>
+                    <span class="nav-text">作品集</span>
                 </a>
-                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📚</span>
-                    <span class="nav-text">Case Study</span>
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--tertiary" data-action="nav_casestudy">
+                    <span class="material-symbols-outlined icon">leaderboard</span>
+                    <span class="nav-text">案例研究</span>
                 </a>
-                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📝</span>
-                    <span class="nav-text">Blog</span>
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary" data-action="nav_blog">
+                    <span class="material-symbols-outlined icon">menu_book</span>
+                    <span class="nav-text">部落格</span>
                 </a>
             </nav>
-            <button class="menu-icon" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle" aria-label="開啟或關閉選單" aria-expanded="false">
                 <span class="material-symbols-rounded">
                     menu
                 </span>
@@ -77,17 +83,17 @@
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📔</span>
-                <span>Portfolio</span>
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--secondary" data-action="nav_portfolio_mobile">
+                <span class="material-symbols-outlined icon">category</span>
+                <span>作品集</span>
             </a>
-            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📚</span>
-                <span>Case Study</span>
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--tertiary" data-action="nav_casestudy_mobile">
+                <span class="material-symbols-outlined icon">leaderboard</span>
+                <span>案例研究</span>
             </a>
-            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📝</span>
-                <span>Blog</span>
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary" data-action="nav_blog_mobile">
+                <span class="material-symbols-outlined icon">menu_book</span>
+                <span>部落格</span>
             </a>
         </div>
     </header>
@@ -270,7 +276,10 @@
             </div>
             <div class="prototype-single-text">
                 <h3 class="prototype-single-title">結帳進度提示</h3>
-                <p class="prototype-single-desc">透過麵包屑導航，提示結帳進度。</p>
+                <p class="prototype-single-desc">透過麵包屑導航，提示結帳進度。<br><br><span
+                        style="color: var(--color-primary-700); font-size: 0.9em; line-height: 1.6; display: block; border-left: 4px solid var(--color-primary-300); padding-left: 12px; margin-top: 12px;"><strong>💡
+                            UX 洞察：</strong>為弭平電商「下單即扣款」與金融商品「T+2交割」的認知落差，介面設計上明確標示「預估扣款日」與「餘額防呆預警」，大幅降低新手的違約焦慮。</span>
+                </p>
             </div>
         </div>
 
@@ -286,7 +295,8 @@
                     <h3 class="prototype-compare-title">確認明細後簽署文件</h3>
                     <p class="prototype-compare-status compare-status--error">
                         <span class="material-symbols-outlined compare-status-icon">close</span>
-                        沒有簽署文件無法繼續申購。
+                        <span>沒有簽署文件無法繼續申購。<a href="javascript:void(0)"
+                                style="text-decoration: underline; font-weight: 600; color: inherit; margin-left: 4px; display: inline-block;">立即前往簽署</a></span>
                     </p>
                 </div>
             </div>
@@ -369,7 +379,8 @@
                         <div class="journey-card-body">
                             <div class="journey-stage">瀏覽投資標的</div>
                             <p class="journey-desc">用戶尋找感興趣的標的，查看詳細資訊，將感興趣的股票加入追蹤清單。</p>
-                            <div class="journey-emotion journey-emotion--teal">🙂 期待</div>
+                            <div class="journey-emotion journey-emotion--teal"><span class="material-symbols-outlined"
+                                    style="font-size: 1.25em;">sentiment_satisfied</span> 期待</div>
                         </div>
                     </div>
                     <!-- Stage 2 -->
@@ -378,7 +389,8 @@
                         <div class="journey-card-body">
                             <div class="journey-stage">下單委託</div>
                             <p class="journey-desc">決定投資金額與股數量，閱讀條款，確認委託明細，送出委託，等待成交。</p>
-                            <div class="journey-emotion journey-emotion--orange">😕 困惑</div>
+                            <div class="journey-emotion journey-emotion--orange"><span class="material-symbols-outlined"
+                                    style="font-size: 1.25em;">sentiment_dissatisfied</span> 困惑</div>
                         </div>
                     </div>
                     <!-- Stage 3 -->
@@ -387,7 +399,8 @@
                         <div class="journey-card-body">
                             <div class="journey-stage">委託成交</div>
                             <p class="journey-desc">隔日或數日後，再次登入 App 查詢是否買到，或透過推播得知。</p>
-                            <div class="journey-emotion journey-emotion--blue">😄 開心</div>
+                            <div class="journey-emotion journey-emotion--blue"><span class="material-symbols-outlined"
+                                    style="font-size: 1.25em;">sentiment_very_satisfied</span> 開心</div>
                         </div>
                     </div>
                     <!-- Stage 4 -->
@@ -396,12 +409,60 @@
                         <div class="journey-card-body">
                             <div class="journey-stage">扣款交割</div>
                             <p class="journey-desc">扣款期限前，確認帳戶金額足夠，不足則將資金入帳補足。扣款後完成交割，投資標的入戶。</p>
-                            <div class="journey-emotion journey-emotion--pink">😰 焦慮</div>
+                            <div class="journey-emotion journey-emotion--pink"><span class="material-symbols-outlined"
+                                    style="font-size: 1.25em;">sentiment_sad</span> 焦慮</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- Competitor Analysis (競品分析) -->
+        <div class="competitor-analysis-block">
+            <div class="competitor-header">
+                <h3 class="competitor-title">Competitor Analysis 競品分析</h3>
+                <p class="competitor-desc">了解基富通、大戶豐、創富通、momo的相關產品特色，及其解決方式</p>
+            </div>
+            <div class="competitor-image-wrapper">
+                <img src="./img/produsts.png" alt="競品分析比較表" class="competitor-image">
+            </div>
+        </div>
+
+        <!-- Wireframe (手繪線框稿) -->
+        <div class="wireframe-block">
+            <h3 class="wireframe-title">Wireframe 手繪線框稿</h3>
+            <div class="wireframe-image-wrapper">
+                <img src="./img/financial-wireframe.JPG" alt="手繪線框稿圖片" class="wireframe-image">
+            </div>
+
+        </div>
+
+        <!-- UI Flow (介面流程) -->
+        <div class="ui-flow-block">
+            <h3 class="ui-flow-title">UI Flow介面流程</h3>
+            <div class="ui-flow-content">
+                <div class="ui-flow-tooltip group">
+                    <div class="ui-flow-tooltip-header">
+                        <span class="material-symbols-outlined icon">info</span>
+                        <h4 class="ui-flow-tooltip-title">介面流程說明</h4>
+                        <span class="material-symbols-outlined expand-icon">expand_more</span>
+                    </div>
+                    <div class="ui-flow-tooltip-body">
+                        <ol class="ui-flow-tooltip-list">
+                            <li class="ui-flow-tooltip-item"><span class="step-num">1.</span> 選擇申購</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">2.</span> 透過推薦快速加入商品</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">3.</span> 選取標的，勾選進入結帳流程</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">4.</span> 點擊結帳</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">5.</span> 確認明細，簽署文件</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">6.</span> 申購完成</li>
+                        </ol>
+                    </div>
+                    <div class="ui-flow-tooltip-pointer"></div>
+                </div>
+                <div class="ui-flow-image-wrapper">
+                    <img src="./img/financial-UI-flow.png" alt="UI Flow介面流程圖片" class="ui-flow-image">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -410,7 +471,7 @@
         <div class="footer-container">
             <div data-layer="card-about" class="card-about">
                 <div data-layer="card-header" class="card-header">
-                    <div data-layer="About Icon" class="AboutIcon">💫</div>
+                    <div data-layer="About Icon" class="material-symbols-outlined AboutIcon">stars</div>
                     <div data-layer="About Text" class="AboutText">關於阿泥</div>
                 </div>
                 <div data-layer="card-content" class="card-content">
@@ -422,7 +483,7 @@
                         實戰營，協助優化線上學習平台的使用體驗。</div>
                 </div>
                 <a href="mailto:sophia.lue1010@gmail.com" data-layer="cardlink"
-                    class="btn btn--md btn--outline-filled btn--linear-primary">
+                    class="btn btn--md btn--outline-filled btn--linear-primary" data-action="footer_contact">
                     <span class="material-symbols-rounded cardlink-icon">
                         mail
                     </span>
@@ -432,50 +493,55 @@
 
             <div data-layer="card-toc" class="card-toc">
                 <div data-layer="card-header" class="card-header">
-                    <div data-layer="Explore Content Icon" class="cardheader-icon">🧭</div>
+                    <div data-layer="Explore Content Icon" class="material-symbols-outlined cardheader-icon">explore
+                    </div>
                     <div data-layer="Explore Content Text" class="cardheader-text">探索內容</div>
                 </div>
 
-                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary">
-                    <div data-layer="Portfolio Icon" class="cardlink-icon">📔</div>
+                <a href="./portfolio.html" data-layer="cardlink 1" class="btn btn--md btn--outline-filled btn--primary"
+                    data-action="footer_nav_portfolio">
+                    <div data-layer="Portfolio Icon" class="material-symbols-outlined cardlink-icon">menu_book</div>
                     <div data-layer="Portfolio Text" class="cardlink-text">Portfolio</div>
                 </a>
-                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary">
-                    <div data-layer="Case Study Icon" class="cardlink-icon">📚</div>
+                <a href="./casestudy.html" data-layer="cardlink 2" class="btn btn--md btn--outline-filled btn--primary"
+                    data-action="footer_nav_casestudy">
+                    <div data-layer="Case Study Icon" class="material-symbols-outlined cardlink-icon">library_books
+                    </div>
                     <div data-layer="Case Study Text" class="cardlink-text">Casestudy</div>
                 </a>
-                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary">
-                    <div data-layer="Blog Icon" class="cardlink-icon">📝</div>
+                <a href="./blog.html" data-layer="cardlink 3" class="btn btn--md btn--outline-filled btn--primary"
+                    data-action="footer_nav_blog">
+                    <div data-layer="Blog Icon" class="material-symbols-outlined cardlink-icon">history_edu</div>
                     <div data-layer="Blog Text" class="cardlink-text">Blog</div>
                 </a>
             </div>
 
             <div data-layer="card-support" class="card-support">
                 <div data-layer="card-header" class="cardheader">
-                    <div data-layer="Support Icon" class="cardheader-icon">🥤</div>
+                    <div data-layer="Support Icon" class="material-symbols-outlined cardheader-icon">local_cafe</div>
                     <div data-layer="Support Text" class="cardheader-text">支持創作</div>
                 </div>
                 <div data-layer="card-content" class="card-content">
                     <div data-layer="Support Description" class="SupportDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
                 </div>
                 <a href="https://buymeacoffee.com/sophialue14" data-layer="cardlink"
-                    class="btn btn--lg btn--outline-filled btn--tertiary">
-                    <div data-layer="Sponsor Icon" class="cardlink-icon">💰</div>
+                    class="btn btn--lg btn--outline-filled btn--tertiary" data-action="footer_sponsor">
+                    <div data-layer="Sponsor Icon" class="material-symbols-outlined cardlink-icon">payments</div>
                     <div data-layer="Sponsor Text" class="cardlink-text">贊助連結</div>
                 </a>
             </div>
 
             <div data-layer="card-social" class="card-social">
                 <div data-layer="card-header" class="card-header">
-                    <div data-layer="Social Links Icon" class="cardheader-icon">🍻</div>
+                    <div data-layer="Social Links Icon" class="material-symbols-outlined cardheader-icon">groups</div>
                     <div data-layer="Social Links Text" class="cardheader-text">社群連結</div>
                 </div>
                 <div data-layer="card-content" class="card-content">
                     <div data-layer="Social Links Description" class="SocialLinksDescription">如果喜歡我的文章內容，歡迎給予實際支持。</div>
                 </div>
                 <a href="https://www.instagram.com/ni_de_life" data-layer="cardlink"
-                    class="btn btn--lg btn--outline-filled btn--secondary">
-                    <div data-layer="Instagram Icon" class="cardlink-icon">📷</div>
+                    class="btn btn--lg btn--outline-filled btn--secondary" data-action="footer_social_ig">
+                    <div data-layer="Instagram Icon" class="material-symbols-outlined cardlink-icon">photo_camera</div>
                     <div data-layer="Instagram Text" class="cardlink-text">Instagram</div>
                 </a>
 

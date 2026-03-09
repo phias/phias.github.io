@@ -41,26 +41,32 @@
     <header class="top-app-bar">
         <div class="app-bar-container">
 
-            <a href="./index.html" class="btn btn--md btn--text btn--primary site-title">
-                <span class="title-full">✨阿泥在哪裡？｜Sophia's Magic Corner🧙‍♀️</span>
-                <span class="title-short">✨阿泥在哪裡？🧙‍♀️</span>
+            <a href="./index.html" class="btn btn--md btn--text site-title"
+                style="--btn-text-color: var(--color-text-900); --btn-color-hover-light: var(--color-surface-100);">
+                <span class="title-full"><span class="material-symbols-outlined"
+                        style="vertical-align: middle;">auto_awesome</span> 阿泥在哪裡？ <span
+                        style="color: var(--color-divider); margin: 0 4px;">|</span> Sophia's Magic Corner <span
+                        class="material-symbols-outlined" style="vertical-align: middle;">face_3</span></span>
+                <span class="title-short"><span class="material-symbols-outlined"
+                        style="vertical-align: middle;">auto_awesome</span> 阿泥在哪裡？ <span
+                        class="material-symbols-outlined" style="vertical-align: middle;">face_3</span></span>
             </a>
 
             <nav class="nav-links">
-                <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📔</span>
-                    <span class="nav-text">Portfolio</span>
+                <a href="./portfolio.html" class="btn btn--md btn--text btn--secondary" data-action="nav_portfolio">
+                    <span class="material-symbols-outlined icon">category</span>
+                    <span class="nav-text">作品集</span>
                 </a>
-                <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📚</span>
-                    <span class="nav-text">Case Study</span>
+                <a href="./casestudy.html" class="btn btn--md btn--text btn--tertiary" data-action="nav_casestudy">
+                    <span class="material-symbols-outlined icon">leaderboard</span>
+                    <span class="nav-text">案例研究</span>
                 </a>
-                <a href="./blog.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon">📝</span>
-                    <span class="nav-text">Blog</span>
+                <a href="./blog.html" class="btn btn--md btn--text btn--primary" data-action="nav_blog">
+                    <span class="material-symbols-outlined icon">menu_book</span>
+                    <span class="nav-text">部落格</span>
                 </a>
             </nav>
-            <button class="menu-icon" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle" aria-label="開啟或關閉選單" aria-expanded="false">
                 <span class="material-symbols-rounded">
                     menu
                 </span>
@@ -69,17 +75,17 @@
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./portfolio.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📔</span>
-                <span>Portfolio</span>
+            <a href="./portfolio.html" class="btn btn--md btn--text btn--secondary" data-action="nav_portfolio_mobile">
+                <span class="material-symbols-outlined icon">category</span>
+                <span>作品集</span>
             </a>
-            <a href="./casestudy.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📚</span>
-                <span>Case Study</span>
+            <a href="./casestudy.html" class="btn btn--md btn--text btn--tertiary" data-action="nav_casestudy_mobile">
+                <span class="material-symbols-outlined icon">leaderboard</span>
+                <span>案例研究</span>
             </a>
-            <a href="./blog.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon">📝</span>
-                <span>Blog</span>
+            <a href="./blog.html" class="btn btn--md btn--text btn--primary" data-action="nav_blog_mobile">
+                <span class="material-symbols-outlined icon">menu_book</span>
+                <span>部落格</span>
             </a>
         </div>
     </header>
