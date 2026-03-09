@@ -1,2308 +1,480 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阿泥在哪裡？｜Sophia's Magic Corner 🧙‍♀️</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="阿泥在哪裡？是一個關於交換經驗、作品展示、案例研究的個人網站，結合設計與社會觀察的魔法角落。">
-    <meta name="author" content="Sophia Lue">
-    <meta name="keywords" content="阿泥在哪裡, 交換經驗, 個人網站, UIUX, 案例研究, Portfolio">
-    <meta property="og:title" content="阿泥在哪裡？｜Sophia's Magic Corner">
-    <meta property="og:description" content="交換經驗、作品展示與案例研究的魔法角落">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-
+    <title>Sophia's Magic Corner | Casestudy</title>
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
-/* 🌈 Candy Glassmorphism Design System */
-:root {
-  /* 🎨 Primary Color (Aliceblue based mint candy tone) */
-  --color-primary-50: #f5feff;
-  --color-primary-100: #e0f8fb;
-  --color-primary-300: #b0eef3;
-  --color-primary-500: #aee9ee;
-  --color-primary-700: #82cfd8;
-  --color-primary-900: #52acb7;
-  
-  /* 🎨 Secondary Color (warm citrus candy tone) */
-  --color-secondary-50: #fff8f0;
-  --color-secondary-100: #ffe8d1;
-  --color-secondary-300: #ffd29e;
-  --color-secondary-500: #ffbb6e;
-  --color-secondary-700: #ff9443;
-  --color-secondary-900: #cc6a1d;
-  
-  /* ✨ Accent Color (berry pop tone) */
-  --color-accent: #ff6ba0;
-  --color-accent-light: #ffb3d1;
-  --color-accent-dark: #e6457d;
-  
-  /* 🧁 Background Colors */
-  --color-background-50: #ffffff;
-  --color-background-100: #f7faff;
-  --color-background-300: #eef3f9;
-  --color-background-500: #e6edf5;
-  
-  /* 🧊 Surface Colors */
-  --color-surface-50: #ffffff;
-  --color-surface-100: #fcfdff;
-  --color-surface-300: #f2f7fa;
-  --color-surface-500: #eaf1f6;
-  
-  /* 📝 Text Colors */
-  --color-text-50: #fefefe;
-  --color-text-300: #90a4ae;
-  --color-text-500: #607d8b;
-  --color-text-700: #37474f;
-  --color-text-900: #212121;
-  
-  /* 🎭 Glass Effects */
-  --glass-bg: rgba(255, 255, 255, 0.25);
-  --glass-bg-strong: rgba(255, 255, 255, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-shadow: 0 8px 32px rgba(174, 233, 238, 0.37);
-  --glass-shadow-hover: 0 16px 64px rgba(174, 233, 238, 0.5);
-  
-  /* 🍭 Candy Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary-300), var(--color-primary-700));
-  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-300), var(--color-secondary-700));
-  --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-  --gradient-rainbow: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500), var(--color-accent));
-  --gradient-bg: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 50%, var(--color-accent-light) 100%);
-  
-  /* 📏 Spacing & Sizing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  
-  /* 🎨 Border Radius (Candy Style) */
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 28px;
-  --radius-xl: 40px;
-  --radius-full: 9999px;
-  
-  /* ⚡ Transitions */
-  --transition-fast: 0.2s ease-out;
-  --transition-normal: 0.3s ease-out;
-  --transition-slow: 0.5s ease-out;
-}
-
-/* === Base Styles === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Nunito', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-text-700);
-  background: var(--gradient-bg);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* === Floating Background Decoration === */
-.bg-decoration {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.floating-bubble {
-  position: absolute;
-  border-radius: var(--radius-full);
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  animation: float 20s infinite ease-in-out;
-}
-
-.bubble-1 {
-  width: 120px;
-  height: 120px;
-  top: 10%;
-  left: 10%;
-  background: radial-gradient(circle, rgba(174, 233, 238, 0.3), rgba(174, 233, 238, 0.1));
-  animation-delay: 0s;
-}
-
-.bubble-2 {
-  width: 80px;
-  height: 80px;
-  top: 60%;
-  right: 15%;
-  background: radial-gradient(circle, rgba(255, 187, 110, 0.3), rgba(255, 187, 110, 0.1));
-  animation-delay: -5s;
-}
-
-.bubble-3 {
-  width: 200px;
-  height: 200px;
-  bottom: 20%;
-  left: 5%;
-  background: radial-gradient(circle, rgba(255, 107, 160, 0.2), rgba(255, 107, 160, 0.05));
-  animation-delay: -10s;
-}
-
-.bubble-4 {
-  width: 150px;
-  height: 150px;
-  top: 30%;
-  right: 5%;
-  background: radial-gradient(circle, rgba(174, 233, 238, 0.25), rgba(174, 233, 238, 0.08));
-  animation-delay: -15s;
-}
-
-.bubble-5 {
-  width: 60px;
-  height: 60px;
-  bottom: 10%;
-  right: 30%;
-  background: radial-gradient(circle, rgba(255, 187, 110, 0.4), rgba(255, 187, 110, 0.1));
-  animation-delay: -8s;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-  25% {
-    transform: translateY(-20px) rotate(90deg) scale(1.1);
-  }
-  50% {
-    transform: translateY(-40px) rotate(180deg) scale(0.9);
-  }
-  75% {
-    transform: translateY(-20px) rotate(270deg) scale(1.05);
-  }
-}
-
-/* === Glass Navigation === */
-.glass-nav {
-  position: fixed;
-  top: var(--spacing-md);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--glass-shadow);
-  padding: var(--spacing-sm) var(--spacing-md);
-  transition: all var(--transition-normal);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-lg);
-  max-width: 1200px;
-}
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-family: 'Fredoka', 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-text-900);
-}
-
-.brand-icon,
-.brand-emoji {
-  font-size: 1.5rem;
-}
-
-.nav-menu {
-  display: flex;
-  gap: var(--spacing-xs);
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-lg);
-  color: var(--color-text-700);
-  text-decoration: none;
-  font-weight: 500;
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-item::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-  border-radius: var(--radius-lg);
-}
-
-.nav-item:hover::before {
-  opacity: 0.1;
-}
-
-.nav-item:hover {
-  transform: translateY(-2px);
-  color: var(--color-primary-900);
-}
-
-.nav-item.active {
-  background: var(--glass-bg-strong);
-  color: var(--color-primary-900);
-  box-shadow: inset 0 2px 8px rgba(174, 233, 238, 0.3);
-}
-
-.nav-item .material-icons-round {
-  font-size: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.nav-item span:last-child {
-  position: relative;
-  z-index: 1;
-}
-
-.menu-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: none;
-  border-radius: var(--radius-md);
-  color: var(--color-text-700);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-}
-
-.menu-toggle:hover {
-  background: var(--glass-bg-strong);
-  transform: scale(1.05);
-}
-
-/* === Main Content === */
-.main-content {
-  padding-top: 120px;
-}
-
-/* === Hero Section === */
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-xl) var(--spacing-md);
-}
-
-.hero-container {
-  max-width: 900px;
-  width: 100%;
-}
-
-.hero-glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(40px);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--glass-shadow);
-  padding: var(--spacing-2xl);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-glass-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-rainbow);
-  opacity: 0.03;
-  border-radius: var(--radius-xl);
-}
-
-.hero-avatar {
-  position: relative;
-  display: inline-block;
-  margin-bottom: var(--spacing-lg);
-}
-
-.avatar-ring {
-  width: 140px;
-  height: 140px;
-  border-radius: var(--radius-full);
-  background: var(--gradient-primary);
-  padding: 4px;
-  margin: 0 auto;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: var(--color-primary-700);
-}
-
-.hero-title {
-  font-family: 'Fredoka', 'Nunito', sans-serif;
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
-  line-height: 1.2;
-}
-
-.title-line {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-text-700);
-  margin-bottom: var(--spacing-xs);
-}
-
-.title-highlight {
-  background: var(--gradient-rainbow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: block;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: var(--color-text-600);
-  margin-bottom: var(--spacing-xl);
-  line-height: 1.7;
-}
-
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-xl);
-}
-
-.stat-item {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  transition: all var(--transition-normal);
-}
-
-.stat-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--glass-shadow-hover);
-}
-
-.stat-number {
-  display: block;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--color-text-600);
-  font-weight: 500;
-}
-
-.hero-actions {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* === Candy Buttons === */
-.candy-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-md) var(--spacing-lg);
-  border: none;
-  border-radius: var(--radius-xl);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(20px);
-}
-
-.candy-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  opacity: 0.8;
-  transition: all var(--transition-normal);
-}
-
-.candy-btn span {
-  position: relative;
-  z-index: 1;
-}
-
-.candy-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--glass-shadow-hover);
-}
-
-.candy-btn:hover::before {
-  opacity: 1;
-}
-
-.candy-btn.primary {
-  background: var(--gradient-primary);
-  color: white;
-}
-
-.candy-btn.secondary {
-  background: var(--glass-bg-strong);
-  color: var(--color-text-700);
-}
-
-.candy-btn.support {
-  background: var(--gradient-accent);
-  color: white;
-}
-
-/* === Content Sections === */
-.content-section {
-  padding: var(--spacing-2xl) 0;
-}
-
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: var(--spacing-2xl);
-}
-
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  font-family: 'Fredoka', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-sm);
-}
-
-.section-title .material-icons-round {
-  font-size: 2.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-600);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* === Portfolio Grid === */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-xl);
-}
-
-.portfolio-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-slow);
-  cursor: pointer;
-}
-
-.portfolio-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-.portfolio-card:hover::before {
-  opacity: 0.05;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--glass-shadow-hover);
-}
-
-.card-content {
-  position: relative;
-  z-index: 2;
-}
-
-.card-icon {
-  width: 80px;
-  height: 80px;
-  background: var(--gradient-secondary);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--spacing-md);
-  color: white;
-  font-size: 2.5rem;
-}
-
-.portfolio-card h3 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-sm);
-}
-
-.portfolio-card p {
-  color: var(--color-text-600);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
-
-.card-tags {
-  display: flex;
-  gap: var(--spacing-xs);
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-700);
-}
-
-.card-glow {
-  position: absolute;
-  inset: -2px;
-  background: var(--gradient-rainbow);
-  border-radius: var(--radius-lg);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-  z-index: -1;
-}
-
-.portfolio-card:hover .card-glow {
-  opacity: 0.3;
-}
-
-/* === Case Study List === */
-.case-study-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-}
-
-.case-study-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-lg);
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  transition: all var(--transition-normal);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.case-study-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 60%;
-  background: var(--gradient-secondary);
-  border-radius: 0 4px 4px 0;
-  transition: height var(--transition-normal);
-}
-
-.case-study-item:hover::before {
-  height: 80%;
-}
-
-.case-study-item:hover {
-  transform: translateX(8px);
-  box-shadow: var(--glass-shadow-hover);
-}
-
-.case-number {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  min-width: 80px;
-}
-
-.case-content {
-  flex: 1;
-}
-
-.case-content h3 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-xs);
-}
-
-.case-content p {
-  color: var(--color-text-600);
-  margin-bottom: var(--spacing-sm);
-}
-
-.case-meta {
-  display: flex;
-  gap: var(--spacing-md);
-  font-size: 0.9rem;
-  color: var(--color-text-500);
-}
-
-.case-arrow {
-  color: var(--color-text-400);
-  transition: all var(--transition-normal);
-}
-
-.case-study-item:hover .case-arrow {
-  color: var(--color-primary-700);
-  transform: translateX(4px);
-}
-
-/* === Blog Grid === */
-.blog-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-xl);
-}
-
-.blog-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: all var(--transition-normal);
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--glass-shadow-hover);
-}
-
-.blog-image {
-  height: 200px;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 4rem;
-}
-
-.blog-content {
-  padding: var(--spacing-lg);
-}
-
-.blog-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-sm);
-}
-
-.blog-category {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-primary-700);
-}
-
-.blog-status {
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.blog-status.featured {
-  background: var(--gradient-accent);
-  color: white;
-}
-
-.blog-status.popular {
-  background: var(--gradient-secondary);
-  color: white;
-}
-
-.blog-card h3 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: var(--spacing-sm);
-}
-
-.blog-card h3 a {
-  color: var(--color-text-900);
-  text-decoration: none;
-  transition: color var(--transition-normal);
-}
-
-.blog-card h3 a:hover {
-  color: var(--color-primary-700);
-}
-
-.blog-card p {
-  color: var(--color-text-600);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
-
-.blog-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--color-text-500);
-}
-
-.blog-list {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-}
-
-.blog-list h4 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-md);
-}
-
-.blog-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-normal);
-  cursor: pointer;
-  margin-bottom: var(--spacing-xs);
-}
-
-.blog-item:hover {
-  background: var(--glass-bg-strong);
-  transform: translateX(4px);
-}
-
-.blog-emoji {
-  font-size: 1.2rem;
-}
-
-.blog-title {
-  font-weight: 500;
-  color: var(--color-text-700);
-}
-
-/* === Contact Section === */
-.contact-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-xl);
-}
-
-.contact-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  text-align: center;
-}
-
-.contact-avatar {
-  width: 100px;
-  height: 100px;
-  background: var(--gradient-accent);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--spacing-lg);
-  color: white;
-  font-size: 3rem;
-}
-
-.contact-card h3 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-sm);
-}
-
-.contact-card > p {
-  color: var(--color-text-600);
-  margin-bottom: var(--spacing-xl);
-  line-height: 1.6;
-}
-
-.contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-xl);
-}
-
-.contact-method {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  color: var(--color-text-700);
-  transition: all var(--transition-normal);
-}
-
-.contact-method:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--glass-shadow);
-}
-
-.contact-method.primary {
-  background: var(--gradient-primary);
-  color: white;
-}
-
-.contact-method .material-icons-round {
-  font-size: 2rem;
-}
-
-.contact-method div {
-  text-align: left;
-}
-
-.contact-method strong {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.contact-method span {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.support-section {
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-
-.support-section h4 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-xs);
-}
-
-.support-section p {
-  color: var(--color-text-600);
-  margin-bottom: var(--spacing-md);
-}
-
-.skills-showcase {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-}
-
-.skills-showcase h4 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-900);
-  margin-bottom: var(--spacing-md);
-  text-align: center;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-sm);
-}
-
-.skill-bubble {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-md);
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-md);
-  text-align: center;
-  transition: all var(--transition-normal);
-}
-
-.skill-bubble:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--glass-shadow);
-}
-
-.skill-icon {
-  font-size: 2rem;
-}
-
-.skill-bubble span:last-child {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text-700);
-}
-
-/* === Coming Soon Overlay === */
-.coming-soon {
-  position: relative;
-}
-
-.coming-soon::after {
-  content: '🚧 施工中...';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--gradient-accent);
-  color: white;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-xl);
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: var(--glass-shadow);
-  z-index: 10;
-  backdrop-filter: blur(20px);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { 
-    transform: translate(-50%, -50%) scale(1); 
-    opacity: 1;
-  }
-  50% { 
-    transform: translate(-50%, -50%) scale(1.05); 
-    opacity: 0.9;
-  }
-}
-
-/* === Footer === */
-.glass-footer {
-  background: var(--glass-bg);
-  backdrop-filter: blur(30px);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  padding: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
-  text-align: center;
-}
-
-.footer-content p {
-  color: var(--color-text-600);
-  margin-bottom: var(--spacing-xs);
-}
-
-.footer-content p:last-child {
-  color: var(--color-text-500);
-  font-size: 0.9rem;
-}
-
-/* === Additional Animations === */
-@keyframes ripple {
-    to {
-        transform: scale(2);
-        opacity: 0;
-    }
-}
-
-@keyframes gentleFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes candyGlow {
-    0% {
-        box-shadow: 0 0 20px rgba(174, 233, 238, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 30px rgba(174, 233, 238, 0.8), 0 0 40px rgba(255, 107, 160, 0.3);
-    }
-}
-
-@keyframes bubblePop {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.animate-slide-up {
-    animation: slideInUp 0.6s ease-out forwards;
-}
-
-.animate-fade-scale {
-    animation: fadeInScale 0.6s ease-out forwards;
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  
-  .menu-toggle {
-    display: flex;
-  }
-  
-  .glass-nav {
-    top: var(--spacing-sm);
-    left: var(--spacing-sm);
-    right: var(--spacing-sm);
-    transform: none;
-    padding: var(--spacing-sm);
-  }
-  
-  .nav-container {
-    gap: var(--spacing-sm);
-  }
-  
-  .hero-glass-card {
-    padding: var(--spacing-xl);
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .title-line {
-    font-size: 1.2rem;
-  }
-  
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .candy-btn {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-  }
-  
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-  
-  .case-study-item {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--spacing-md);
-  }
-  
-  .case-number {
-    min-width: auto;
-  }
-  
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --spacing-xs: 0.4rem;
-    --spacing-sm: 0.8rem;
-    --spacing-md: 1.2rem;
-    --spacing-lg: 1.6rem;
-    --spacing-xl: 2.4rem;
-    --spacing-2xl: 3.2rem;
-  }
-  
-  .main-content {
-    padding-top: 100px;
-  }
-  
-  .hero-section {
-    min-height: 80vh;
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-  
-  .content-section {
-    padding: var(--spacing-xl) 0;
-  }
-  
-  .section-container {
-    padding: 0 var(--spacing-sm);
-  }
-  
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-  
-  .portfolio-card,
-  .case-study-item,
-  .blog-card,
-  .contact-card,
-  .skills-showcase {
-    padding: var(--spacing-lg);
-  }
-}
+        /* --- Design Tokens (Applied) --- */
+        :root {
+            /* 🎨 Colors */
+            --color-primary-100: #E0F8FB;
+            --color-primary-300: #B0EEF3;
+            --color-primary-700: #82CFD8;
+            --color-primary-900: #52ACB7;
+            --color-background-100: #F7FAFF;
+            --color-background-300: #EEF3F9;
+            --color-text-50: #FEFEFE;
+            --color-text-100: #CFD8DC;
+            --color-text-500: #607D8B;
+            --color-text-700: #37474F;
+            --color-text-900: #212121;
+            --color-border: #D0E1E7;
+            --color-surface-50: #FFFFFF;
+
+            /* --- Typography --- */
+            --font-family-zh: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+            --font-family-en: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            --font-title-medium-emphasized: 700 18px/1.5 var(--font-family-zh), var(--font-family-en);
+            --font-title-small-emphasized: 700 16px/1.5 var(--font-family-zh), var(--font-family-en);
+            --font-headline-medium-baseline: 400 24px/1.3 var(--font-family-zh), var(--font-family-en);
+            --font-headline-small-emphasized: 700 20px/1.4 var(--font-family-zh), var(--font-family-en);
+            --font-body-medium-baseline: 400 16px/1.6 var(--font-family-zh), var(--font-family-en);
+            --font-body-small-baseline: 400 14px/1.6 var(--font-family-zh), var(--font-family-en);
+            --font-label-large-baseline: 400 14px/1.5 var(--font-family-zh), var(--font-family-en);
+
+            /* --- Other Tokens --- */
+            --border-radius-md: 16px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- 全域樣式 --- */
+        body {
+            margin: 0;
+            background-color: var(--color-background-100);
+            color: var(--color-text-900);
+            font: var(--font-body-medium-baseline);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- 頁首 & 側邊欄 (樣式簡化) --- */
+        .site-header {
+            background-color: var(--color-surface-50);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo a {
+            font: var(--font-title-medium-emphasized);
+            text-decoration: none;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            padding: 0;
+        }
+
+        .main-nav a {
+            padding: 0.5rem 0;
+            color: var(--color-text-500);
+            font: var(--font-title-small-emphasized);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .main-nav a.active {
+            color: var(--color-primary-700);
+        }
+
+        .main-content {
+            display: flex;
+            gap: 2.5rem;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .sidebar {
+            flex: 0 0 240px;
+        }
+
+        .widget {
+            margin-bottom: 2.5rem;
+        }
+
+        .widget-title {
+            font: var(--font-headline-small-emphasized);
+            border-left: 4px solid var(--color-primary-700);
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--color-background-300);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            color: var(--color-text-500);
+            font: var(--font-label-large-baseline);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .tag:hover,
+        .tag.active {
+            background-color: var(--color-primary-300);
+            color: var(--color-primary-900);
+        }
+
+        .projects-area {
+            flex: 1;
+        }
+
+        .section-title {
+            font: var(--font-headline-medium-baseline);
+            border-left: 4px solid var(--color-primary-700);
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- 新增：精選專案區塊 --- */
+        .featured-project {
+            margin-bottom: 3rem;
+        }
+
+        .featured-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--color-surface-50);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow);
+        }
+
+        .featured-card .card-image {
+            flex: 0 0 200px;
+        }
+
+        .featured-card .card-image img {
+            width: 100%;
+            border-radius: var(--border-radius-md);
+            display: block;
+        }
+
+        .featured-card .card-content h4 {
+            font: var(--font-title-medium-emphasized);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .featured-card .card-content p {
+            font: var(--font-body-medium-baseline);
+            color: var(--color-text-500);
+            margin: 0 0 1rem 0;
+        }
+
+        .featured-card .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .all-projects {
+            margin-top: 3rem;
+        }
+
+        /* =========================================================
+         * 📂 向上堆疊卡片 V4 互動效果
+         * ========================================================= */
+        .card-stack-container {
+            position: relative;
+            height: 600px;
+            perspective: 2000px;
+        }
+
+        .project-card {
+            position: absolute;
+            width: 80%;
+            height: 450px;
+            left: 10%;
+            top: 50px;
+            will-change: transform, opacity;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .card-content {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-surface-50);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* 讓內容從底部開始 */
+        }
+
+        .card-info-wrapper {
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            color: var(--color-text-50);
+        }
+
+        .card-info-wrapper h4 {
+            font: var(--font-title-small-emphasized);
+            margin: 0 0 0.5rem 0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-info-wrapper p {
+            font: var(--font-body-small-baseline);
+            color: var(--color-text-100);
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .project-card.is-active .card-content {
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* --- 頁腳 --- */
+        .site-footer-bottom {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: var(--color-text-300);
+            font: var(--font-label-large-baseline);
+        }
     </style>
 </head>
+
 <body>
-    <!-- Floating Background Elements -->
-    <div class="bg-decoration">
-        <div class="floating-bubble bubble-1"></div>
-        <div class="floating-bubble bubble-2"></div>
-        <div class="floating-bubble bubble-3"></div>
-        <div class="floating-bubble bubble-4"></div>
-        <div class="floating-bubble bubble-5"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo"><a href="#">Sophia's Magic Corner ✨</a></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#" class="active">Casestudy</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content container">
+        <aside class="sidebar">
+            <section class="widget">
+                <h3 class="widget-title">專案類型</h3>
+                <div class="tag-cloud" id="category-filter">
+                    <a class="tag active" data-filter="all">全部專案</a>
+                    <a class="tag" data-filter="product-design">產品設計</a>
+                    <a class="tag" data-filter="ux-research">UX 研究</a>
+                    <a class="tag" data-filter="side-project">Side Project</a>
+                </div>
+            </section>
+            <section class="widget">
+                <h3 class="widget-title">技能標籤</h3>
+                <div class="tag-cloud" id="skill-filter">
+                    <a class="tag" data-filter="ui-ux">UI/UX設計</a>
+                    <a class="tag" data-filter="fintech">金融科技</a>
+                    <a class="tag" data-filter="data-tech">數據科技</a>
+                </div>
+            </section>
+        </aside>
+
+        <main class="projects-area">
+            <section class="featured-project">
+                <h2 class="section-title">精選專案</h2>
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/400x300/FF9443/FFFFFF?text=Featured" alt="精選專案插圖">
+                    </div>
+                    <div class="card-content">
+                        <h4>財富管理體驗優化</h4>
+                        <p>透過研究與訪談，重新釐清使用者需求，並搭配數據分析，制定更貼近用戶的理財產品與體驗，打造滿意的財富管理體驗。</p>
+                        <div class="tag-group">
+                            <span class="tag">#產品設計</span>
+                            <span class="tag">#金融科技</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="all-projects">
+                <h2 class="section-title">所有專案</h2>
+                <div class="card-stack-container" id="card-stacker">
+                    <!-- 卡片由 JS 動態生成 -->
+                </div>
+            </section>
+        </main>
     </div>
 
-    <!-- Glass Navigation -->
-    <nav class="glass-nav" id="main-nav">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-icon">✨</span>
-                <span class="brand-text">阿泥的魔法角落</span>
-                <span class="brand-emoji">🧙‍♀️</span>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-item" data-section="home">
-                    <span class="material-icons-round">home</span>
-                    <span>首頁</span>
-                </a>
-                <a href="#portfolio" class="nav-item" data-section="portfolio">
-                    <span class="material-icons-round">work</span>
-                    <span>作品集</span>
-                </a>
-                <a href="#case-study" class="nav-item" data-section="case-study">
-                    <span class="material-icons-round">school</span>
-                    <span>案例研究</span>
-                </a>
-                <a href="#blog" class="nav-item" data-section="blog">
-                    <span class="material-icons-round">article</span>
-                    <span>部落格</span>
-                </a>
-                <a href="#contact" class="nav-item" data-section="contact">
-                    <span class="material-icons-round">favorite</span>
-                    <span>聯絡我</span>
-                </a>
-            </div>
-            
-            <button class="menu-toggle" id="menu-toggle">
-                <span class="material-icons-round">menu</span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section" id="home">
-            <div class="hero-container">
-                <div class="hero-glass-card">
-                    <div class="hero-avatar">
-                        <div class="avatar-ring"></div>
-                        <div class="avatar-image">
-                            <span class="material-icons-round">person</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-content">
-                        <h1 class="hero-title">
-                            <span class="title-line">哈囉！我是</span>
-                            <span class="title-highlight">阿泥 Sophia</span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            社會研究所學生 × UIUX自學者 × 設計與科技愛好者<br>
-                            用研究的心，做設計的事 🎨
-                        </p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">年設計經驗</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">歐洲城市探索</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">∞</span>
-                                <span class="stat-label">學習熱忱</span>
-                            </div>
-                        </div>
-                        
-                        <div class="hero-actions">
-                            <button class="candy-btn primary" onclick="scrollToSection('portfolio')">
-                                <span class="material-icons-round">work</span>
-                                <span>查看作品</span>
-                            </button>
-                            <button class="candy-btn secondary" onclick="scrollToSection('contact')">
-                                <span class="material-icons-round">email</span>
-                                <span>聯絡我</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="content-section" id="portfolio">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="material-icons-round">work</span>
-                        作品集 Portfolio
-                    </h2>
-                    <p class="section-subtitle">探索我的設計旅程與創作靈感</p>
-                </div>
-                
-                <div class="portfolio-grid">
-                    <div class="portfolio-card coming-soon" data-category="ui-ux">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <span class="material-icons-round">account_balance</span>
-                            </div>
-                            <h3>財富管理購物車</h3>
-                            <p>金融業數位轉型專案，從需求挖掘到高保真原型設計的完整流程</p>
-                            <div class="card-tags">
-                                <span class="tag">數位轉型</span>
-                                <span class="tag">金融業</span>
-                                <span class="tag">產品設計</span>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                    
-                    <div class="portfolio-card coming-soon" data-category="research">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <span class="material-icons-round">schedule</span>
-                            </div>
-                            <h3>Timesaw Puzzle</h3>
-                            <p>跨域團隊合作的時間管理工具，專為學生打造的智能規劃系統</p>
-                            <div class="card-tags">
-                                <span class="tag">UX研究</span>
-                                <span class="tag">Side Project</span>
-                                <span class="tag">時間管理</span>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                    
-                    <div class="portfolio-card coming-soon" data-category="ui-ux">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <span class="material-icons-round">laptop</span>
-                            </div>
-                            <h3>UXTW 實戰營專案</h3>
-                            <p>Hahow 線上學習平台的使用者體驗優化，提升學習成效</p>
-                            <div class="card-tags">
-                                <span class="tag">線上學習</span>
-                                <span class="tag">UXTW</span>
-                                <span class="tag">體驗優化</span>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Study Section -->
-        <section class="content-section" id="case-study">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="material-icons-round">school</span>
-                        案例研究 Case Studies
-                    </h2>
-                    <p class="section-subtitle">深度解析設計思維與問題解決過程</p>
-                </div>
-                
-                <div class="case-study-list">
-                    <div class="case-study-item coming-soon">
-                        <div class="case-number">01</div>
-                        <div class="case-content">
-                            <h3>財管購物車專案完整復盤</h3>
-                            <p>從使用者研究到產品上線，完整記錄金融科技產品的設計決策過程</p>
-                            <div class="case-meta">
-                                <span class="case-duration">3個月專案</span>
-                                <span class="case-role">產品設計師</span>
-                            </div>
-                        </div>
-                        <div class="case-arrow">
-                            <span class="material-icons-round">arrow_forward</span>
-                        </div>
-                    </div>
-                    
-                    <div class="case-study-item coming-soon">
-                        <div class="case-number">02</div>
-                        <div class="case-content">
-                            <h3>時間管理工具的使用者洞察</h3>
-                            <p>深入研究學生族群的時間管理痛點，設計貼近需求的解決方案</p>
-                            <div class="case-meta">
-                                <span class="case-duration">6個月研究</span>
-                                <span class="case-role">UX研究員</span>
-                            </div>
-                        </div>
-                        <div class="case-arrow">
-                            <span class="material-icons-round">arrow_forward</span>
-                        </div>
-                    </div>
-                    
-                    <div class="case-study-item coming-soon">
-                        <div class="case-number">03</div>
-                        <div class="case-content">
-                            <h3>線上學習平台體驗優化</h3>
-                            <p>透過使用者旅程分析，重新設計學習流程，提升課程完成率</p>
-                            <div class="case-meta">
-                                <span class="case-duration">2個月優化</span>
-                                <span class="case-role">體驗設計師</span>
-                            </div>
-                        </div>
-                        <div class="case-arrow">
-                            <span class="material-icons-round">arrow_forward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section class="content-section" id="blog">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="material-icons-round">article</span>
-                        部落格 Blog
-                    </h2>
-                    <p class="section-subtitle">分享我的歐洲交換經驗與生活點滴</p>
-                </div>
-                
-                <div class="blog-grid">
-                    <article class="blog-card featured">
-                        <div class="blog-image">
-                            <span class="material-icons-round">flight_takeoff</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span class="blog-category">📼 交換紀錄</span>
-                                <span class="blog-status featured">精選</span>
-                            </div>
-                            <h3><a href="./exchangestudent-0.html">交換準備、申請、面試分享</a></h3>
-                            <p>完整記錄研究所交換申請的每個步驟，從書審準備到面試技巧，不是最頂尖也能成功申請！</p>
-                            <div class="blog-footer">
-                                <span class="read-time">10分鐘閱讀</span>
-                                <span class="blog-date">最新發布</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <span class="material-icons-round">local_post_office</span>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span class="blog-category">📼 交換紀錄</span>
-                                <span class="blog-status popular">熱門</span>
-                            </div>
-                            <h3><a href="./exchangestudent-2.html">波蘭郵寄包裹、寄明信片、匯款</a></h3>
-                            <p>在波蘭生活必備的郵寄指南，包括郵資計算、流程說明和實用小撇步</p>
-                            <div class="blog-footer">
-                                <span class="read-time">8分鐘閱讀</span>
-                                <span class="blog-date">1週前</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <div class="blog-list">
-                        <h4>更多旅遊攻略</h4>
-                        <div class="blog-item coming-soon">
-                            <span class="blog-emoji">🇸🇪</span>
-                            <span class="blog-title">斯德哥爾摩｜北歐設計的美學啟發</span>
-                        </div>
-                        <div class="blog-item coming-soon">
-                            <span class="blog-emoji">🏰</span>
-                            <span class="blog-title">格但斯克｜波羅的海邊的童話小鎮</span>
-                        </div>
-                        <div class="blog-item coming-soon">
-                            <span class="blog-emoji">🎨</span>
-                            <span class="blog-title">克拉克夫｜歷史與現代的完美融合</span>
-                        </div>
-                        <div class="blog-item coming-soon">
-                            <span class="blog-emoji">🌃</span>
-                            <span class="blog-title">華沙｜有點無聊但值得一訪的首都</span>
-                        </div>
-                        <div class="blog-item coming-soon">
-                            <span class="blog-emoji">🧱</span>
-                            <span class="blog-title">柏林｜圍牆倒塌紀念日的特別回憶</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="content-section" id="contact">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="material-icons-round">favorite</span>
-                        聯絡我 Contact
-                    </h2>
-                    <p class="section-subtitle">有任何想法或合作機會，歡迎與我聊聊！</p>
-                </div>
-                
-                <div class="contact-content">
-                    <div class="contact-card">
-                        <div class="contact-avatar">
-                            <span class="material-icons-round">waving_hand</span>
-                        </div>
-                        <h3>讓我們開始對話吧！</h3>
-                        <p>無論是設計合作、交換經驗分享，或是單純想聊聊天，我都很樂意認識你！</p>
-                        
-                        <div class="contact-methods">
-                            <a href="mailto:sophia.lue1010@gmail.com" class="contact-method primary">
-                                <span class="material-icons-round">email</span>
-                                <div>
-                                    <strong>Email</strong>
-                                    <span>sophia.lue1010@gmail.com</span>
-                                </div>
-                            </a>
-                            
-                            <a href="https://www.instagram.com/ni_de_life" class="contact-method" target="_blank">
-                                <span class="material-icons-round">camera_alt</span>
-                                <div>
-                                    <strong>Instagram</strong>
-                                    <span>@ni_de_life</span>
-                                </div>
-                            </a>
-                            
-                            <a href="https://www.linkedin.com/in/yu-ning-liu-834596210" class="contact-method" target="_blank">
-                                <span class="material-icons-round">work</span>
-                                <div>
-                                    <strong>LinkedIn</strong>
-                                    <span>專業檔案</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="support-section">
-                            <h4>支持我的創作</h4>
-                            <p>如果你喜歡我的內容，歡迎請我喝杯咖啡 ☕</p>
-                            <a href="https://p.ecpay.com.tw/6942264" class="candy-btn support" target="_blank">
-                                <span class="material-icons-round">local_cafe</span>
-                                <span>請我喝咖啡</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-showcase">
-                        <h4>技能專長</h4>
-                        <div class="skills-grid">
-                            <div class="skill-bubble">
-                                <span class="skill-icon">🎨</span>
-                                <span>UI/UX Design</span>
-                            </div>
-                            <div class="skill-bubble">
-                                <span class="skill-icon">🔬</span>
-                                <span>User Research</span>
-                            </div>
-                            <div class="skill-bubble">
-                                <span class="skill-icon">📊</span>
-                                <span>Data Analysis</span>
-                            </div>
-                            <div class="skill-bubble">
-                                <span class="skill-icon">💻</span>
-                                <span>Prototyping</span>
-                            </div>
-                            <div class="skill-bubble">
-                                <span class="skill-icon">🌐</span>
-                                <span>Web Design</span>
-                            </div>
-                            <div class="skill-bubble">
-                                <span class="skill-icon">✈️</span>
-                                <span>Travel Planning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="glass-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 阿泥在哪裡？｜Sophia's Magic Corner</p>
-            <p>用 ❤️ 和 ☕ 在台北製作</p>
-        </div>
+    <footer class="site-footer-bottom">
+        <p>探索在這裡? | Sophia's Magic Corner © All Rights Reserved</p>
     </footer>
 
     <script>
-// === Navigation System ===
-class GlassNavigation {
-    constructor() {
-        this.nav = document.getElementById('main-nav');
-        this.menuToggle = document.getElementById('menu-toggle');
-        this.navMenu = document.getElementById('nav-menu');
-        this.navItems = document.querySelectorAll('.nav-item');
-        this.sections = document.querySelectorAll('.content-section, .hero-section');
-        this.isMenuOpen = false;
-        
-        this.init();
-    }
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = [
+                { id: 1, title: 'Timesow Puzzle 時間管理工具', description: '結合番茄鐘與拼圖遊戲的 App，讓時間管理變得更有趣。', imageUrl: 'https://placehold.co/600x450/82CFD8/FFFFFF?text=Timesow', tags: ['product-design', 'ux-research', 'ui-ux'] },
+                { id: 2, title: '線上學習平台優化', description: '從使用者回饋出發，優化課程觀看與互動介面。', imageUrl: 'https://placehold.co/600x450/52ACB7/FFFFFF?text=E-Learning', tags: ['side-project', 'ux-research', 'ui-ux'] },
+                { id: 3, title: '財富管理體驗優化', description: '重新釐清使用者需求，打造滿意的財富管理體驗。', imageUrl: 'https://placehold.co/600x450/FF9443/FFFFFF?text=Fintech', tags: ['product-design', 'fintech', 'data-tech'] },
+                { id: 4, title: '數據儀表板設計', description: '將複雜數據轉化為清晰易懂的視覺化圖表。', imageUrl: 'https://placehold.co/600x450/FFBB6E/FFFFFF?text=Dashboard', tags: ['side-project', 'data-tech', 'ui-ux'] },
+                { id: 5, title: '使用者訪談與分析', description: '透過深度訪談，挖掘使用者真實痛點與需求。', imageUrl: 'https://placehold.co/600x450/CC5680/FFFFFF?text=Interview', tags: ['ux-research'] },
+                { id: 6, title: '永續時尚 App 概念', description: '一個旨在推廣二手衣物交換與租賃的平台概念。', imageUrl: 'https://placehold.co/600x450/994160/FFFFFF?text=Fashion+App', tags: ['product-design', 'side-project', 'ui-ux'] }
+            ];
 
-    init() {
-        this.setupEventListeners();
-        this.setupScrollSpy();
-        this.setupSmoothScroll();
-    }
+            const stacker = document.getElementById('card-stacker');
+            let cardElements = [];
+            let currentIndex = 0;
+            let visibleCards = [];
+            let isScrolling = false;
+            let activeFilter = 'all';
 
-    setupEventListeners() {
-        // Mobile menu toggle
-        if (this.menuToggle) {
-            this.menuToggle.addEventListener('click', () => this.toggleMobileMenu());
-        }
+            function createCards() {
+                projects.forEach(project => {
+                    const card = document.createElement('a');
+                    card.href = `#project-${project.id}`;
+                    card.className = 'project-card';
+                    card.dataset.tags = project.tags.join(' ');
 
-        // Navigation item clicks
-        this.navItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                const section = item.getAttribute('data-section');
-                this.scrollToSection(section);
-                this.closeMobileMenu();
-            });
-        });
-
-        // Close mobile menu on outside click
-        document.addEventListener('click', (e) => {
-            if (this.isMenuOpen && !this.nav.contains(e.target)) {
-                this.closeMobileMenu();
+                    card.innerHTML = `
+                        <div class="card-content" style="background-image: url(${project.imageUrl})">
+                            <div class="card-info-wrapper">
+                                <h4>${project.title}</h4>
+                                <p>${project.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    stacker.appendChild(card);
+                    cardElements.push(card);
+                });
             }
-        });
 
-        // Close mobile menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.isMenuOpen) {
-                this.closeMobileMenu();
+            function updateCardPositions() {
+                if (visibleCards.length === 0) return;
+
+                visibleCards.forEach((card, index) => {
+                    card.classList.remove('is-active');
+                    const offset = index - currentIndex;
+                    let transform = '';
+                    let opacity = '1';
+
+                    if (index < currentIndex) {
+                        const stackOffset = currentIndex - index;
+                        transform = `translateY(${stackOffset * -30}px) translateZ(-${stackOffset * 80}px) scale(${1 - stackOffset * 0.05})`;
+                    }
+                    else if (index === currentIndex) {
+                        transform = `translateY(0) translateZ(0) scale(1)`;
+                        card.classList.add('is-active');
+                    }
+                    else {
+                        transform = `translateY(120%) scale(0.8)`;
+                        opacity = '0';
+                    }
+
+                    card.style.transform = transform;
+                    card.style.opacity = opacity;
+                    card.style.zIndex = index;
+                    card.style.pointerEvents = (index === currentIndex) ? 'auto' : 'none';
+                });
             }
-        });
 
-        // Close mobile menu on window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && this.isMenuOpen) {
-                this.closeMobileMenu();
-            }
-        });
-    }
-
-    setupScrollSpy() {
-        const observerOptions = {
-            threshold: 0.3,
-            rootMargin: '-100px 0px -50% 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.id;
-                    this.updateActiveNavItem(sectionId);
-                }
-            });
-        }, observerOptions);
-
-        this.sections.forEach(section => {
-            observer.observe(section);
-        });
-    }
-
-    setupSmoothScroll() {
-        // Add smooth scroll behavior
-        document.documentElement.style.scrollBehavior = 'smooth';
-    }
-
-    toggleMobileMenu() {
-        this.isMenuOpen = !this.isMenuOpen;
-        
-        if (this.isMenuOpen) {
-            this.openMobileMenu();
-        } else {
-            this.closeMobileMenu();
-        }
-    }
-
-    openMobileMenu() {
-        this.navMenu.style.display = 'flex';
-        this.navMenu.style.flexDirection = 'column';
-        this.navMenu.style.position = 'absolute';
-        this.navMenu.style.top = '100%';
-        this.navMenu.style.left = '0';
-        this.navMenu.style.right = '0';
-        this.navMenu.style.background = 'var(--glass-bg-strong)';
-        this.navMenu.style.backdropFilter = 'blur(30px)';
-        this.navMenu.style.borderRadius = '0 0 var(--radius-lg) var(--radius-lg)';
-        this.navMenu.style.padding = 'var(--spacing-md)';
-        this.navMenu.style.gap = 'var(--spacing-xs)';
-        this.navMenu.style.boxShadow = 'var(--glass-shadow)';
-        this.navMenu.style.opacity = '0';
-        this.navMenu.style.transform = 'translateY(-10px)';
-        this.navMenu.style.transition = 'all 0.3s ease';
-        
-        // Animate in
-        setTimeout(() => {
-            this.navMenu.style.opacity = '1';
-            this.navMenu.style.transform = 'translateY(0)';
-        }, 10);
-        
-        // Update menu button icon
-        const icon = this.menuToggle.querySelector('.material-icons-round');
-        if (icon) {
-            icon.textContent = 'close';
-        }
-    }
-
-    closeMobileMenu() {
-        if (!this.isMenuOpen) return;
-        
-        this.isMenuOpen = false;
-        
-        // Animate out
-        this.navMenu.style.opacity = '0';
-        this.navMenu.style.transform = 'translateY(-10px)';
-        
-        setTimeout(() => {
-            this.navMenu.style.display = '';
-            this.navMenu.style.position = '';
-            this.navMenu.style.top = '';
-            this.navMenu.style.left = '';
-            this.navMenu.style.right = '';
-            this.navMenu.style.background = '';
-            this.navMenu.style.backdropFilter = '';
-            this.navMenu.style.borderRadius = '';
-            this.navMenu.style.padding = '';
-            this.navMenu.style.gap = '';
-            this.navMenu.style.boxShadow = '';
-            this.navMenu.style.opacity = '';
-            this.navMenu.style.transform = '';
-            this.navMenu.style.transition = '';
-            this.navMenu.style.flexDirection = '';
-        }, 300);
-        
-        // Update menu button icon
-        const icon = this.menuToggle.querySelector('.material-icons-round');
-        if (icon) {
-            icon.textContent = 'menu';
-        }
-    }
-
-    updateActiveNavItem(sectionId) {
-        this.navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('data-section') === sectionId) {
-                item.classList.add('active');
-            }
-        });
-    }
-
-    scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            const navHeight = this.nav.offsetHeight;
-            const targetPosition = section.offsetTop - navHeight - 20;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    }
-}
-
-// === Glassmorphism Effects ===
-class GlassEffects {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.setupParallaxBubbles();
-        this.setupCardHoverEffects();
-        this.setupRippleEffects();
-        this.setupScrollAnimations();
-    }
-
-    setupParallaxBubbles() {
-        const bubbles = document.querySelectorAll('.floating-bubble');
-        
-        window.addEventListener('scroll', throttle(() => {
-            const scrolled = window.pageYOffset;
-            
-            bubbles.forEach((bubble, index) => {
-                const speed = (index + 1) * 0.5;
-                const yPos = -(scrolled * speed * 0.1);
-                const rotation = scrolled * (index + 1) * 0.05;
-                
-                bubble.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
-            });
-        }, 16));
-    }
-
-    setupCardHoverEffects() {
-        const cards = document.querySelectorAll('.portfolio-card, .case-study-item, .blog-card, .contact-card');
-        
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', (e) => {
-                this.addGlassHoverEffect(e.target);
-            });
-            
-            card.addEventListener('mouseleave', (e) => {
-                this.removeGlassHoverEffect(e.target);
-            });
-            
-            card.addEventListener('mousemove', (e) => {
-                this.updateGlassHoverEffect(e);
-            });
-        });
-    }
-
-    addGlassHoverEffect(element) {
-        element.style.transition = 'transform 0.3s ease-out';
-    }
-
-    removeGlassHoverEffect(element) {
-        element.style.transform = '';
-    }
-
-    updateGlassHoverEffect(e) {
-        const card = e.currentTarget;
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        
-        const rotateX = (y / rect.height) * 5;
-        const rotateY = -(x / rect.width) * 5;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-    }
-
-    setupRippleEffects() {
-        const buttons = document.querySelectorAll('.candy-btn, .nav-item, .contact-method');
-        
-        buttons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                this.createRipple(e);
-            });
-        });
-    }
-
-    createRipple(e) {
-        const button = e.currentTarget;
-        const rect = button.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        const ripple = document.createElement('div');
-        ripple.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            left: ${x}px;
-            top: ${y}px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-            pointer-events: none;
-            z-index: 1000;
-        `;
-        
-        button.style.position = 'relative';
-        button.style.overflow = 'hidden';
-        button.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
-    }
-
-    setupScrollAnimations() {
-        const animatedElements = document.querySelectorAll('.portfolio-card, .case-study-item, .blog-card, .skill-bubble');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        animatedElements.forEach((element, index) => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = `all 0.6s ease ${index * 0.1}s`;
-            observer.observe(element);
-        });
-    }
-}
-
-// === Candy Animations ===
-class CandyAnimations {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.setupStatCounters();
-        this.setupFloatingAnimations();
-        this.setupGlowEffects();
-        this.setupBubbleInteractions();
-    }
-
-    setupStatCounters() {
-        const statNumbers = document.querySelectorAll('.stat-number');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    this.animateStatNumber(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statNumbers.forEach(stat => {
-            observer.observe(stat);
-        });
-    }
-
-    animateStatNumber(element) {
-        const originalText = element.textContent;
-        const isNumber = /^\d+$/.test(originalText.replace('+', ''));
-        
-        if (isNumber) {
-            const finalNumber = parseInt(originalText.replace('+', ''));
-            const hasPlus = originalText.includes('+');
-            const duration = 2000;
-            const startTime = performance.now();
-            
-            const animate = (currentTime) => {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function
-                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                const currentNumber = Math.floor(easeOutQuart * finalNumber);
-                
-                element.textContent = currentNumber + (hasPlus ? '+' : '');
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
-                } else {
-                    element.textContent = originalText;
-                }
-            };
-            
-            requestAnimationFrame(animate);
-        }
-    }
-
-    setupFloatingAnimations() {
-        const floatingElements = document.querySelectorAll('.candy-btn, .skill-bubble');
-        
-        floatingElements.forEach((element, index) => {
-            const delay = index * 0.5;
-            element.style.animation = `gentleFloat 4s ease-in-out ${delay}s infinite`;
-        });
-    }
-
-    setupGlowEffects() {
-        const glowElements = document.querySelectorAll('.hero-avatar, .contact-avatar, .card-icon');
-        
-        glowElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.animation = 'candyGlow 1s ease-in-out infinite alternate';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                element.style.animation = '';
-            });
-        });
-    }
-
-    setupBubbleInteractions() {
-        const bubbles = document.querySelectorAll('.floating-bubble');
-        
-        bubbles.forEach(bubble => {
-            bubble.style.cursor = 'pointer';
-            bubble.addEventListener('click', () => {
-                this.createBubblePop(bubble);
-            });
-        });
-        
-        // Add cursor interaction
-        document.addEventListener('mousemove', (e) => {
-            bubbles.forEach(bubble => {
-                const rect = bubble.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const distance = Math.sqrt(
-                    Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2)
+            function filterAndArrangeCards() {
+                visibleCards = cardElements.filter(card =>
+                    activeFilter === 'all' || card.dataset.tags.includes(activeFilter)
                 );
-                
-                if (distance < 100) {
-                    const moveX = (e.clientX - centerX) * 0.05;
-                    const moveY = (e.clientY - centerY) * 0.05;
-                    
-                    bubble.style.transform += ` translate(${moveX}px, ${moveY}px)`;
-                }
-            });
-        });
-    }
 
-    createBubblePop(bubble) {
-        bubble.style.animation = 'bubblePop 0.6s ease-out';
-        
-        setTimeout(() => {
-            bubble.style.animation = '';
-        }, 600);
-    }
-}
+                cardElements.forEach(card => {
+                    const isVisible = visibleCards.includes(card);
+                    card.style.display = isVisible ? 'block' : 'none';
+                });
 
-// === Scroll Magic ===
-class ScrollMagic {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.setupNavbarScroll();
-        this.setupParallaxElements();
-        this.setupProgressIndicator();
-    }
-
-    setupNavbarScroll() {
-        const nav = document.getElementById('main-nav');
-        let lastScrollY = window.scrollY;
-        
-        window.addEventListener('scroll', throttle(() => {
-            const currentScrollY = window.scrollY;
-            
-            if (currentScrollY > 100) {
-                nav.style.background = 'var(--glass-bg-strong)';
-                nav.style.boxShadow = 'var(--glass-shadow-hover)';
-            } else {
-                nav.style.background = 'var(--glass-bg-strong)';
-                nav.style.boxShadow = 'var(--glass-shadow)';
+                // *** 修改：初始狀態直接顯示最後一張卡片 ***
+                currentIndex = Math.max(0, visibleCards.length - 1);
+                updateCardPositions();
             }
-            
-            // Hide/show nav on scroll
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                nav.style.transform = 'translateX(-50%) translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateX(-50%) translateY(0)';
-            }
-            
-            lastScrollY = currentScrollY;
-        }, 16));
-    }
 
-    setupParallaxElements() {
-        const parallaxElements = document.querySelectorAll('.hero-glass-card, .section-title');
-        
-        window.addEventListener('scroll', throttle(() => {
-            const scrolled = window.pageYOffset;
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = (index + 1) * 0.3;
-                const yPos = scrolled * speed * 0.05;
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        }, 16));
-    }
+            function handleScroll(e) {
+                if (isScrolling || visibleCards.length <= 1) return;
+                isScrolling = true;
 
-    setupProgressIndicator() {
-        const progressBar = document.createElement('div');
-        progressBar.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: var(--gradient-rainbow);
-            z-index: 9999;
-            transition: width 0.1s ease;
-        `;
-        document.body.appendChild(progressBar);
-        
-        window.addEventListener('scroll', throttle(() => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + '%';
-        }, 16));
-    }
-}
-
-// === Utility Functions ===
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// === Global Functions ===
-window.scrollToSection = function(sectionId) {
-    const section = document.getElementById(sectionId);
-    const nav = document.getElementById('main-nav');
-    
-    if (section && nav) {
-        const navHeight = nav.offsetHeight;
-        const targetPosition = section.offsetTop - navHeight - 20;
-        
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
-};
-
-// === Performance Monitoring ===
-class PerformanceMonitor {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.monitorPageLoad();
-    }
-
-    monitorPageLoad() {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                if (window.performance && window.performance.timing) {
-                    const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-                    console.log(`🍭 Candy Glass Site loaded in ${loadTime}ms`);
+                // 滾輪向下 -> 下一張 (卡片向上飛)
+                if (e.deltaY > 0) {
+                    if (currentIndex < visibleCards.length - 1) {
+                        currentIndex++;
+                    }
+                    // 滾輪向上 -> 上一張 (卡片向下歸位)
+                } else {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    }
                 }
-            }, 0);
+                updateCardPositions();
+
+                setTimeout(() => { isScrolling = false; }, 400);
+            }
+
+            function handleFilterClick(e) {
+                const target = e.target;
+                if (target.classList.contains('tag') && !target.classList.contains('active')) {
+                    document.querySelectorAll('.tag-cloud .tag').forEach(t => t.classList.remove('active'));
+
+                    const filterValue = target.dataset.filter;
+                    document.querySelectorAll(`.tag[data-filter="${filterValue}"]`).forEach(t => t.classList.add('active'));
+
+                    activeFilter = filterValue;
+                    filterAndArrangeCards();
+                }
+            }
+
+            stacker.addEventListener('mouseenter', () => {
+                document.body.style.overflow = 'hidden';
+            });
+
+            stacker.addEventListener('mouseleave', () => {
+                document.body.style.overflow = '';
+            });
+
+            createCards();
+            filterAndArrangeCards();
+
+            stacker.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                handleScroll(e);
+            });
+            document.getElementById('category-filter').addEventListener('click', handleFilterClick);
+            document.getElementById('skill-filter').addEventListener('click', handleFilterClick);
+            window.addEventListener('resize', filterAndArrangeCards);
         });
-    }
-}
-
-// === Error Handling ===
-window.addEventListener('error', (e) => {
-    console.error('🚨 JavaScript Error:', e.error);
-});
-
-window.addEventListener('unhandledrejection', (e) => {
-    console.error('🚨 Unhandled Promise Rejection:', e.reason);
-});
-
-// === Initialization ===
-document.addEventListener('DOMContentLoaded', () => {
-    // Check for required browser features
-    if (!('IntersectionObserver' in window)) {
-        console.warn('IntersectionObserver not supported, some animations may not work');
-    }
-    
-    if (!CSS.supports('backdrop-filter', 'blur(20px)')) {
-        console.warn('Backdrop filter not supported, glassmorphism effects may be limited');
-        // Add fallback styles
-        document.documentElement.style.setProperty('--glass-bg', 'rgba(255, 255, 255, 0.8)');
-        document.documentElement.style.setProperty('--glass-bg-strong', 'rgba(255, 255, 255, 0.9)');
-    }
-    
-    // Initialize all systems
-    new GlassNavigation();
-    new GlassEffects();
-    new CandyAnimations();
-    new ScrollMagic();
-    new PerformanceMonitor();
-    
-    // Add loaded class for any CSS transitions
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-    }, 100);
-    
-    console.log('🍭✨ Candy Glassmorphism site initialized successfully!');
-});
-
-// === Export for external use ===
-window.CandyGlassSite = {
-    GlassNavigation,
-    GlassEffects,
-    CandyAnimations,
-    ScrollMagic,
-    scrollToSection: window.scrollToSection,
-    throttle,
-    debounce
-};
     </script>
 </body>
+
 </html>

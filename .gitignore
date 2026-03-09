@@ -1,0 +1,10 @@
+# 排除 AI 工具專用檔案
+.agents/
+mcp-config.json
+*.rules
+.cursorrules
+.env
+
+# 排除開發工具
+node_modules/
+.DS_Store
