@@ -23,5 +23,7 @@ __pycache__/
 # 排除隱密資料
 posts/
 tokens.json
+
+# 排除專案文件
 readme.md
 spec.md
