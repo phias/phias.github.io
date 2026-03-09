@@ -1,5 +1,5 @@
 # 排除 AI 工具專用檔案
-.agents/
+.agent/
 mcp-config.json
 *.rules
 .cursorrules
@@ -8,3 +8,9 @@ mcp-config.json
 # 排除開發工具
 node_modules/
 .DS_Store
+
+# 排除隱密資料
+posts/
+tokens.json
+readme.md
+spec.md
