@@ -34,24 +34,20 @@
     <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-
-            <a href="./porfolio-formal.html" class="btn btn--md btn--text btn--primary site-title">
-                <span class="title-full">劉于寧的履歷</span>
-                <span class="title-short">劉于寧</span>
+            <a href="./porfolio-formal.html" class="btn btn--md btn--text site-title">
+                <span class="title-full"><span class="material-symbols-outlined">auto_awesome</span>
+                    劉于寧的履歷
+                    <span class="material-symbols-outlined">face_3</span></span>
             </a>
 
             <nav class="nav-links">
-                <a href="./financial-formal.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon"></span>
+                <a href="./financial-formal.html" class="btn btn--md btn--text btn--secondary"
+                    data-action="nav_portfolio">
+                    <span class="material-symbols-outlined icon">category</span>
                     <span class="nav-text">財管購物車專案</span>
                 </a>
-                <a href="./timesaw-formal.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon"></span>
-                    <span class="nav-text">Timesaw Puzzle專案</span>
-                </a>
-                
             </nav>
-            <button class="menu-icon" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle" aria-label="開啟或關閉選單" aria-expanded="false">
                 <span class="material-symbols-rounded">
                     menu
                 </span>
@@ -60,77 +56,48 @@
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./financial-formal.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon"></span>
+            <a href="./financial-formal.html" class="btn btn--md btn--text btn--secondary"
+                data-action="nav_portfolio_mobile">
+                <span class="material-symbols-outlined icon">category</span>
                 <span>財管購物車專案</span>
             </a>
-            <a href="./timesaw-formal.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon"></span>
-                <span>Timesaw Puzzle專案</span>
-            </a>
-            
         </div>
     </header>
 
+
     <div class="portfolio-formal-page">
         <!-- hero section -->
-        <section class="profile-intro">
-            <img src="./img/portfolio_forrmal.jpeg" alt="Profile Picture" class="profile-picture">
-            <div class="name">
-                劉于寧
-            </div>
-            <div class="role">產品設計師</div>
-            <div class="profile-des">
-                一位擁有社會學研究背景的產品設計師。我專注於透過資料分析與使用者研究，
-                設計能創造商業價值的數位產品與服務。目前已累積金融科技與教育科技領域的實戰經驗，
-                擅長運用質性研究與量化分析，深入理解使用者需求並轉化為具體的設計方案。
-            
-                我的優勢在於能將社會學訓練與設計思維結合，不只關注介面與互動，更著重於理解使用情境與行為脈絡，
-                進而提出能兼顧使用者體驗與商業目標的解決方案。如果您正在尋找一位具備研究思維、
-                設計能力與商業視角的產品設計師，我將很樂意與您進一步討論合作機會。
-            </div>
-            
-            <!-- hero action -->
-            <div class="hero-actions">
-                <a class="btn btn--md btn--outline-filled btn--primary" href="mailto:sophia.lue1010@gmail.com">
-                    <span class="material-symbols-rounded">mail</span>
-                    <span>聯絡我</span>
-                </a>
-                <a class="btn btn--md btn--text btn--primary" href="https://www.yourator.co/r/ce2c3ae3-df71-4e86-a0eb-7dce2bd422f0">
-                    <span class="material-symbols-rounded">download</span>
-                    <span>下載履歷</span>
-                </a>
+        <section class="formal-profile-card">
+            <img src="./img/portfolio_forrmal.jpeg" alt="劉于寧的 Profile Picture" class="formal-profile-image">
+            <div class="formal-profile-content">
+                <h1 class="formal-name">劉于寧</h1>
+                <div class="formal-role">產品設計師</div>
+                <div class="formal-desc">
+                    一位擁有社會學研究背景的產品設計師。我專注於透過資料分析與使用者研究，
+                    設計能創造商業價值的數位產品與服務。目前已累積金融科技與教育科技領域的實戰經驗，
+                    擅長運用質性研究與量化分析，深入理解使用者需求並轉化為具體的設計方案。
+                    <br><br>
+                    我的優勢在於能將社會學訓練與設計思維結合，不只關注介面與互動，更著重於理解使用情境與行為脈絡，
+                    進而提出能兼顧使用者體驗與商業目標的解決方案。如果您正在尋找一位具備研究思維、
+                    設計能力與商業視角的產品設計師，我將很樂意與您進一步討論合作機會。
+                </div>
+
+                <!-- hero action -->
+                <div class="formal-hero-actions">
+                    <a class="btn btn--md btn--filled btn--primary" href="mailto:sophia.lue1010@gmail.com"
+                        style="border-radius: 99px;">
+                        <span class="material-symbols-rounded">mail</span>
+                        <span>聯絡我</span>
+                    </a>
+                    <a class="btn btn--md btn--outline-filled btn--secondary"
+                        href="https://www.yourator.co/r/ce2c3ae3-df71-4e86-a0eb-7dce2bd422f0"
+                        style="border-radius: 99px;">
+                        <span class="material-symbols-rounded">download</span>
+                        <span>下載履歷</span>
+                    </a>
+                </div>
             </div>
         </section>
-        <div class="container-abi-tool">
-            <!-- tool section -->
-            <section class="tools">
-                <h3>特殊經歷</h3>
-                <div class="tool-description">
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">Side Project交流分享會分享人</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">Ｔ大使</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">Ｔ大使畢聯會美編組組長</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">波蘭亞當密茲坎維奇大學交換</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">社會統計課程助教</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">大專生研究計畫補助</div>
-                </div>
-            </section>
-            <!-- abilities&tools section -->
-            <section class="abilities">
-                <h3>專業技能</h3>
-                <div class="abilities-description">
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">UI/UX 設計</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">使用者研究</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">原型設計</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">數據分析</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">Figma</div>
-                    <div class="btn btn--md btn--outline btn--primary btn--no-hover">前端開發</div>
-                    
-                    
-                </div>
-            </section>
-            
-        </div>
 
         <!-- featured portfolio section -->
         <section class="featured-portfolio">
@@ -151,143 +118,134 @@
         </section>
 
         <!-- learning path section -->
-        <section class="learning-path">
+        <section class="formal-section-card">
             <div class="content-header">
-                <span class="material-symbols-rounded content-header-icon">
-                    psychiatry
-                </span>
-                <span>學習軌跡</span>
+                <span class="material-symbols-rounded content-header-icon">signpost</span>
+                <span class="header-text">經歷與軌跡</span>
             </div>
-            <div class="learning-path-content">
-                <div class="learning-path-container">
-                    <div class="learning-icon icon-edu">
-                        <div class="text-edu">🎓</div>
-                    </div>
-                    <div class="learning-icon icon-design">
-                        <div class="text-design">🎨</div>
-                    </div>
-                    <div class="learning-icon icon-launch">
-                        <div class="text-launch">🚀</div>
-                    </div>
-                    <div class="learning-icon icon-work">
-                        <div class="text-work">💼</div>
-                    </div>
-                    <div class="learning-icon icon-global">
-                        <div class="text-global">🌍</div>
-                    </div>
 
-                    
-                    <div class="learning-path-item">
+            <div class="formal-timeline-container">
+                <div class="formal-timeline-item">
+                    <div class="formal-timeline-icon-wrap">
+                        <span class="material-symbols-rounded">school</span>
+                    </div>
+                    <div class="formal-timeline-content">
                         <div class="learning-path-title">臺北大學社會研究所畢業</div>
                         <div class="learning-path-des">大學專精於數據分析，直升研究所後專注於社會資本與金融社會學研究，探究投資行為決策因素。</div>
-                        <div class="tag-list">
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">數據分析</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">社會資本</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">金融社會學</div>
-                            </div>
+                        <div class="tag-group">
+                            <span class="formal-tag">數據分析</span>
+                            <span class="formal-tag">社會資本</span>
+                            <span class="formal-tag">金融社會學</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="learning-path-item">
+                <div class="formal-timeline-item">
+                    <div class="formal-timeline-icon-wrap">
+                        <span class="material-symbols-rounded">palette</span>
+                    </div>
+                    <div class="formal-timeline-content">
                         <div class="learning-path-title">UI/UX設計自學與實戰</div>
                         <div class="learning-path-des">透過網路資源自學設計思維與工具，並參與 UXTW 實戰營累積實務經驗</div>
-                        <div class="tag-list">
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">UI/UX 設計</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">設計思維</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">自主學習</div>
-                            </div>
+                        <div class="tag-group">
+                            <span class="formal-tag">UI/UX 設計</span>
+                            <span class="formal-tag">設計思維</span>
+                            <span class="formal-tag">自主學習</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="learning-path-item">
+                <div class="formal-timeline-item">
+                    <div class="formal-timeline-icon-wrap">
+                        <span class="material-symbols-rounded">rocket_launch</span>
+                    </div>
+                    <div class="formal-timeline-content">
                         <div class="learning-path-title">Side Project 開發</div>
                         <div class="learning-path-des">與夥伴共同開發時間管理工具 Timesaw Puzzle，從概念到產品的完整實作</div>
-                        <div class="tag-list">
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">產品開發</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">團隊協作</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">使用者研究</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">時間管理</div>
-                            </div>
+                        <div class="tag-group">
+                            <span class="formal-tag">產品開發</span>
+                            <span class="formal-tag">團隊協作</span>
+                            <span class="formal-tag">使用者研究</span>
+                            <span class="formal-tag">時間管理</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="learning-path-item">
+                <div class="formal-timeline-item">
+                    <div class="formal-timeline-icon-wrap">
+                        <span class="material-symbols-rounded">work</span>
+                    </div>
+                    <div class="formal-timeline-content">
                         <div class="learning-path-title">企業實習</div>
                         <div class="learning-path-des">在凱基證券實習，參與財富管理平台的購物車設計與規劃，累積金融科技產品設計經驗。在台灣漫畫基地實習，協助展覽活動執行。</div>
-                        <div class="tag-list">
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">金融科技</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">數位轉型</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="FinancialSociologyText">服務設計</div>
-                            </div>
+                        <div class="tag-group">
+                            <span class="formal-tag">金融科技</span>
+                            <span class="formal-tag">數位轉型</span>
+                            <span class="formal-tag">服務設計</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="learning-path-item">
+                <div class="formal-timeline-item">
+                    <div class="formal-timeline-icon-wrap">
+                        <span class="material-symbols-rounded">language</span>
+                    </div>
+                    <div class="formal-timeline-content">
                         <div class="learning-path-title">波蘭交換學習</div>
                         <div class="learning-path-des">在波蘭進行交換，學習波蘭語，了解歐洲政治經濟，體驗不同文化並拓展國際視野。</div>
-                        <div class="tag-list">
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">語言學習</div>
-                            </div>
-                            <div class="btn btn--xs btn--outline btn--primary btn--no-hover">
-                                <div class="SocialNetworkAnalysisText">跨文化溝通</div>
-                            </div>
+                        <div class="tag-group">
+                            <span class="formal-tag">語言學習</span>
+                            <span class="formal-tag">跨文化溝通</span>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
 
-        <!-- portfolio section -->
-        <section class="portfolio-section">
-            <div class="content-header">
-                <span class="material-symbols-rounded content-header-icon">
-                    interests
-                </span>
-                <span>其他作品</span>
-            </div>
-            <div class="portfolio-list">
-                <div class="card card-portfolio">
-                    <a href="./timesaw-formal.html" class="portfolio-card-link">
-                        <img src="./img/banner-timesaw.webp" alt="Timesaw Puzzle封面">
-                        <h2>Timesaw Puzzle</h2>
-                        <p>時間管理工具，結合待辦事項與拼圖遊戲，提升專注力與生產力</p>
-                    </a>
+        <!-- tool & abilities section -->
+        <div class="formal-card-grid">
+            <section class="formal-section-card formal-grid-card">
+                <div class="content-header" style="padding-top: 0;">
+                    <span class="material-symbols-rounded content-header-icon"
+                        style="font-size: 32px;">military_tech</span>
+                    <span class="header-text" style="font-size: 1.5rem;">特殊經歷</span>
                 </div>
+                <div class="formal-abilities-grid">
+                    <span class="formal-tag">Side Project交流分享會分享人</span>
+                    <span class="formal-tag">Ｔ大使</span>
+                    <span class="formal-tag">Ｔ大使畢聯會美編組組長</span>
+                    <span class="formal-tag">波蘭亞當密茲坎維奇大學交換</span>
+                    <span class="formal-tag">社會統計課程助教</span>
+                    <span class="formal-tag">大專生研究計畫補助</span>
+                </div>
+            </section>
 
-            </div>
-        </section>
+            <section class="formal-section-card formal-grid-card">
+                <div class="content-header" style="padding-top: 0;">
+                    <span class="material-symbols-rounded content-header-icon"
+                        style="font-size: 32px;">construction</span>
+                    <span class="header-text" style="font-size: 1.5rem;">專業技能</span>
+                </div>
+                <div class="formal-abilities-grid">
+                    <span class="formal-tag">UI/UX 設計</span>
+                    <span class="formal-tag">使用者研究</span>
+                    <span class="formal-tag">原型設計</span>
+                    <span class="formal-tag">數據分析</span>
+                    <span class="formal-tag">Figma</span>
+                    <span class="formal-tag">前端開發</span>
+                </div>
+            </section>
+        </div>
+
     </div>
+
     <footer class="site-footer">
-        <div class="footer-container" style="display: flex; height: auto;">
+        <div class="footer-container flex-center-auto">
             <div data-layer="card-about" class="card-about">
-                <div data-layer="card-header" class="card-header">
-                    <div data-layer="About Icon" class="AboutIcon">💫</div>
-                    <div data-layer="About Text" class="AboutText">了解更多職涯經歷</div>
+                <div data-layer="card-header" class="card-header" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="material-symbols-outlined icon" style="font-size: 24px;">auto_awesome</span>
+                    <div data-layer="About Text" class="AboutText" style="font-size: 1.2rem; font-weight: bold;">
+                        了解更多職涯經歷</div>
                 </div>
                 <div class="hero-actions">
                     <a href="https://www.yourator.co/r/ce2c3ae3-df71-4e86-a0eb-7dce2bd422f0"
@@ -318,10 +276,8 @@
 
 
         </div>
-        <div data-layer="footer-signature" class="FooterSignature"
-            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div data-layer="Footer Signature Text" class="FooterSignatureText"
-                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+        <div data-layer="footer-signature" class="FooterSignature footer-signature-container">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText footer-signature-text">
                 © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
         </div>
     </footer>

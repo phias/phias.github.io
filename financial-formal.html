@@ -34,24 +34,20 @@
     <!-- Header 與 Navbar -->
     <header class="top-app-bar">
         <div class="app-bar-container">
-
-            <a href="./porfolio-formal.html" class="btn btn--md btn--text btn--primary site-title">
-                <span class="title-full">劉于寧的履歷</span>
-                <span class="title-short">劉于寧</span>
+            <a href="./porfolio-formal.html" class="btn btn--md btn--text site-title">
+                <span class="title-full"><span class="material-symbols-outlined">auto_awesome</span>
+                    劉于寧的履歷
+                    <span class="material-symbols-outlined">face_3</span></span>
             </a>
 
             <nav class="nav-links">
-                <a href="./financial-formal.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon"></span>
+                <a href="./financial-formal.html" class="btn btn--md btn--text btn--secondary"
+                    data-action="nav_portfolio">
+                    <span class="material-symbols-outlined icon">category</span>
                     <span class="nav-text">財管購物車專案</span>
                 </a>
-                <a href="./timesaw-formal.html" class="btn btn--md btn--text btn--primary">
-                    <span class="icon"></span>
-                    <span class="nav-text">Timesaw Puzzle專案</span>
-                </a>
-                
             </nav>
-            <button class="menu-icon" id="menu-toggle">
+            <button class="menu-icon" id="menu-toggle" aria-label="開啟或關閉選單" aria-expanded="false">
                 <span class="material-symbols-rounded">
                     menu
                 </span>
@@ -60,127 +56,396 @@
 
         <!-- 手機版 dropdown menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./financial-formal.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon"></span>
+            <a href="./financial-formal.html" class="btn btn--md btn--text btn--secondary"
+                data-action="nav_portfolio_mobile">
+                <span class="material-symbols-outlined icon">category</span>
                 <span>財管購物車專案</span>
             </a>
-            <a href="./timesaw-formal.html" class="btn btn--md btn--text btn--primary">
-                <span class="icon"></span>
-                <span>Timesaw Puzzle專案</span>
-            </a>
-            
         </div>
     </header>
-    <!-- 主內容 -->
-    <div class="article-page">
-        
-        <!-- 文章標頭區域 -->
-        <div class="article-header">
-            <!-- 麵包屑導航 -->
-            <nav class="breadcrumb">
-                <a href="./porfolio-formal.html">履歷</a>
-                <span class="separator">›</span>
-                <a href="./financial-formal.html">財管購物車專案</a>
-            </nav>
 
-            <!-- 文章標題區 -->
-            <div class="article-title-section">
-                
-                
-                <h1>一鍵下單，輕鬆配置：專為理財新手打造的購物車式投資體驗</h1>
-                <div class="project-info-list">
-                    <span class="project-info">
-                        <h5>專案期間</h5>
-                        <p>2 個月</p>
-                    </span>
-                    <span class="project-info">
-                        <h5>擔任角色</h5>
-                        <p>使用者體驗（UX）設計師</p>
-                    </span>
-                    <span class="project-info">
-                        <h5>負責項目</h5>
-                        <p>功能流程規劃、設計完稿</p>
-                    </span>
-                    <span class="project-info">
-                        <h5>服務公司</h5>
-                        <p>凱基證券</p>
-                </div>
+    <!-- Project Header Section -->
+    <main class="page-container project-header-section">
+        <!-- Badge -->
+        <div class="project-badge">
+            <span class="material-symbols-outlined">category</span>
+            實習專案
+        </div>
 
-                <div class="project-tag-time">
-                    <div class="project-tags">
-                        <span class="btn btn--xs btn--filled btn--primary" disabled>#數位轉型</span>
-                        <span class="btn btn--xs btn--filled btn--primary" disabled>#金融科技</span>
-                        <span class="btn btn--xs btn--filled btn--primary" disabled>#產品設計</span>
-                    </div>
-                    <span class="execution-time">2023/07/07 - 2023/08/25</span>
-                </div>
-                
+        <!-- Title -->
+        <h1 class="project-title">
+            財富管理購物車
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="project-subtitle">
+            委託下單流程優化與競品策略分析
+        </h2>
+
+        <!-- Description -->
+        <p class="project-desc">
+            打破金融交易隔閡，整合股票、基金與債券的一站式直覺體驗。
+        </p>
+
+        <!-- Bottom details (chips) -->
+        <div class="project-details">
+            <div class="detail-chip role">
+                <span class="material-symbols-outlined">person</span>
+                產品經理
+            </div>
+            <div class="detail-chip time">
+                <span class="material-symbols-outlined">schedule</span>
+                Jul - Sep 2023
+            </div>
+            <div class="detail-chip tool">
+                <span class="material-symbols-outlined">auto_awesome</span>
+                Figma
             </div>
         </div>
-        
-        <!-- Article Bento Grid 佈局 -->
-        <div class="article-bento-grid">
-            <!-- 主要文章內容 -->
-            <article class="article-content">
-                <h2>專案背景</h2>
-                <p>
-                    舊版財富管理 APP 的下單流程對新手不友善，其複雜的介面與專業術語，造成使用者學習門檻高、操作易中斷，客戶轉換率長期偏低。
-                </p>
-                <h2>專案目標</h2>
-                <p>
-                    透過重新設計下單流程，打造一個直觀且易於使用的購物車式投資體驗，降低新手使用者的操作難度，提升客戶轉換率與滿意度。
-                </p>
-                <h2>專案挑戰</h2>
-                <p></p>
-                <h2>角色與貢獻</h2>
-                <p>我主要負責以下幾個方面：</p>
-                <ul>
-                    <li>需求挖掘：透過用戶訪談和市場調查，了解使用者的痛點和需求。</li>
-                    <li>資訊架構設計：根據需求分析，設計清晰的資訊架構，確保使用者能夠輕鬆找到所需功能。</li>
-                    <li>互動設計：設計直觀的互動流程，提升使用者操作的便利性。</li>
-                    <li>高保真原型製作：使用 Figma 製作高保真原型，並進行可用性測試以驗證設計效果。</li>
+    </main>
+
+    <!-- Pain Points & Strategy Section -->
+    <section class="page-container strategy-section">
+        <h2 class="strategy-section-title">
+            <span class="material-symbols-outlined">label_important</span>
+            痛點與設計策略
+        </h2>
+
+        <div class="strategy-cards-container">
+            <!-- Card 1: Pain Points -->
+            <div class="strategy-card pain-points-card">
+                <h3 class="strategy-card-title">痛點分析</h3>
+                <ul class="strategy-list pain-points-list">
+                    <li>
+                        <div class="list-title">操作門檻高與架構混亂</div>
+                        <div class="list-desc">交易介面術語多，找不到委託回報與成交紀錄。</div>
+                    </li>
+                    <li>
+                        <div class="list-title">資訊過載與決策癱瘓</div>
+                        <div class="list-desc">缺乏篩選機制與入場時機的建議。</div>
+                    </li>
+                    <li>
+                        <div class="list-title">規則盲區</div>
+                        <div class="list-desc">易忘交割期限，且無下單前預警餘額不足，導致違約風險。</div>
+                    </li>
+                    <li>
+                        <div class="list-title">流程破碎化</div>
+                        <div class="list-desc">股票、基金、債券下單分散在不同平台，難以統一管理。</div>
+                    </li>
+                    <li>
+                        <div class="list-title">策略缺失</div>
+                        <div class="list-desc">缺乏符合其風險偏好且易於操作的組合。</div>
+                    </li>
                 </ul>
-
-                <h2>專案成果</h2>
-                <p>經過多次迭代和測試，我們成功地推出了一款符合使用者需求的財富管理工具。該工具不僅提升了使用者的滿意度，還促進了業務目標的達成。</p>
-
-                <h2>結語</h2>
-                <p>這個專案讓我深刻體會到 UX 設計在數位轉型中的重要性。透過深入了解使用者需求並將其轉化為具體的設計方案，我們能夠創造出真正有價值的產品。</p>
-            </article>
-            <!-- 側邊欄 -->
-            <!-- 目錄 -->
-            <div class="toc-container">
-                <h3>📋 文章目錄</h3>
-                <nav class="toc">
-                    <ul class="toc-list">
-                        <li><a href="#專案背景" class="toc-link toc-level-1">專案背景</a></li>
-                        <li><a href="#我的角色與貢獻" class="toc-link toc-level-1">我的角色與貢獻</a></li>
-                        <li><a href="#專案成果" class="toc-link toc-level-1">專案成果</a></li>
-                        <li><a href="#結語" class="toc-link toc-level-1">結語</a></li>
-                    </ul>
-                </nav>
             </div>
-            
-        </div>
-        <!-- 文章底部導航 -->
-        <nav class="article-navigation">
-            <a href="./porfolio-formal.html" class="nav-back">
-                <span class="icon">←</span>
-                <span>返回個人履歷</span>
-            </a>
-        </nav>
-    </div>
 
+            <!-- Card 2: Design Strategy -->
+            <div class="strategy-card design-strategy-card">
+                <h3 class="strategy-card-title">設計策略</h3>
+                <ul class="strategy-list design-strategy-list">
+                    <li>下單確認明細，成功後立即顯示<span class="highlight-pink">委託明細的快捷引導</span>。</li>
+                    <li>下單前<span class="highlight-pink">自動檢查交割帳戶餘額</span>，不足則警告需存入。</li>
+                    <li>在交易過程中標註應交割日期。</li>
+                    <li>基於投資屬性，<span class="highlight-pink">推介熱門標的</span>並提供建議價格區間。</li>
+                    <li><span class="highlight-pink">理專主動推介並協助下單</span>，客戶確認結帳下單。</li>
+                    <li>建立<span class="highlight-pink">投資購物車</span>，將不同類型的金融商品購買整合在單一入口。</li>
+                    <li>允許用戶<span class="highlight-pink">一鍵申購</span>自選組合，簡化多類型商品的繁瑣購買流程。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Prototype Section -->
+    <section class="page-container prototype-section">
+        <h2 class="strategy-section-title">
+            <span class="material-symbols-outlined">label_important</span>
+            設計原型
+        </h2>
+
+        <div class="prototype-container">
+            <!-- Left Phone & Tooltip -->
+            <div class="phone-wrapper phone-left">
+                <!-- Tooltip Left -->
+                <div class="tooltip tooltip-left">
+                    透過推薦熱門商品，快速加<br>入購物車
+                </div>
+                <!-- Image -->
+                <img src="./img/iPhone 1.png" alt="購物車推薦畫面" class="phone-img">
+            </div>
+
+            <!-- Right Phone & Tooltip -->
+            <div class="phone-wrapper phone-right">
+                <!-- Tooltip Right -->
+                <div class="tooltip tooltip-right">
+                    理專主動推介商品，後台協<br>助下單，再由客戶放入購物<br>車。
+                </div>
+                <!-- Image -->
+                <img src="./img/iPhone2.png" alt="理專推薦明細畫面" class="phone-img">
+            </div>
+        </div>
+
+        <!-- Third Prototype Container: Three Phones -->
+        <div class="prototype-three-card">
+            <!-- Three Phones Wrapper -->
+            <div class="phones-group">
+                <!-- Phone 1 (Left) -->
+                <div class="phone-stacked-wrapper phone-wrapper-1">
+                    <div class="tooltip-badge tooltip-badge-left">
+                        <div class="badge-content">
+                            <div class="badge-header">
+                                <span class="material-symbols-outlined badge-icon">stars</span>
+                                <div class="badge-title">投資購物車</div>
+                            </div>
+                            <div class="badge-desc">可將不同類型的金融商品購買整合在單一入口</div>
+                        </div>
+                    </div>
+                    <img src="./img/iPhone3.png" alt="投資市場趨勢" class="phone-img-stacked">
+                </div>
+
+                <!-- Phone 2 (Center) -->
+                <div class="phone-stacked-wrapper phone-wrapper-2">
+                    <img src="./img/iPhone4.png" alt="購物車清單" class="phone-img-stacked">
+                </div>
+
+                <!-- Phone 3 (Right) -->
+                <div class="phone-stacked-wrapper phone-wrapper-3">
+                    <div class="tooltip-badge tooltip-badge-right">
+                        <div class="badge-content">
+                            <div class="badge-header">
+                                <span class="material-symbols-outlined badge-icon">stars</span>
+                                <div class="badge-title">投資購物車</div>
+                            </div>
+                            <div class="badge-desc">勾選商品進入結帳流程，一鍵購買多類型商品，投資策略自由組</div>
+                        </div>
+                    </div>
+                    <img src="./img/iPhone5.png" alt="購物車結帳" class="phone-img-stacked">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Second Prototype Container -->
+        <div class="prototype-single-card">
+            <div class="prototype-single-image-wrapper">
+                <img src="./img/Shopping Car2-2.png" alt="直覺調整委託條件畫面" class="prototype-single-img">
+            </div>
+            <div class="prototype-single-text">
+                <h3 class="prototype-single-title">直覺調整委託條件</h3>
+                <p class="prototype-single-desc">透過下拉列表，修改委託條件。</p>
+            </div>
+        </div>
+
+        <!-- 4th Prototype Container -->
+        <div class="prototype-single-card">
+            <div class="prototype-single-image-wrapper">
+                <img src="./img/Shopping Car2-1-1.png" alt="結帳進度提示畫面" class="prototype-single-img">
+            </div>
+            <div class="prototype-single-text">
+                <h3 class="prototype-single-title">結帳進度提示</h3>
+                <p class="prototype-single-desc">透過麵包屑導航，提示結帳進度。<br><br><span class="ux-insight"><strong>💡
+                            UX 洞察：</strong>為弭平電商「下單即扣款」與金融商品「T+2交割」的認知落差，介面設計上明確標示「預估扣款日」與「餘額防呆預警」，大幅降低新手的違約焦慮。</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Fifth Prototype Container: Before & After Compare -->
+        <div class="prototype-compare-card">
+            <!-- Before Card -->
+            <div class="prototype-compare-item">
+                <div class="prototype-compare-image-wrapper">
+                    <img src="./img/Shopping Car3-1.png" alt="Before: 確認明細後簽署文件" class="prototype-compare-img">
+                </div>
+                <div class="prototype-compare-text">
+                    <span class="compare-badge compare-badge--before">Before</span>
+                    <h3 class="prototype-compare-title">確認明細後簽署文件</h3>
+                    <p class="prototype-compare-status compare-status--error">
+                        <span class="material-symbols-outlined compare-status-icon">close</span>
+                        <span>沒有簽署文件無法繼續申購。<a href="javascript:void(0)" class="text-link">立即前往簽署</a></span>
+                    </p>
+                </div>
+            </div>
+            <!-- After Card -->
+            <div class="prototype-compare-item">
+                <div class="prototype-compare-image-wrapper">
+                    <img src="./img/Shopping Car3-2.png" alt="After: 文件簽署防呆機制" class="prototype-compare-img">
+                </div>
+                <div class="prototype-compare-text">
+                    <span class="compare-badge compare-badge--after">After</span>
+                    <h3 class="prototype-compare-title">文件簽署防呆機制</h3>
+                    <p class="prototype-compare-status compare-status--success">
+                        <span class="material-symbols-outlined compare-status-icon">check</span>
+                        已簽署所有文件，可以繼續後續流程。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Design Process Section -->
+    <section class="page-container process-section">
+        <h2 class="strategy-section-title">
+            <span class="material-symbols-outlined">label_important</span>
+            設計過程
+        </h2>
+
+        <div class="process-outer-card">
+
+            <!-- User Persona -->
+            <div class="process-block">
+                <h3 class="process-block-title">User Persona 用戶畫像</h3>
+                <div class="persona-grid">
+                    <!-- Left: Avatar + Info -->
+                    <div class="persona-info">
+                        <div class="persona-avatar-wrapper">
+                            <img src="./img/persona-avatar.png" alt="凱莉 - 用戶畫像" class="persona-avatar">
+                        </div>
+                        <div class="persona-name">凱莉</div>
+                        <div class="persona-tags">女性・22歲・台北市</div>
+                        <div class="persona-tags persona-tags--highlight">大學生・打工月收20k</div>
+                        <p class="persona-quote">「我想讓錢變大，但打開 App 卻像進了<br>迷宮，差點還賠掉信用。」</p>
+                        <div class="persona-hashtags">
+                            #積極投資 #投資新手<br>#數位原住民 #高風險承受度
+                        </div>
+                    </div>
+
+                    <!-- Right: Patterns + Scenario + Value -->
+                    <div class="persona-cards">
+                        <div class="persona-detail-card persona-detail-card--pattern">
+                            <div class="persona-detail-label">Patterns 模式</div>
+                            <p>對損失恐懼低，追求成長性，但流程失敗的信用風險感到極度焦慮。</p>
+                            <p>習慣從社群媒體或同儕間獲取投資熱點。</p>
+                            <p>習慣電商購物（下單即扣款、即時查進度）的邏輯，無法直覺理解證券市場的「T+2 交割」與「委託/成交」分離機制。</p>
+                        </div>
+                        <div class="persona-detail-card persona-detail-card--scenario">
+                            <div class="persona-detail-label">Scenario 情境</div>
+                            <p>下午在社群看到熱門標的，凱莉決定跟風下單。好不容易研究完怎麼買進，卻在選單裡迷路，找不到剛剛的單子到底有沒有掛成功。隔天接到營業員電話，才驚覺帳戶餘額不足，差點釀成違約交割。雖然緊急借錢過難關，但這次警嚇讓她對投資產生畏懼，從積極探索轉為自我懷疑。
+                            </p>
+                        </div>
+                        <div class="persona-value-row">
+                            <span class="persona-value-label">Value 價值</span>
+                            <p class="persona-value-text">金融電商化，風險透明化：打造一個具備預警機制與直覺引導的投資APP。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="process-divider"></div>
+
+            <!-- User Journey -->
+            <div class="process-block">
+                <h3 class="process-block-title">User Journey 使用者旅程</h3>
+                <div class="journey-grid">
+                    <!-- Stage 1 -->
+                    <div class="journey-card">
+                        <div class="journey-card-bar journey-card-bar--teal"></div>
+                        <div class="journey-card-body">
+                            <div class="journey-stage">瀏覽投資標的</div>
+                            <p class="journey-desc">用戶尋找感興趣的標的，查看詳細資訊，將感興趣的股票加入追蹤清單。</p>
+                            <div class="journey-emotion journey-emotion--teal"><span
+                                    class="material-symbols-outlined">sentiment_satisfied</span> 期待</div>
+                        </div>
+                    </div>
+                    <!-- Stage 2 -->
+                    <div class="journey-card">
+                        <div class="journey-card-bar journey-card-bar--orange"></div>
+                        <div class="journey-card-body">
+                            <div class="journey-stage">下單委託</div>
+                            <p class="journey-desc">決定投資金額與股數量，閱讀條款，確認委託明細，送出委託，等待成交。</p>
+                            <div class="journey-emotion journey-emotion--orange"><span
+                                    class="material-symbols-outlined">sentiment_dissatisfied</span> 困惑</div>
+                        </div>
+                    </div>
+                    <!-- Stage 3 -->
+                    <div class="journey-card">
+                        <div class="journey-card-bar journey-card-bar--blue"></div>
+                        <div class="journey-card-body">
+                            <div class="journey-stage">委託成交</div>
+                            <p class="journey-desc">隔日或數日後，再次登入 App 查詢是否買到，或透過推播得知。</p>
+                            <div class="journey-emotion journey-emotion--blue"><span
+                                    class="material-symbols-outlined">sentiment_very_satisfied</span> 開心</div>
+                        </div>
+                    </div>
+                    <!-- Stage 4 -->
+                    <div class="journey-card">
+                        <div class="journey-card-bar journey-card-bar--pink"></div>
+                        <div class="journey-card-body">
+                            <div class="journey-stage">扣款交割</div>
+                            <p class="journey-desc">扣款期限前，確認帳戶金額足夠，不足則將資金入帳補足。扣款後完成交割，投資標的入戶。</p>
+                            <div class="journey-emotion journey-emotion--pink"><span
+                                    class="material-symbols-outlined">sentiment_sad</span> 焦慮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitor Analysis (競品分析) -->
+        <div class="competitor-analysis-block">
+            <div class="competitor-header">
+                <h3 class="competitor-title">Competitor Analysis 競品分析</h3>
+                <p class="competitor-desc">了解基富通、大戶豐、創富通、momo的相關產品特色，及其解決方式</p>
+            </div>
+            <div class="competitor-image-wrapper">
+                <img src="./img/produsts.png" alt="競品分析比較表" class="competitor-image">
+            </div>
+        </div>
+
+        <!-- Wireframe (手繪線框稿) -->
+        <div class="wireframe-block">
+            <h3 class="wireframe-title">Wireframe 手繪線框稿</h3>
+            <div class="wireframe-image-wrapper">
+                <img src="./img/financial-wireframe.JPG" alt="手繪線框稿圖片" class="wireframe-image">
+            </div>
+
+        </div>
+
+        <!-- UI Flow (介面流程) -->
+        <div class="ui-flow-block">
+            <h3 class="ui-flow-title">UI Flow介面流程</h3>
+            <div class="ui-flow-content">
+                <div class="ui-flow-tooltip group">
+                    <div class="ui-flow-tooltip-header">
+                        <span class="material-symbols-outlined icon">info</span>
+                        <h4 class="ui-flow-tooltip-title">介面流程說明</h4>
+                        <span class="material-symbols-outlined expand-icon">expand_more</span>
+                    </div>
+                    <div class="ui-flow-tooltip-body">
+                        <ol class="ui-flow-tooltip-list">
+                            <li class="ui-flow-tooltip-item"><span class="step-num">1.</span> 選擇申購</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">2.</span> 透過推薦快速加入商品</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">3.</span> 選取標的，勾選進入結帳流程</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">4.</span> 點擊結帳</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">5.</span> 確認明細，簽署文件</li>
+                            <li class="ui-flow-tooltip-item"><span class="step-num">6.</span> 申購完成</li>
+                        </ol>
+                    </div>
+                    <div class="ui-flow-tooltip-pointer"></div>
+                </div>
+                <div class="ui-flow-image-wrapper">
+                    <img src="./img/financial-UI-flow.png" alt="UI Flow介面流程圖片" class="ui-flow-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章底部導航 -->
+    <nav class="article-navigation">
+        <a href="./porfolio-formal.html" class="nav-back">
+            <span class="icon">←</span>
+            <span>返回個人履歷</span>
+        </a>
+    </nav>
     <footer class="site-footer">
-        <div class="footer-container" style="display: flex; height: auto;">
+        <div class="footer-container footer-container--flex">
             <div data-layer="card-about" class="card-about">
                 <div data-layer="card-header" class="card-header">
                     <div data-layer="About Icon" class="AboutIcon">💫</div>
                     <div data-layer="About Text" class="AboutText">了解更多職涯經歷</div>
                 </div>
                 <div class="hero-actions">
-                    <a href="#"
-                        class="btn btn--md btn--outline-filled btn--linear-primary">
+                    <a href="#" class="btn btn--md btn--outline-filled btn--linear-primary">
                         <span class="material-symbols-rounded cardlink-icon">
                             download
                         </span>
@@ -207,10 +472,8 @@
 
 
         </div>
-        <div data-layer="footer-signature" class="FooterSignature"
-            style="align-self: stretch; padding: 32px; overflow: hidden; border-top: 1px var(--color-divider, #E2E8F0) solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div data-layer="Footer Signature Text" class="FooterSignatureText"
-                style="color: black; font-size: 11px; font-family: Noto Sans TC; font-weight: 400; line-height: 16px; letter-spacing: 0.50px; word-wrap: break-word">
+        <div data-layer="footer-signature" class="FooterSignature">
+            <div data-layer="Footer Signature Text" class="FooterSignatureText">
                 © 2025 阿泥在哪裡？｜Sophia's Magic Corner. All rights reserved. 謝謝泥🦀</div>
         </div>
     </footer>
