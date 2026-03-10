@@ -2529,6 +2529,294 @@ section h2 {
   margin-bottom: 0;
 }
 
+/* formal-tag variants */
+.formal-tag--accent {
+  background: var(--color-primary-100);
+  border-color: var(--color-primary-400);
+  color: var(--color-primary-900);
+}
+
+.formal-tag--secondary {
+  background: var(--color-secondary-100);
+  border-color: var(--color-secondary-400);
+  color: var(--color-secondary-900);
+}
+
+/* Timeline Sub-cards (學歷 / 實習 / Side Project) */
+
+/* Accordion 觸發器標頭 */
+.formal-timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/* Chevron 旋轉指示器 */
+.formal-sub-chevron {
+  color: var(--color-text-400);
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s ease;
+}
+
+.formal-timeline-item.is-open .formal-sub-chevron {
+  transform: rotate(180deg);
+  color: var(--color-primary-500);
+}
+
+/* 有子卡片的 timeline item：點擊互動 */
+.formal-timeline-item.has-sub-cards {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 展開時底色持久顯示 */
+.formal-timeline-item.has-sub-cards.is-open {
+  background: var(--color-surface-100);
+  transform: translateX(8px);
+}
+
+/* 子卡片容器：預設收合 */
+.formal-sub-cards {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.28s ease,
+    margin-top 0.3s ease;
+}
+
+/* 子卡片容器：展開狀態 */
+.formal-timeline-item.is-open .formal-sub-cards {
+  max-height: 1200px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.formal-internship-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  border-left: 3px solid var(--color-primary-300);
+  background: var(--color-surface-100);
+  transition: all 0.3s ease;
+}
+
+.formal-internship-sub:hover {
+  background: var(--color-primary-50);
+  border-left-color: var(--color-primary-500);
+  transform: translateX(4px);
+}
+
+.formal-sub-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.formal-sub-title {
+  font: var(--font-body-medium-baseline);
+  font-weight: 700;
+  color: var(--color-text-900);
+}
+
+.formal-sub-meta {
+  font: var(--font-body-small-baseline);
+  color: var(--color-text-500);
+}
+
+
+/* Internship Section */
+.formal-internship-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.formal-internship-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-50);
+  transition: all 0.3s ease;
+}
+
+.formal-internship-item:hover {
+  background: var(--color-surface-100);
+  box-shadow: 0 8px 24px rgba(174, 233, 238, 0.15);
+  transform: translateY(-2px);
+}
+
+.formal-internship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.formal-internship-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.formal-internship-company {
+  font: var(--font-title-medium-emphasized);
+  color: var(--color-text-900);
+}
+
+.formal-internship-period {
+  font: var(--font-body-small-baseline);
+  color: var(--color-text-500);
+}
+
+.formal-bullet-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formal-bullet-list li {
+  font: var(--font-body-medium-baseline);
+  color: var(--color-text-700);
+  line-height: 1.7;
+}
+
+/* Language Skills */
+.formal-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formal-language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.formal-language-item:hover {
+  background: var(--color-surface-100);
+}
+
+.formal-language-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: var(--font-body-medium-baseline);
+  color: var(--color-text-700);
+}
+
+/* Certification Section */
+.formal-cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.formal-cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.formal-cert-item:hover {
+  background: var(--color-surface-100);
+}
+
+.formal-cert-icon {
+  font-size: 28px;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+.formal-cert-name {
+  font: var(--font-body-medium-baseline);
+  font-weight: 700;
+  color: var(--color-text-900);
+}
+
+.formal-cert-issuer {
+  font: var(--font-body-small-baseline);
+  color: var(--color-text-500);
+  margin-top: 0.2rem;
+}
+
+/* Continuous Learning */
+.formal-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.formal-learning-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-50);
+  transition: all 0.3s ease;
+}
+
+.formal-learning-item:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-300);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(174, 233, 238, 0.2);
+}
+
+.formal-learning-icon {
+  font-size: 28px;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+.formal-learning-name {
+  font: var(--font-body-medium-baseline);
+  font-weight: 600;
+  color: var(--color-text-900);
+  line-height: 1.5;
+}
+
+.formal-learning-org {
+  font: var(--font-body-small-baseline);
+  color: var(--color-text-500);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .formal-internship-header {
+    flex-direction: column;
+  }
+
+  .formal-learning-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .learning-path-container {
   display: grid;
   grid-template-columns: fit-content(100%) minmax(0, 1fr);

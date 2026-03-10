@@ -106,4 +106,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     addStructuredData();
+
+    // === 經歷與軌跡 Accordion 收合 ===
+    document.querySelectorAll('.formal-timeline-item.has-sub-cards').forEach(item => {
+        function toggleAccordion() {
+            const isOpen = item.classList.toggle('is-open');
+            item.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+        item.addEventListener('click', toggleAccordion);
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleAccordion();
+            }
+        });
+    });
 });
