@@ -121,4 +121,48 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // === UI Flow 介面流程互動 ===
+    const flowStepperItems = document.querySelectorAll('.ui-flow-stepper-item');
+    const flowImageGroups = document.querySelectorAll('.ui-flow-image-group');
+    const flowTriggerLabel = document.querySelector('.current-step-label');
+    const flowStepperContainer = document.getElementById('flow-stepper-container');
+
+    if (flowStepperItems.length > 0 && flowImageGroups.length > 0) {
+        function setActiveFlowStep(stepIndex) {
+            // Remove active classes
+            flowStepperItems.forEach(item => item.classList.remove('is-active'));
+            flowImageGroups.forEach(group => group.classList.remove('is-active'));
+
+            // Find target elements
+            const targetItem = Array.from(flowStepperItems).find(item => item.getAttribute('data-step') === String(stepIndex));
+            const targetGroup = Array.from(flowImageGroups).find(group => group.getAttribute('data-content-step') === String(stepIndex));
+
+            if (targetItem) {
+                targetItem.classList.add('is-active');
+                // 只有「縮合後的按鈕文字」需要切換
+                if (flowTriggerLabel) {
+                    flowTriggerLabel.textContent = targetItem.textContent.trim();
+                }
+            }
+            if (targetGroup) targetGroup.classList.add('is-active');
+
+            // Optional: Close menu on mobile/click by removing a class if we used one
+            // flowStepperContainer.classList.remove('is-open'); 
+        }
+
+        flowStepperItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const stepIndex = item.getAttribute('data-step');
+                setActiveFlowStep(stepIndex);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const stepIndex = item.getAttribute('data-step');
+                    setActiveFlowStep(stepIndex);
+                }
+            });
+        });
+    }
 });
